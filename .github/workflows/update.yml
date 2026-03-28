@@ -1,0 +1,34 @@
+name: Auto Update Spots
+
+on:
+  schedule:
+    - cron: '*/10 * * * *' # Запускать каждые 5 минут
+  workflow_dispatch: # Позволяет запустить вручную кнопкой
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run parser
+        env:
+          VK_TOKEN: ${{ secrets.VK_TOKEN }}
+        run: python parser.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "Auto-Updater"
+          git config --global user.email "bot@example.com"
+          git add spots.json
+          git commit -m "Автоматическое обновление точек" || echo "Нет новых точек"
+          git push
