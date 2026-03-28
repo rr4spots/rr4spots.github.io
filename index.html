@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>РР4 - Актуальные точки</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b0c10;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* --- НАВИГАЦИЯ --- */
+        .navbar {
+            display: flex; justify-content: center; align-items: center;
+            padding: 20px 40px; background-color: #0b0c10;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .logo { font-size: 1.5em; font-weight: 800; display: flex; align-items: center; gap: 10px; }
+        .logo span { color: #5b61ff; } 
+
+        /* --- ГЛАВНЫЙ ЭКРАН --- */
+        .hero { text-align: center; padding: 60px 20px; background: radial-gradient(circle at top, #161824 0%, #0b0c10 60%); }
+        .hero h1 { font-size: 4em; margin: 0; font-weight: 800; line-height: 1.1; letter-spacing: -1px; }
+        .highlight { color: #5b61ff; }
+        
+        .hero-btns { margin-top: 30px; display: flex; justify-content: center; }
+        .btn-main {
+            background-color: #5b61ff; color: white; padding: 16px 40px;
+            border-radius: 30px; font-weight: 600; font-size: 1.1em;
+            border: none; cursor: pointer; transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(91, 97, 255, 0.3);
+        }
+        .btn-main:hover { background-color: #4a50e0; transform: translateY(-2px); }
+
+        /* --- КАСТОМНЫЕ ФИЛЬТРЫ --- */
+        .filter-section {
+            display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; 
+            margin-bottom: 40px; position: relative; z-index: 100;
+        }
+        .custom-select-wrapper { position: relative; width: 280px; }
+        .custom-select-trigger {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 14px 25px; font-size: 1.1em; font-weight: 600;
+            background-color: #12141c; color: #ffffff;
+            border: 1px solid #232533; border-radius: 12px;
+            cursor: pointer; transition: all 0.2s;
+        }
+        .custom-select-trigger:hover, .custom-select-wrapper.open .custom-select-trigger { border-color: #5b61ff; }
+        .custom-options {
+            position: absolute; display: block; top: calc(100% + 10px); left: 0; right: 0;
+            background-color: #12141c; border: 1px solid #232533; border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+            opacity: 0; visibility: hidden; pointer-events: none;
+            transform: translateY(-10px); transition: all 0.2s;
+            max-height: 350px; overflow-y: auto;
+        }
+        .custom-select-wrapper.open .custom-options { opacity: 1; visibility: visible; pointer-events: all; transform: translateY(0); }
+        .custom-option { padding: 12px 25px; font-weight: 600; color: #8a8d98; cursor: pointer; transition: 0.2s; }
+        .custom-option:hover, .custom-option.selected { background-color: rgba(91, 97, 255, 0.1); color: #5b61ff; }
+        .custom-options::-webkit-scrollbar { width: 8px; }
+        .custom-options::-webkit-scrollbar-track { background: #0b0c10; border-radius: 0 12px 12px 0; }
+        .custom-options::-webkit-scrollbar-thumb { background: #5b61ff; border-radius: 10px; }
+        .custom-options::-webkit-scrollbar-thumb:hover { background: #4a50e0; }
+        .arrow { transition: transform 0.3s; font-size: 0.8em; color: #5b61ff; }
+        .custom-select-wrapper.open .arrow { transform: rotate(180deg); }
+
+        /* --- СЕТКА КАРТОЧЕК --- */
+        .container { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; max-width: 1400px; margin: 0 auto; padding: 0 20px 80px; }
+        .spot-card { background-color: #12141c; border-radius: 16px; padding: 15px; cursor: pointer; transition: all 0.3s; border: 1px solid #1f222e; display: flex; flex-direction: column; }
+        .spot-card:hover { transform: translateY(-5px); border-color: #5b61ff; box-shadow: 0 10px 30px rgba(91, 97, 255, 0.1); }
+        .image-container { position: relative; width: 100%; height: 200px; margin-bottom: 15px; border-radius: 10px; overflow: hidden; }
+        .spot-card img.preview-img { width: 100%; height: 100%; object-fit: cover; transition: 0.3s;}
+        .spot-card:hover img.preview-img { transform: scale(1.05); } 
+        .no-photo { width: 100%; height: 100%; background:#1a1d27; display:flex; align-items:center; justify-content:center; color:#555; font-weight: 600; }
+        .date-badge { position: absolute; top: 10px; right: 10px; background: rgba(11, 12, 16, 0.8); color: #5b61ff; padding: 6px 10px; border-radius: 8px; font-size: 0.85em; font-weight: 800; backdrop-filter: blur(4px); }
+        .info-row { font-size: 1.05em; margin-bottom: 8px; color: #d1d3d8; font-weight: 600;}
+        .info-label { color: #6e717e; font-size: 0.9em; margin-right: 5px; font-weight: 400;}
+        .info-coords { color: #5b61ff; font-weight: 800; font-size: 1.15em; }
+
+        /* --- МОДАЛЬНОЕ ОКНО С КАРТОЧКОЙ --- */
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(11, 12, 16, 0.95); display: none; justify-content: center; align-items: center; z-index: 1000; opacity: 0; transition: opacity 0.3s; backdrop-filter: blur(5px); }
+        .modal-overlay.active { display: flex; opacity: 1; }
+        .modal-content { background-color: #12141c; width: 98%; max-width: 1600px; height: 95vh; border-radius: 16px; display: flex; flex-direction: column; overflow: hidden; position: relative; border: 1px solid #1f222e; }
+        .close-modal { position: absolute; top: 20px; right: 25px; font-size: 35px; color: #fff; cursor: pointer; z-index: 1010; background: rgba(0,0,0,0.5); border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; transition: 0.2s; }
+        .close-modal:hover { background: #5b61ff; }
+        .modal-body { display: flex; flex-direction: row; height: 100%; }
+        @media (max-width: 900px) { .modal-body { flex-direction: column; } }
+        
+        .gallery-container { flex: 3; position: relative; background-color: #08090b; display: flex; align-items: center; justify-content: center; padding: 10px; }
+        
+        /* КУРСОР ДЛЯ ФОТО В МОДАЛКЕ */
+        .main-img { width: 100%; height: 100%; object-fit: contain; cursor: zoom-in; } 
+        
+        .nav-btn { position: absolute; top: 50%; transform: translateY(-50%); background-color: rgba(91,97,255,0.2); color: white; border: none; padding: 30px 20px; cursor: pointer; font-size: 30px; border-radius: 12px; z-index: 10; display: none; transition: 0.2s; backdrop-filter: blur(5px);}
+        .nav-btn:hover { background-color: rgba(91,97,255,0.8); }
+        .prev-btn { left: 15px; } .next-btn { right: 15px; }
+        .thumbnails-container { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px; z-index: 10; background: rgba(11,12,16,0.8); padding: 10px 15px; border-radius: 12px; backdrop-filter: blur(5px);}
+        .thumb-img { width: 60px; height: 60px; object-fit: cover; border-radius: 6px; cursor: pointer; border: 2px solid transparent; opacity: 0.4; transition: 0.2s; }
+        .thumb-img:hover, .thumb-img.active { opacity: 1; border-color: #5b61ff; }
+        
+        .info-panel { flex: 1; padding: 40px; border-left: 1px solid #1f222e; overflow-y: auto; background-color: #12141c; }
+        @media (max-width: 900px) { .info-panel { border-left: none; border-top: 1px solid #1f222e;} }
+        .modal-meta-label { font-size: 1.2em; color: #ffffff; margin-bottom: 25px; line-height: 2;}
+        .details-text { font-size: 1.1em; color: #8a8d98; line-height: 1.8; white-space: pre-wrap; font-weight: 400;}
+        hr { border:0; border-top:1px solid #1f222e; margin: 25px 0; }
+
+        /* --- ПОЛНОЭКРАННЫЙ ЛАЙТБОКС (ГАЛЕРЕЯ) --- */
+        .lightbox-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            display: none; justify-content: center; align-items: center;
+            z-index: 2000; /* Должен быть поверх всего остального */
+            opacity: 0; transition: opacity 0.3s;
+        }
+        .lightbox-overlay.active { display: flex; opacity: 1; }
+        .lightbox-img { max-width: 95%; max-height: 95%; object-fit: contain; border-radius: 8px; box-shadow: 0 0 30px rgba(0,0,0,0.8);}
+        .lightbox-close { position: absolute; top: 20px; right: 30px; font-size: 45px; color: #fff; cursor: pointer; z-index: 2010; transition: 0.2s; }
+        .lightbox-close:hover { color: #5b61ff; }
+        .lightbox-btn { position: absolute; top: 50%; transform: translateY(-50%); background: transparent; color: rgba(255,255,255,0.5); border: none; font-size: 60px; cursor: pointer; z-index: 2010; transition: 0.2s; padding: 20px;}
+        .lightbox-btn:hover { color: #ffffff; }
+        .lightbox-prev { left: 20px; }
+        .lightbox-next { right: 20px; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#5b61ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2 17L12 22L22 17" stroke="#5b61ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2 12L12 17L22 12" stroke="#5b61ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            RR4 <span>Spots</span>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Самые свежие точки<br>для <span class="highlight">РР4</span></h1>
+        <div class="hero-btns">
+            <button class="btn-main" onclick="document.getElementById('spots-container').scrollIntoView({behavior: 'smooth'})">Смотреть точки</button>
+        </div>
+    </section>
+
+    <div class="filter-section">
+        <div class="custom-select-wrapper" id="custom-select-wb">
+            <div class="custom-select-trigger">
+                <span id="custom-select-text-wb">Все водоемы</span>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="custom-options">
+                <div class="custom-option selected" data-value="all">Все водоемы</div>
+                <div class="custom-option" data-value="оз. Комариное">оз. Комариное</div>
+                <div class="custom-option" data-value="оз. Лосиное">оз. Лосиное</div>
+                <div class="custom-option" data-value="р. Вьюнок">р. Вьюнок</div>
+                <div class="custom-option" data-value="оз. Старый Острог">оз. Старый Острог</div>
+                <div class="custom-option" data-value="р. Белая">р. Белая</div>
+                <div class="custom-option" data-value="оз. Куори">оз. Куори</div>
+                <div class="custom-option" data-value="оз. Медвежье">оз. Медвежье</div>
+                <div class="custom-option" data-value="р. Волхов">р. Волхов</div>
+                <div class="custom-option" data-value="р. Северский Донец">р. Северский Донец</div>
+                <div class="custom-option" data-value="р. Сура">р. Сура</div>
+                <div class="custom-option" data-value="Ладожское оз.">Ладожское оз.</div>
+                <div class="custom-option" data-value="оз. Янтарное">оз. Янтарное</div>
+                <div class="custom-option" data-value="Ладожский архипелаг">Ладожский архипелаг</div>
+                <div class="custom-option" data-value="р. Ахтуба">р. Ахтуба</div>
+                <div class="custom-option" data-value="оз. Медное">оз. Медное</div>
+                <div class="custom-option" data-value="р. Нижняя Тунгуска">р. Нижняя Тунгуска</div>
+                <div class="custom-option" data-value="р. Яма">р. Яма</div>
+                <div class="custom-option" data-value="Норвежское море">Норвежское море</div>
+            </div>
+        </div>
+
+        <div class="custom-select-wrapper" id="custom-select-tag">
+            <div class="custom-select-trigger">
+                <span id="custom-select-text-tag">Любая цель</span>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="custom-options">
+                <div class="custom-option selected" data-value="all">Любая цель</div>
+                <div class="custom-option" data-value="Трофей">Трофей</div>
+                <div class="custom-option" data-value="Фарм">Фарм</div>
+                <div class="custom-option" data-value="Высед">Высед</div>
+                <div class="custom-option" data-value="Обычная">Обычная точка</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="spots-container"></div>
+
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal" id="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="gallery-container">
+                    <button class="nav-btn prev-btn" id="prev-btn">&#10094;</button>
+                    <img src="" alt="Скриншот РР4" class="main-img" id="main-modal-img" title="Кликните для увеличения">
+                    <button class="nav-btn next-btn" id="next-btn">&#10095;</button>
+                    <div class="thumbnails-container" id="thumbnails-container"></div>
+                </div>
+                <div class="info-panel">
+                    <div class="modal-meta-label">
+                        <span class="info-label">Озеро:</span> <span id="modal-waterbody" style="font-weight:bold;"></span><br>
+                        <span class="info-label">Цель:</span> <span id="modal-tag" style="color:#5b61ff; font-weight:700;"></span><br>
+                        <span class="info-label">Точка:</span> <span class="info-coords" id="modal-coords"></span><br>
+                        <span class="info-label">Дата:</span> <span id="modal-date" style="color:#5b61ff; font-weight:800;"></span>
+                    </div>
+                    <hr>
+                    <div class="details-text" id="modal-description"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lightbox-overlay" id="lightbox-overlay">
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+        <button class="lightbox-btn lightbox-prev" id="lightbox-prev">&#10094;</button>
+        <img src="" class="lightbox-img" id="lightbox-img">
+        <button class="lightbox-btn lightbox-next" id="lightbox-next">&#10095;</button>
+    </div>
+
+    <script>
+        let allSpots = [];
+        let currentSpotImages = [];
+        let currentImageIndex = 0;
+
+        let currentWbFilter = "all";
+        let currentTagFilter = "all";
+
+        const modal = document.getElementById('modal-overlay');
+        const mainImg = document.getElementById('main-modal-img');
+        const thumbsContainer = document.getElementById('thumbnails-container');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+
+        // Элементы лайтбокса
+        const lightbox = document.getElementById('lightbox-overlay');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxPrevBtn = document.getElementById('lightbox-prev');
+        const lightboxNextBtn = document.getElementById('lightbox-next');
+
+        function setupCustomSelect(selectId, textId, filterType) {
+            const select = document.getElementById(selectId);
+            const trigger = select.querySelector('.custom-select-trigger');
+            const text = document.getElementById(textId);
+            const options = select.querySelectorAll('.custom-option');
+
+            trigger.addEventListener('click', (e) => {
+                e.stopPropagation();
+                document.querySelectorAll('.custom-select-wrapper').forEach(el => {
+                    if (el !== select) el.classList.remove('open');
+                });
+                select.classList.toggle('open');
+            });
+
+            options.forEach(option => {
+                option.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    options.forEach(opt => opt.classList.remove('selected'));
+                    this.classList.add('selected');
+                    text.textContent = this.textContent;
+                    select.classList.remove('open');
+                    
+                    if (filterType === 'wb') currentWbFilter = this.getAttribute('data-value');
+                    if (filterType === 'tag') currentTagFilter = this.getAttribute('data-value');
+                    
+                    renderSpots();
+                });
+            });
+        }
+
+        setupCustomSelect('custom-select-wb', 'custom-select-text-wb', 'wb');
+        setupCustomSelect('custom-select-tag', 'custom-select-text-tag', 'tag');
+
+        window.addEventListener('click', () => {
+            document.querySelectorAll('.custom-select-wrapper').forEach(el => el.classList.remove('open'));
+        });
+
+        async function loadSpots() {
+            try {
+                const response = await fetch('spots.json?v=' + new Date().getTime());
+                allSpots = await response.json();
+                
+                allSpots.sort((a, b) => b.timestamp - a.timestamp);
+                renderSpots();
+            } catch (error) {
+                console.error('Ошибка:', error);
+                document.getElementById('spots-container').innerHTML = '<p style="text-align:center; color:#888;">Не удалось загрузить данные.</p>';
+            }
+        }
+
+        function renderSpots() {
+            const container = document.getElementById('spots-container');
+            container.innerHTML = ''; 
+
+            const filteredSpots = allSpots.filter(spot => {
+                const spotTag = spot.tag || "Обычная"; 
+                const matchWb = currentWbFilter === "all" || spot.waterbody === currentWbFilter;
+                const matchTag = currentTagFilter === "all" || spotTag === currentTagFilter;
+                return matchWb && matchTag;
+            });
+
+            filteredSpots.forEach(spot => {
+                const card = document.createElement('div');
+                card.className = 'spot-card';
+                
+                const previewImgHtml = spot.images && spot.images.length > 0 
+                    ? `<img src="${spot.images[0]}" class="preview-img" alt="Превью">`
+                    : `<div class="no-photo">Нет фото</div>`;
+
+                const displayTag = spot.tag || "Обычная";
+
+                card.innerHTML = `
+                    <div class="image-container">
+                        ${previewImgHtml}
+                        <div class="date-badge">${spot.date}</div>
+                    </div>
+                    <div class="info-row"><span class="info-label">Озеро:</span> ${spot.waterbody}</div>
+                    <div class="info-row"><span class="info-label">Цель:</span> <span style="color:#5b61ff; font-weight:700;">${displayTag}</span></div>
+                    <div class="info-row"><span class="info-label">Точка:</span> <span class="info-coords">${spot.coordinates}</span></div>
+                `;
+                
+                card.onclick = () => openModal(spot);
+                container.appendChild(card);
+            });
+        }
+
+        function openModal(spot) {
+            currentSpotImages = spot.images || [];
+            currentImageIndex = 0;
+
+            document.getElementById('modal-coords').innerText = spot.coordinates;
+            document.getElementById('modal-waterbody').innerText = spot.waterbody;
+            document.getElementById('modal-tag').innerText = spot.tag || "Обычная";
+            document.getElementById('modal-date').innerText = spot.date;
+            document.getElementById('modal-description').innerText = spot.description;
+
+            thumbsContainer.innerHTML = ''; 
+
+            if (currentSpotImages.length > 0) {
+                updateMainImage();
+                const showNav = currentSpotImages.length > 1;
+                prevBtn.style.display = showNav ? 'block' : 'none';
+                nextBtn.style.display = showNav ? 'block' : 'none';
+                
+                if (showNav) {
+                    currentSpotImages.forEach((imgSrc, index) => {
+                        const thumb = document.createElement('img');
+                        thumb.src = imgSrc;
+                        thumb.className = 'thumb-img';
+                        if (index === 0) thumb.classList.add('active');
+                        thumb.onclick = () => { currentImageIndex = index; updateMainImage(); };
+                        thumbsContainer.appendChild(thumb);
+                    });
+                }
+            } else {
+                mainImg.src = ''; 
+                prevBtn.style.display = 'none';
+                nextBtn.style.display = 'none';
+            }
+
+            modal.classList.add('active');
+        }
+
+        // Обновляем картинку и в карточке, и в лайтбоксе (если он открыт)
+        function updateMainImage() {
+            const currentSrc = currentSpotImages[currentImageIndex];
+            mainImg.src = currentSrc;
+            lightboxImg.src = currentSrc; 
+            
+            const thumbs = thumbsContainer.querySelectorAll('.thumb-img');
+            thumbs.forEach((t, i) => {
+                if (i === currentImageIndex) t.classList.add('active');
+                else t.classList.remove('active');
+            });
+        }
+
+        // Перелистывание в окне карточки
+        prevBtn.onclick = (e) => { e.stopPropagation(); navigateImages(-1); };
+        nextBtn.onclick = (e) => { e.stopPropagation(); navigateImages(1); };
+
+        function navigateImages(direction) {
+            if (direction === 1) {
+                currentImageIndex = (currentImageIndex < currentSpotImages.length - 1) ? currentImageIndex + 1 : 0;
+            } else {
+                currentImageIndex = (currentImageIndex > 0) ? currentImageIndex - 1 : currentSpotImages.length - 1;
+            }
+            updateMainImage();
+        }
+
+        // --- ЛОГИКА ЛАЙТБОКСА ---
+        
+        // Открыть на весь экран по клику на фото
+        mainImg.onclick = () => {
+            if (currentSpotImages.length > 0) {
+                lightboxImg.src = currentSpotImages[currentImageIndex];
+                // Показываем стрелки в лайтбоксе только если фоток больше одной
+                const showNav = currentSpotImages.length > 1;
+                lightboxPrevBtn.style.display = showNav ? 'block' : 'none';
+                lightboxNextBtn.style.display = showNav ? 'block' : 'none';
+                
+                lightbox.classList.add('active');
+            }
+        };
+
+        // Закрытие окон
+        const closeLightboxFn = () => { lightbox.classList.remove('active'); };
+        const closeModalFn = () => { modal.classList.remove('active'); };
+
+        document.getElementById('lightbox-close').onclick = closeLightboxFn;
+        document.getElementById('close-modal').onclick = closeModalFn;
+
+        lightbox.onclick = (e) => { if (e.target === lightbox) closeLightboxFn(); };
+        modal.onclick = (e) => { if (e.target === modal) closeModalFn(); };
+
+        // Перелистывание внутри лайтбокса
+        lightboxPrevBtn.onclick = (e) => { e.stopPropagation(); navigateImages(-1); };
+        lightboxNextBtn.onclick = (e) => { e.stopPropagation(); navigateImages(1); };
+
+        // Управление клавиатурой (Закрытие на Esc)
+        document.addEventListener('keydown', (e) => { 
+            if (e.key === 'Escape') {
+                if (lightbox.classList.contains('active')) {
+                    closeLightboxFn(); // Сначала закрываем большое фото
+                } else if (modal.classList.contains('active')) {
+                    closeModalFn(); // Если большое фото закрыто, закрываем саму карточку
+                }
+            }
+            // Можно перелистывать стрелками на клавиатуре, если открыта карточка или лайтбокс
+            if (e.key === 'ArrowRight' && (modal.classList.contains('active') || lightbox.classList.contains('active'))) {
+                navigateImages(1);
+            }
+            if (e.key === 'ArrowLeft' && (modal.classList.contains('active') || lightbox.classList.contains('active'))) {
+                navigateImages(-1);
+            }
+        });
+
+        loadSpots();
+    </script>
+</body>
+</html>
