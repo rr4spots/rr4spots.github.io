@@ -38,7 +38,7 @@
         }
         .btn-main:hover { background-color: #4a50e0; transform: translateY(-2px); }
 
-        /* --- КАСТОМНЫЕ ФИЛЬТРЫ --- */
+        /* --- КАСТОМНЫЕ ФИЛЬТРЫ И ПОИСК --- */
         .filter-section {
             display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; 
             margin-bottom: 40px; position: relative; z-index: 100;
@@ -70,6 +70,28 @@
         .arrow { transition: transform 0.3s; font-size: 0.8em; color: #5b61ff; }
         .custom-select-wrapper.open .arrow { transform: rotate(180deg); }
 
+        /* СТИЛИ ДЛЯ ПОИСКА */
+        .search-wrapper { position: relative; width: 280px; }
+        .custom-search-input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 14px 25px;
+            font-size: 1.1em;
+            font-weight: 600;
+            background-color: #12141c;
+            color: #ffffff;
+            border: 1px solid #232533;
+            border-radius: 12px;
+            outline: none;
+            transition: all 0.2s;
+            font-family: 'Inter', sans-serif;
+        }
+        .custom-search-input::placeholder { color: #8a8d98; font-weight: 600; }
+        .custom-search-input:focus {
+            border-color: #5b61ff;
+            box-shadow: 0 0 15px rgba(91, 97, 255, 0.15);
+        }
+
         /* --- СЕТКА КАРТОЧЕК --- */
         .container { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; max-width: 1400px; margin: 0 auto; padding: 0 20px 80px; }
         .spot-card { background-color: #12141c; border-radius: 16px; padding: 15px; cursor: pointer; transition: all 0.3s; border: 1px solid #1f222e; display: flex; flex-direction: column; }
@@ -82,6 +104,7 @@
         .info-row { font-size: 1.05em; margin-bottom: 8px; color: #d1d3d8; font-weight: 600;}
         .info-label { color: #6e717e; font-size: 0.9em; margin-right: 5px; font-weight: 400;}
         .info-coords { color: #5b61ff; font-weight: 800; font-size: 1.15em; }
+        .no-results { grid-column: 1 / -1; text-align: center; color: #8a8d98; font-size: 1.2em; padding: 40px; }
 
         /* --- МОДАЛЬНОЕ ОКНО С КАРТОЧКОЙ --- */
         .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(11, 12, 16, 0.95); display: none; justify-content: center; align-items: center; z-index: 1000; opacity: 0; transition: opacity 0.3s; backdrop-filter: blur(5px); }
@@ -115,7 +138,7 @@
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background-color: rgba(0, 0, 0, 0.95);
             display: none; justify-content: center; align-items: center;
-            z-index: 2000; /* Должен быть поверх всего остального */
+            z-index: 2000;
             opacity: 0; transition: opacity 0.3s;
         }
         .lightbox-overlay.active { display: flex; opacity: 1; }
@@ -149,6 +172,7 @@
     </section>
 
     <div class="filter-section">
+        
         <div class="custom-select-wrapper" id="custom-select-wb">
             <div class="custom-select-trigger">
                 <span id="custom-select-text-wb">Все водоемы</span>
@@ -190,6 +214,11 @@
                 <div class="custom-option" data-value="Обычная">Обычная точка</div>
             </div>
         </div>
+
+        <div class="search-wrapper">
+            <input type="text" id="search-input" class="custom-search-input" placeholder="Поиск по рыбе...">
+        </div>
+
     </div>
 
     <div class="container" id="spots-container"></div>
@@ -232,6 +261,7 @@
 
         let currentWbFilter = "all";
         let currentTagFilter = "all";
+        let currentSearchQuery = ""; // Новая переменная для поиска
 
         const modal = document.getElementById('modal-overlay');
         const mainImg = document.getElementById('main-modal-img');
@@ -239,11 +269,17 @@
         const prevBtn = document.getElementById('prev-btn');
         const nextBtn = document.getElementById('next-btn');
 
-        // Элементы лайтбокса
         const lightbox = document.getElementById('lightbox-overlay');
         const lightboxImg = document.getElementById('lightbox-img');
         const lightboxPrevBtn = document.getElementById('lightbox-prev');
         const lightboxNextBtn = document.getElementById('lightbox-next');
+
+        // Обработка текстового поиска
+        const searchInput = document.getElementById('search-input');
+        searchInput.addEventListener('input', (e) => {
+            currentSearchQuery = e.target.value.toLowerCase().trim();
+            renderSpots();
+        });
 
         function setupCustomSelect(selectId, textId, filterType) {
             const select = document.getElementById(selectId);
@@ -299,12 +335,28 @@
             const container = document.getElementById('spots-container');
             container.innerHTML = ''; 
 
+            // СЛОЖНЫЙ ФИЛЬТР: Учитываем Водоем + Цель + Поиск
             const filteredSpots = allSpots.filter(spot => {
                 const spotTag = spot.tag || "Обычная"; 
+                
                 const matchWb = currentWbFilter === "all" || spot.waterbody === currentWbFilter;
                 const matchTag = currentTagFilter === "all" || spotTag === currentTagFilter;
-                return matchWb && matchTag;
+                
+                let matchSearch = true;
+                if (currentSearchQuery !== "") {
+                    // Ищем совпадения в описании и координатах
+                    const descMatch = spot.description && spot.description.toLowerCase().includes(currentSearchQuery);
+                    const coordsMatch = spot.coordinates && spot.coordinates.toLowerCase().includes(currentSearchQuery);
+                    matchSearch = descMatch || coordsMatch;
+                }
+
+                return matchWb && matchTag && matchSearch;
             });
+
+            if (filteredSpots.length === 0) {
+                container.innerHTML = '<div class="no-results">По вашему запросу ничего не найдено 🐟</div>';
+                return;
+            }
 
             filteredSpots.forEach(spot => {
                 const card = document.createElement('div');
@@ -368,7 +420,6 @@
             modal.classList.add('active');
         }
 
-        // Обновляем картинку и в карточке, и в лайтбоксе (если он открыт)
         function updateMainImage() {
             const currentSrc = currentSpotImages[currentImageIndex];
             mainImg.src = currentSrc;
@@ -381,7 +432,6 @@
             });
         }
 
-        // Перелистывание в окне карточки
         prevBtn.onclick = (e) => { e.stopPropagation(); navigateImages(-1); };
         nextBtn.onclick = (e) => { e.stopPropagation(); navigateImages(1); };
 
@@ -394,13 +444,10 @@
             updateMainImage();
         }
 
-        // --- ЛОГИКА ЛАЙТБОКСА ---
-        
-        // Открыть на весь экран по клику на фото
+        // Открыть лайтбокс
         mainImg.onclick = () => {
             if (currentSpotImages.length > 0) {
                 lightboxImg.src = currentSpotImages[currentImageIndex];
-                // Показываем стрелки в лайтбоксе только если фоток больше одной
                 const showNav = currentSpotImages.length > 1;
                 lightboxPrevBtn.style.display = showNav ? 'block' : 'none';
                 lightboxNextBtn.style.display = showNav ? 'block' : 'none';
@@ -409,7 +456,6 @@
             }
         };
 
-        // Закрытие окон
         const closeLightboxFn = () => { lightbox.classList.remove('active'); };
         const closeModalFn = () => { modal.classList.remove('active'); };
 
@@ -419,20 +465,17 @@
         lightbox.onclick = (e) => { if (e.target === lightbox) closeLightboxFn(); };
         modal.onclick = (e) => { if (e.target === modal) closeModalFn(); };
 
-        // Перелистывание внутри лайтбокса
         lightboxPrevBtn.onclick = (e) => { e.stopPropagation(); navigateImages(-1); };
         lightboxNextBtn.onclick = (e) => { e.stopPropagation(); navigateImages(1); };
 
-        // Управление клавиатурой (Закрытие на Esc)
         document.addEventListener('keydown', (e) => { 
             if (e.key === 'Escape') {
                 if (lightbox.classList.contains('active')) {
-                    closeLightboxFn(); // Сначала закрываем большое фото
+                    closeLightboxFn();
                 } else if (modal.classList.contains('active')) {
-                    closeModalFn(); // Если большое фото закрыто, закрываем саму карточку
+                    closeModalFn();
                 }
             }
-            // Можно перелистывать стрелками на клавиатуре, если открыта карточка или лайтбокс
             if (e.key === 'ArrowRight' && (modal.classList.contains('active') || lightbox.classList.contains('active'))) {
                 navigateImages(1);
             }
