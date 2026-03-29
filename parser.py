@@ -124,7 +124,7 @@ def parse_vk():
                         continue
 
                     spot_tag = "Обычная"
-                    if any(word in lower_clean_text for word in ["трофей", "троф", "трофе", "синяк", "синь", "голуб", "голубая","звезд", "звёзд"]):
+                    if any(word in lower_clean_text for word in ["трофей", "троф", "трофе", "синяк", "синь", "голуб", "голубая","звезд", "звёзд","⭐"]):
                         spot_tag = "Трофей"
                     elif any(word in lower_clean_text for word in ["фарм", "фар"]):
                         spot_tag = "Фарм"
