@@ -49,6 +49,9 @@ def clean_text(text):
     text = text.replace('Вся информация по РР4 на нашем сайте - rr4farmtrof.com', '')
     text = text.replace('Правила публикации постов: vk.com/-pravila', '')
     text = text.replace('Правила публикации постов: vk.com/-pravila', '')
+    text = text.replace('Добавить пост: https://vk.com/rf4map?w=wall-134739321_11470/', '')
+    text = text.replace('Добавить пост: https://vk.com/rf4map?w=wall-134739321_11470', '')
+    
     
     text = re.sub(r'#\w+', '', text)
     
