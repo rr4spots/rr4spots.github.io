@@ -6,7 +6,6 @@ from datetime import datetime
 
 
 VK_TOKEN = os.environ.get("VK_TOKEN") 
-# =============================================
 
 VK_GROUPS = [
     "rr4mestakleva", 
