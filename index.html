@@ -261,7 +261,7 @@
 
         let currentWbFilter = "all";
         let currentTagFilter = "all";
-        let currentSearchQuery = ""; // Новая переменная для поиска
+        let currentSearchQuery = ""; 
 
         const modal = document.getElementById('modal-overlay');
         const mainImg = document.getElementById('main-modal-img');
@@ -274,7 +274,6 @@
         const lightboxPrevBtn = document.getElementById('lightbox-prev');
         const lightboxNextBtn = document.getElementById('lightbox-next');
 
-        // Обработка текстового поиска
         const searchInput = document.getElementById('search-input');
         searchInput.addEventListener('input', (e) => {
             currentSearchQuery = e.target.value.toLowerCase().trim();
@@ -335,7 +334,6 @@
             const container = document.getElementById('spots-container');
             container.innerHTML = ''; 
 
-            // СЛОЖНЫЙ ФИЛЬТР: Учитываем Водоем + Цель + Поиск
             const filteredSpots = allSpots.filter(spot => {
                 const spotTag = spot.tag || "Обычная"; 
                 
@@ -344,7 +342,6 @@
                 
                 let matchSearch = true;
                 if (currentSearchQuery !== "") {
-                    // Ищем совпадения в описании и координатах
                     const descMatch = spot.description && spot.description.toLowerCase().includes(currentSearchQuery);
                     const coordsMatch = spot.coordinates && spot.coordinates.toLowerCase().includes(currentSearchQuery);
                     matchSearch = descMatch || coordsMatch;
@@ -362,8 +359,9 @@
                 const card = document.createElement('div');
                 card.className = 'spot-card';
                 
+                // ВАЖНО: ВОТ ЗДЕСЬ Я ДОБАВИЛ loading="lazy" ДЛЯ УСКОРЕНИЯ ЗАГРУЗКИ!
                 const previewImgHtml = spot.images && spot.images.length > 0 
-                    ? `<img src="${spot.images[0]}" class="preview-img" alt="Превью">`
+                    ? `<img src="${spot.images[0]}" class="preview-img" loading="lazy" alt="Превью">`
                     : `<div class="no-photo">Нет фото</div>`;
 
                 const displayTag = spot.tag || "Обычная";
@@ -444,7 +442,6 @@
             updateMainImage();
         }
 
-        // Открыть лайтбокс
         mainImg.onclick = () => {
             if (currentSpotImages.length > 0) {
                 lightboxImg.src = currentSpotImages[currentImageIndex];
