@@ -93,7 +93,7 @@
         }
 
         /* --- СЕТКА КАРТОЧЕК --- */
-        .container { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; max-width: 1400px; margin: 0 auto; padding: 0 20px 80px; }
+        .container { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; max-width: 1400px; margin: 0 auto; padding: 0 20px 40px; }
         .spot-card { background-color: #12141c; border-radius: 16px; padding: 15px; cursor: pointer; transition: all 0.3s; border: 1px solid #1f222e; display: flex; flex-direction: column; }
         .spot-card:hover { transform: translateY(-5px); border-color: #5b61ff; box-shadow: 0 10px 30px rgba(91, 97, 255, 0.1); }
         .image-container { position: relative; width: 100%; height: 200px; margin-bottom: 15px; border-radius: 10px; overflow: hidden; }
@@ -105,6 +105,10 @@
         .info-label { color: #6e717e; font-size: 0.9em; margin-right: 5px; font-weight: 400;}
         .info-coords { color: #5b61ff; font-weight: 800; font-size: 1.15em; }
         .no-results { grid-column: 1 / -1; text-align: center; color: #8a8d98; font-size: 1.2em; padding: 40px; }
+
+        /* --- КНОПКА ПОКАЗАТЬ ЕЩЕ --- */
+        .load-more-container { text-align: center; padding-bottom: 80px; }
+        #load-more-btn { display: none; margin: 0 auto; } 
 
         /* --- МОДАЛЬНОЕ ОКНО С КАРТОЧКОЙ --- */
         .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(11, 12, 16, 0.95); display: none; justify-content: center; align-items: center; z-index: 1000; opacity: 0; transition: opacity 0.3s; backdrop-filter: blur(5px); }
@@ -223,6 +227,10 @@
 
     <div class="container" id="spots-container"></div>
 
+    <div class="load-more-container">
+        <button id="load-more-btn" class="btn-main">Показать еще</button>
+    </div>
+
     <div class="modal-overlay" id="modal-overlay">
         <div class="modal-content">
             <span class="close-modal" id="close-modal">&times;</span>
@@ -263,6 +271,14 @@
         let currentTagFilter = "all";
         let currentSearchQuery = ""; 
 
+        // Переменные для пагинации
+        const CARDS_PER_PAGE = 48;
+        let currentFilteredSpots = [];
+        let displayedCardsCount = 0;
+
+        const container = document.getElementById('spots-container');
+        const loadMoreBtn = document.getElementById('load-more-btn');
+
         const modal = document.getElementById('modal-overlay');
         const mainImg = document.getElementById('main-modal-img');
         const thumbsContainer = document.getElementById('thumbnails-container');
@@ -277,7 +293,7 @@
         const searchInput = document.getElementById('search-input');
         searchInput.addEventListener('input', (e) => {
             currentSearchQuery = e.target.value.toLowerCase().trim();
-            renderSpots();
+            renderSpots(true); // reset = true, чтобы начать отрисовку заново
         });
 
         function setupCustomSelect(selectId, textId, filterType) {
@@ -305,7 +321,7 @@
                     if (filterType === 'wb') currentWbFilter = this.getAttribute('data-value');
                     if (filterType === 'tag') currentTagFilter = this.getAttribute('data-value');
                     
-                    renderSpots();
+                    renderSpots(true); // reset = true
                 });
             });
         }
@@ -317,51 +333,62 @@
             document.querySelectorAll('.custom-select-wrapper').forEach(el => el.classList.remove('open'));
         });
 
+        loadMoreBtn.addEventListener('click', () => {
+            renderSpots(false); // reset = false, чтобы ДОБАВИТЬ точки
+        });
+
         async function loadSpots() {
             try {
                 const response = await fetch('spots.json?v=' + new Date().getTime());
                 allSpots = await response.json();
                 
                 allSpots.sort((a, b) => b.timestamp - a.timestamp);
-                renderSpots();
+                renderSpots(true);
             } catch (error) {
                 console.error('Ошибка:', error);
                 document.getElementById('spots-container').innerHTML = '<p style="text-align:center; color:#888;">Не удалось загрузить данные.</p>';
             }
         }
 
-        function renderSpots() {
-            const container = document.getElementById('spots-container');
-            container.innerHTML = ''; 
+        function renderSpots(reset = true) {
+            // Если ищем заново или сменили фильтр — очищаем контейнер
+            if (reset) {
+                container.innerHTML = ''; 
+                displayedCardsCount = 0;
+                
+                // Фильтруем всю базу
+                currentFilteredSpots = allSpots.filter(spot => {
+                    const spotTag = spot.tag || "Обычная"; 
+                    
+                    const matchWb = currentWbFilter === "all" || spot.waterbody === currentWbFilter;
+                    const matchTag = currentTagFilter === "all" || spotTag === currentTagFilter;
+                    
+                    let matchSearch = true;
+                    if (currentSearchQuery !== "") {
+                        const descMatch = spot.description && spot.description.toLowerCase().includes(currentSearchQuery);
+                        const coordsMatch = spot.coordinates && spot.coordinates.toLowerCase().includes(currentSearchQuery);
+                        matchSearch = descMatch || coordsMatch;
+                    }
 
-            const filteredSpots = allSpots.filter(spot => {
-                const spotTag = spot.tag || "Обычная"; 
-                
-                const matchWb = currentWbFilter === "all" || spot.waterbody === currentWbFilter;
-                const matchTag = currentTagFilter === "all" || spotTag === currentTagFilter;
-                
-                let matchSearch = true;
-                if (currentSearchQuery !== "") {
-                    const descMatch = spot.description && spot.description.toLowerCase().includes(currentSearchQuery);
-                    const coordsMatch = spot.coordinates && spot.coordinates.toLowerCase().includes(currentSearchQuery);
-                    matchSearch = descMatch || coordsMatch;
+                    return matchWb && matchTag && matchSearch;
+                });
+
+                if (currentFilteredSpots.length === 0) {
+                    container.innerHTML = '<div class="no-results">По вашему запросу ничего не найдено 🐟</div>';
+                    loadMoreBtn.style.display = 'none';
+                    return;
                 }
-
-                return matchWb && matchTag && matchSearch;
-            });
-
-            if (filteredSpots.length === 0) {
-                container.innerHTML = '<div class="no-results">По вашему запросу ничего не найдено 🐟</div>';
-                return;
             }
 
-            filteredSpots.forEach(spot => {
+            // Берем нужный кусок массива
+            const spotsToRender = currentFilteredSpots.slice(displayedCardsCount, displayedCardsCount + CARDS_PER_PAGE);
+
+            spotsToRender.forEach(spot => {
                 const card = document.createElement('div');
                 card.className = 'spot-card';
                 
-                // ВАЖНО: ВОТ ЗДЕСЬ Я ДОБАВИЛ loading="lazy" ДЛЯ УСКОРЕНИЯ ЗАГРУЗКИ!
                 const previewImgHtml = spot.images && spot.images.length > 0 
-                    ? `<img src="${spot.images[0]}" class="preview-img" loading="lazy" alt="Превью">`
+                    ? `<img src="${spot.images[0]}" class="preview-img" alt="Превью">`
                     : `<div class="no-photo">Нет фото</div>`;
 
                 const displayTag = spot.tag || "Обычная";
@@ -379,6 +406,16 @@
                 card.onclick = () => openModal(spot);
                 container.appendChild(card);
             });
+
+            // Обновляем счетчик
+            displayedCardsCount += spotsToRender.length;
+
+            // Показываем или прячем кнопку
+            if (displayedCardsCount < currentFilteredSpots.length) {
+                loadMoreBtn.style.display = 'block';
+            } else {
+                loadMoreBtn.style.display = 'none';
+            }
         }
 
         function openModal(spot) {
