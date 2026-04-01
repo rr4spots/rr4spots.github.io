@@ -8,6 +8,7 @@
     <meta name="description" content="Самые свежие точки клева для игры Русская Рыбалка 4. Координаты, клипсы, сборки и наживки для фарма и ловли трофеев на всех водоемах.">
     <meta name="keywords" content="рр4, русская рыбалка 4, точки клева рр4, координаты рр4, фарм рр4, трофеи рр4, где клюет в рр4">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -20,7 +21,6 @@
 
         /* --- СТИЛИ ДЛЯ ВИДЖЕТА ТВИЧА --- */
         #twitch-widget {
-            display: none; /* СКРЫТ ПО УМОЛЧАНИЮ */
             position: fixed;
             top: 20px;
             right: 20px;
@@ -31,69 +31,54 @@
             z-index: 9999;
             overflow: hidden;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(91, 97, 255, 0.15);
-            transition: all 0.3s ease;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            
+            /* Изначально спрятан за краем экрана */
+            transform: translateX(450px);
+            opacity: 0;
+            pointer-events: none;
         }
         
-        #twitch-widget.minimized {
-            width: 190px;
+        /* Когда стрим онлайн - виджет выезжает */
+        #twitch-widget.is-online {
+            transform: translateX(0);
+            opacity: 1;
+            pointer-events: auto;
         }
+
+        /* Когда открыта точка - виджет прячется обратно */
+        #twitch-widget.force-hide {
+            transform: translateX(450px) !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+
+        #twitch-widget.minimized { width: 190px; }
         
         .twitch-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 12px 15px;
-            background-color: rgba(91, 97, 255, 0.1);
-            color: #fff;
-            cursor: pointer;
-            font-weight: 800;
-            font-size: 14px;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 12px 15px; background-color: rgba(91, 97, 255, 0.1);
+            color: #fff; cursor: pointer; font-weight: 800; font-size: 14px;
             transition: background-color 0.2s;
         }
+        .twitch-header:hover { background-color: rgba(91, 97, 255, 0.25); }
+        .twitch-title { display: flex; align-items: center; }
         
-        .twitch-header:hover {
-            background-color: rgba(91, 97, 255, 0.25);
-        }
-        
-        .twitch-title {
-            display: flex;
-            align-items: center;
-        }
-        
-        /* Точка всегда пульсирует, так как виджет виден только на стриме */
         .live-dot {
-            width: 10px;
-            height: 10px;
-            background-color: #ff3b3b;
-            border-radius: 50%;
-            margin-right: 8px;
-            box-shadow: 0 0 8px #ff3b3b;
+            width: 10px; height: 10px; background-color: #ff3b3b;
+            border-radius: 50%; margin-right: 8px; box-shadow: 0 0 8px #ff3b3b;
             animation: pulse 1.5s infinite;
         }
-        
         @keyframes pulse {
             0% { transform: scale(1); opacity: 1; }
             50% { transform: scale(1.2); opacity: 0.6; }
             100% { transform: scale(1); opacity: 1; }
         }
         
-        .twitch-body {
-            height: 225px;
-            transition: height 0.3s ease;
-        }
-        
-        #twitch-widget.minimized .twitch-body {
-            height: 0;
-        }
-        
-        #twitch-arrow {
-            transition: transform 0.3s ease;
-            font-size: 12px;
-        }
-        
-        #twitch-widget.minimized #twitch-arrow {
-            transform: rotate(180deg);
-        }
+        .twitch-body { height: 225px; transition: height 0.3s ease; background: #000; }
+        #twitch-widget.minimized .twitch-body { height: 0; }
+        #twitch-arrow { transition: transform 0.3s ease; font-size: 12px; }
+        #twitch-widget.minimized #twitch-arrow { transform: rotate(180deg); }
         /* --- КОНЕЦ СТИЛЕЙ ТВИЧА --- */
 
         .navbar {
@@ -278,7 +263,7 @@
 </head>
 <body>
 
-    <div id="twitch-widget" class="minimized">
+    <div id="twitch-widget">
         <div class="twitch-header" onclick="toggleTwitch()">
             <div class="twitch-title">
                 <span class="live-dot"></span>
@@ -286,16 +271,7 @@
             </div>
             <span id="twitch-arrow">▼</span>
         </div>
-        <div class="twitch-body">
-            <iframe
-                src="https://player.twitch.tv/?channel=pronk65&parent=rr4spots.github.io&parent=www.rr4spots.github.io&parent=localhost&parent=127.0.0.1&muted=true"
-                height="225"
-                width="400"
-                allowfullscreen="true"
-                scrolling="no"
-                frameborder="0">
-            </iframe>
-        </div>
+        <div class="twitch-body" id="twitch-embed"></div>
     </div>
 
     <nav class="navbar">
@@ -408,35 +384,59 @@
     </div>
 
     <script>
-        // --- СКРИПТЫ ТВИЧА (Скрыть/Показать и Проверка статуса) ---
+        // --- ПЕРЕМЕННЫЕ ДЛЯ ТВИЧА ---
+        let twitchPlayer = null;
+        let isOnline = false;
+
         function toggleTwitch() {
             const widget = document.getElementById('twitch-widget');
             widget.classList.toggle('minimized');
         }
 
-        async function checkTwitchStatus() {
+        // --- УМНЫЙ ЗАПУСК ТВИТЧА ЧЕРЕЗ API ---
+        async function initTwitch() {
             try {
                 const response = await fetch('https://decapi.me/twitch/uptime/pronk65');
                 const text = await response.text();
                 const widget = document.getElementById('twitch-widget');
-                
-                // Если в ответе есть слово "offline" или ошибка — прячем виджет
-                if (text.toLowerCase().includes('offline') || text.toLowerCase().includes('error')) {
-                    widget.style.display = 'none';
-                } else {
-                    // Иначе стрим идет — показываем виджет!
-                    widget.style.display = 'block';
+
+                if (text.toLowerCase().includes('offline')) {
+                    isOnline = false;
+                    widget.classList.remove('is-online');
+                    return;
                 }
+
+                // Если онлайн - запускаем плеер один раз
+                if (!twitchPlayer) {
+                    twitchPlayer = new Twitch.Embed("twitch-embed", {
+                        width: 400,
+                        height: 225,
+                        channel: "pronk65",
+                        parent: ["rr4spots.github.io", "www.rr4spots.github.io", "localhost", "127.0.0.1"],
+                        autoplay: true,
+                        muted: true, // ОБЯЗАТЕЛЬНО для автоплея
+                        layout: "video"
+                    });
+
+                    // Когда плеер готов, принудительно жмем Play
+                    twitchPlayer.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+                        const player = twitchPlayer.getPlayer();
+                        player.setMuted(true);
+                        player.play();
+                    });
+                }
+                
+                isOnline = true;
+                widget.classList.add('is-online');
+
             } catch (error) {
-                console.error('Ошибка проверки Твича:', error);
+                console.error('Ошибка Твича:', error);
             }
         }
 
-        // Проверяем сразу при загрузке страницы
-        checkTwitchStatus();
-        // Запускаем проверку каждую минуту (60000 миллисекунд)
-        setInterval(checkTwitchStatus, 60000);
-
+        // Проверяем статус каждые 2 минуты
+        initTwitch();
+        setInterval(initTwitch, 120000);
 
         // --- ОРИГИНАЛЬНЫЕ СКРИПТЫ САЙТА ---
         let allSpots = [];
@@ -603,6 +603,9 @@
         }
 
         function openModal(spot) {
+            // СКРЫВАЕМ ТВИТЧ ПРИ ОТКРЫТИИ КАРТОЧКИ
+            document.getElementById('twitch-widget').classList.add('force-hide');
+
             currentSpotImages = spot.images || [];
             currentImageIndex = 0;
 
@@ -692,6 +695,9 @@
         
         const closeModalFn = () => { 
             modal.classList.remove('active'); 
+            // ВОЗВРАЩАЕМ ТВИТЧ ПРИ ЗАКРЫТИИ КАРТОЧКИ
+            document.getElementById('twitch-widget').classList.remove('force-hide');
+
             const cleanUrl = window.location.origin + window.location.pathname;
             window.history.pushState({}, document.title, cleanUrl);
         };
