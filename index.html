@@ -19,7 +19,6 @@
             overflow-x: hidden;
         }
 
-        /* --- СТИЛИ ДЛЯ ВИДЖЕТА ТВИЧА --- */
         #twitch-widget {
             position: fixed;
             top: 20px;
@@ -33,20 +32,17 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(91, 97, 255, 0.15);
             transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             
-            /* Изначально спрятан за краем экрана */
             transform: translateX(450px);
             opacity: 0;
             pointer-events: none;
         }
         
-        /* Когда стрим онлайн - виджет выезжает */
         #twitch-widget.is-online {
             transform: translateX(0);
             opacity: 1;
             pointer-events: auto;
         }
 
-        /* Когда открыта точка - виджет прячется обратно */
         #twitch-widget.force-hide {
             transform: translateX(450px) !important;
             opacity: 0 !important;
@@ -79,7 +75,6 @@
         #twitch-widget.minimized .twitch-body { height: 0; }
         #twitch-arrow { transition: transform 0.3s ease; font-size: 12px; }
         #twitch-widget.minimized #twitch-arrow { transform: rotate(180deg); }
-        /* --- КОНЕЦ СТИЛЕЙ ТВИЧА --- */
 
         .navbar {
             display: flex; justify-content: center; align-items: center;
@@ -384,7 +379,6 @@
     </div>
 
     <script>
-        // --- ПЕРЕМЕННЫЕ ДЛЯ ТВИЧА ---
         let twitchPlayer = null;
         let isOnline = false;
 
@@ -392,8 +386,6 @@
             const widget = document.getElementById('twitch-widget');
             widget.classList.toggle('minimized');
         }
-
-        // --- УМНЫЙ ЗАПУСК ТВИТЧА ЧЕРЕЗ API ---
         async function initTwitch() {
             try {
                 const response = await fetch('https://decapi.me/twitch/uptime/pronk65');
@@ -406,7 +398,6 @@
                     return;
                 }
 
-                // Если онлайн - запускаем плеер один раз
                 if (!twitchPlayer) {
                     twitchPlayer = new Twitch.Embed("twitch-embed", {
                         width: 400,
@@ -414,11 +405,10 @@
                         channel: "pronk65",
                         parent: ["rr4spots.github.io", "www.rr4spots.github.io", "localhost", "127.0.0.1"],
                         autoplay: true,
-                        muted: true, // ОБЯЗАТЕЛЬНО для автоплея
+                        muted: true, 
                         layout: "video"
                     });
 
-                    // Когда плеер готов, принудительно жмем Play
                     twitchPlayer.addEventListener(Twitch.Embed.VIDEO_READY, () => {
                         const player = twitchPlayer.getPlayer();
                         player.setMuted(true);
@@ -434,11 +424,9 @@
             }
         }
 
-        // Проверяем статус каждые 2 минуты
         initTwitch();
         setInterval(initTwitch, 120000);
 
-        // --- ОРИГИНАЛЬНЫЕ СКРИПТЫ САЙТА ---
         let allSpots = [];
         let currentSpotImages = [];
         let currentImageIndex = 0;
@@ -695,7 +683,6 @@
         
         const closeModalFn = () => { 
             modal.classList.remove('active'); 
-            // ВОЗВРАЩАЕМ ТВИТЧ ПРИ ЗАКРЫТИИ КАРТОЧКИ
             document.getElementById('twitch-widget').classList.remove('force-hide');
 
             const cleanUrl = window.location.origin + window.location.pathname;
