@@ -18,6 +18,84 @@
             overflow-x: hidden;
         }
 
+        /* --- СТИЛИ ДЛЯ ВИДЖЕТА ТВИЧА --- */
+        #twitch-widget {
+            display: none; /* СКРЫТ ПО УМОЛЧАНИЮ */
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 400px;
+            background-color: #0b0c10;
+            border: 1px solid rgba(91, 97, 255, 0.3);
+            border-radius: 12px;
+            z-index: 9999;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(91, 97, 255, 0.15);
+            transition: all 0.3s ease;
+        }
+        
+        #twitch-widget.minimized {
+            width: 190px;
+        }
+        
+        .twitch-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 15px;
+            background-color: rgba(91, 97, 255, 0.1);
+            color: #fff;
+            cursor: pointer;
+            font-weight: 800;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .twitch-header:hover {
+            background-color: rgba(91, 97, 255, 0.25);
+        }
+        
+        .twitch-title {
+            display: flex;
+            align-items: center;
+        }
+        
+        /* Точка всегда пульсирует, так как виджет виден только на стриме */
+        .live-dot {
+            width: 10px;
+            height: 10px;
+            background-color: #ff3b3b;
+            border-radius: 50%;
+            margin-right: 8px;
+            box-shadow: 0 0 8px #ff3b3b;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.6; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        .twitch-body {
+            height: 225px;
+            transition: height 0.3s ease;
+        }
+        
+        #twitch-widget.minimized .twitch-body {
+            height: 0;
+        }
+        
+        #twitch-arrow {
+            transition: transform 0.3s ease;
+            font-size: 12px;
+        }
+        
+        #twitch-widget.minimized #twitch-arrow {
+            transform: rotate(180deg);
+        }
+        /* --- КОНЕЦ СТИЛЕЙ ТВИЧА --- */
+
         .navbar {
             display: flex; justify-content: center; align-items: center;
             padding: 20px 40px; background-color: #0b0c10;
@@ -127,7 +205,7 @@
         
         .info-panel { flex: 1; padding: 40px; border-left: 1px solid #1f222e; overflow-y: auto; background-color: #12141c; }
         @media (max-width: 900px) { .info-panel { border-left: none; border-top: 1px solid #1f222e;} }
-        /
+        
         .info-panel::-webkit-scrollbar { width: 8px; }
         .info-panel::-webkit-scrollbar-track { background: #12141c; border-radius: 10px; }
         .info-panel::-webkit-scrollbar-thumb { background: #5b61ff; border-radius: 10px; }
@@ -200,8 +278,28 @@
 </head>
 <body>
 
+    <div id="twitch-widget" class="minimized">
+        <div class="twitch-header" onclick="toggleTwitch()">
+            <div class="twitch-title">
+                <span class="live-dot"></span>
+                Прямой эфир
+            </div>
+            <span id="twitch-arrow">▼</span>
+        </div>
+        <div class="twitch-body">
+            <iframe
+                src="https://player.twitch.tv/?channel=pronk65&parent=rr4spots.github.io&parent=www.rr4spots.github.io&parent=localhost&parent=127.0.0.1&muted=true"
+                height="225"
+                width="400"
+                allowfullscreen="true"
+                scrolling="no"
+                frameborder="0">
+            </iframe>
+        </div>
+    </div>
+
     <nav class="navbar">
-<div class="logo">
+        <div class="logo">
             RR4 <span>Spots</span>
         </div>
     </nav>
@@ -310,6 +408,37 @@
     </div>
 
     <script>
+        // --- СКРИПТЫ ТВИЧА (Скрыть/Показать и Проверка статуса) ---
+        function toggleTwitch() {
+            const widget = document.getElementById('twitch-widget');
+            widget.classList.toggle('minimized');
+        }
+
+        async function checkTwitchStatus() {
+            try {
+                const response = await fetch('https://decapi.me/twitch/uptime/pronk65');
+                const text = await response.text();
+                const widget = document.getElementById('twitch-widget');
+                
+                // Если в ответе есть слово "offline" или ошибка — прячем виджет
+                if (text.toLowerCase().includes('offline') || text.toLowerCase().includes('error')) {
+                    widget.style.display = 'none';
+                } else {
+                    // Иначе стрим идет — показываем виджет!
+                    widget.style.display = 'block';
+                }
+            } catch (error) {
+                console.error('Ошибка проверки Твича:', error);
+            }
+        }
+
+        // Проверяем сразу при загрузке страницы
+        checkTwitchStatus();
+        // Запускаем проверку каждую минуту (60000 миллисекунд)
+        setInterval(checkTwitchStatus, 60000);
+
+
+        // --- ОРИГИНАЛЬНЫЕ СКРИПТЫ САЙТА ---
         let allSpots = [];
         let currentSpotImages = [];
         let currentImageIndex = 0;
@@ -438,7 +567,6 @@
                 }
             }
 
-            // Берем нужный кусок массива
             const spotsToRender = currentFilteredSpots.slice(displayedCardsCount, displayedCardsCount + CARDS_PER_PAGE);
 
             spotsToRender.forEach(spot => {
@@ -465,10 +593,8 @@
                 container.appendChild(card);
             });
 
-            // Обновляем счетчик
             displayedCardsCount += spotsToRender.length;
 
-            // Показываем или прячем кнопку
             if (displayedCardsCount < currentFilteredSpots.length) {
                 loadMoreBtn.style.display = 'block';
             } else {
@@ -486,16 +612,12 @@
             document.getElementById('modal-date').innerText = spot.date;
             document.getElementById('modal-description').innerText = spot.description;
 
-            // НАСТРОЙКА КНОПКИ ПОДЕЛИТЬСЯ
             const shareBtn = document.getElementById('share-btn');
             const originalShareHtml = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg> Поделиться точкой`;
-            shareBtn.innerHTML = originalShareHtml; // Возвращаем исходный текст
+            shareBtn.innerHTML = originalShareHtml; 
             
             shareBtn.onclick = () => {
-                // Генерируем уникальную ссылку
                 const currentUrl = window.location.origin + window.location.pathname + '?spot=' + spot.timestamp;
-                
-                // Копируем в буфер обмена
                 navigator.clipboard.writeText(currentUrl).then(() => {
                     shareBtn.innerHTML = 'Ссылка скопирована!';
                     setTimeout(() => { shareBtn.innerHTML = originalShareHtml; }, 2000);
@@ -570,7 +692,6 @@
         
         const closeModalFn = () => { 
             modal.classList.remove('active'); 
-            // Очищаем ссылку от "?spot=..." при закрытии карточки
             const cleanUrl = window.location.origin + window.location.pathname;
             window.history.pushState({}, document.title, cleanUrl);
         };
