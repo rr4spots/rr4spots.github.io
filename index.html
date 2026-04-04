@@ -170,7 +170,6 @@
         .close-modal { position: absolute; top: 20px; right: 25px; font-size: 35px; color: #fff; cursor: pointer; z-index: 1010; background: rgba(0,0,0,0.5); border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; transition: 0.2s; }
         .close-modal:hover { background: #5b61ff; }
         .modal-body { display: flex; flex-direction: row; height: 100%; }
-        @media (max-width: 900px) { .modal-body { flex-direction: column; } }
         
         .gallery-container { flex: 3; position: relative; background-color: #08090b; display: flex; align-items: center; justify-content: center; padding: 10px; }
 
@@ -184,7 +183,6 @@
         .thumb-img:hover, .thumb-img.active { opacity: 1; border-color: #5b61ff; }
         
         .info-panel { flex: 1; padding: 40px; border-left: 1px solid #1f222e; overflow-y: auto; background-color: #12141c; }
-        @media (max-width: 900px) { .info-panel { border-left: none; border-top: 1px solid #1f222e;} }
         
         .info-panel::-webkit-scrollbar { width: 8px; }
         .info-panel::-webkit-scrollbar-track { background: #12141c; border-radius: 10px; }
@@ -233,6 +231,85 @@
         .lightbox-btn:hover { color: #ffffff; }
         .lightbox-prev { left: 20px; }
         .lightbox-next { right: 20px; }
+
+        /* ==================================================== */
+        /* --- ПОЛНАЯ МОБИЛЬНАЯ АДАПТАЦИЯ (ИСПРАВЛЕНО) --- */
+        /* ==================================================== */
+        @media (max-width: 900px) {
+            /* Шапка и навигация */
+            .navbar { padding: 15px 20px; }
+            .hero h1 { font-size: 2.2em; }
+            .hero { padding: 40px 15px; }
+            
+            /* Фильтры: выстраиваем в столбик, тянем на 100% ширины */
+            .filter-section { 
+                flex-direction: column; 
+                align-items: center; 
+                gap: 15px; 
+                padding: 0 15px; 
+            }
+            .custom-select-wrapper, .search-wrapper { 
+                width: 100%; 
+                max-width: 100%; 
+            }
+
+            /* Главная сетка: в 1 колонку на смартфонах */
+            .container { 
+                grid-template-columns: 1fr; 
+                padding: 0 15px 30px; 
+            }
+
+            /* --- МОДАЛЬНОЕ ОКНО (ФИКС) --- */
+            .modal-content { 
+                height: 90vh; /* Отступаем от краев экрана */
+                overflow-y: auto; /* Разрешаем всему окну прокручиваться */
+                display: block; /* Убираем жесткий flex-box */
+                border-radius: 12px;
+            }
+            .modal-body { 
+                display: block; /* Элементы идут друг за другом (сверху вниз) */
+                height: auto;
+            }
+            .gallery-container { 
+                height: 40vh; /* Фиксируем высоту фото, чтобы оно не плющилось */
+                min-height: 250px;
+                padding: 0;
+                display: flex;
+            }
+            .info-panel { 
+                height: auto; 
+                overflow-y: visible; /* Отключаем двойной скролл внутри панели */
+                padding: 20px 15px; 
+                border-left: none; 
+                border-top: 1px solid #1f222e;
+            }
+
+            /* Кнопки перелистывания (делаем аккуратными) */
+            .nav-btn { 
+                padding: 15px 15px; 
+                font-size: 20px; 
+            }
+            .prev-btn { left: 5px; } 
+            .next-btn { right: 5px; }
+
+            /* Миниатюры на фото (уменьшаем, чтобы не лезли на текст) */
+            .thumbnails-container { 
+                bottom: 10px; 
+                padding: 5px 10px;
+                gap: 5px;
+            }
+            .thumb-img { width: 40px; height: 40px; }
+
+            /* Крестик закрытия */
+            .close-modal { 
+                top: 10px; 
+                right: 10px; 
+                width: 35px; 
+                height: 35px; 
+                font-size: 24px; 
+                background: rgba(11, 12, 16, 0.8); /* Темный фон, чтобы не терялся на фото */
+            }
+        }
     </style>
     <link rel="icon" type="image/png" href="favicon.png">
     <meta property="og:site_name" content="RR4 Spots">
