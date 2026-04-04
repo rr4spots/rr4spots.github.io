@@ -100,7 +100,11 @@
             display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; 
             margin-bottom: 40px; position: relative; z-index: 100;
         }
-        .custom-select-wrapper { position: relative; width: 280px; }
+
+        /* --- ИСПРАВЛЕНИЕ Z-INDEX ДЛЯ МЕНЮ --- */
+        .custom-select-wrapper { position: relative; width: 280px; z-index: 10; }
+        .custom-select-wrapper.open { z-index: 999; }
+        
         .custom-select-trigger {
             display: flex; justify-content: space-between; align-items: center;
             padding: 14px 25px; font-size: 1.1em; font-weight: 600;
@@ -127,7 +131,8 @@
         .arrow { transition: transform 0.3s; font-size: 0.8em; color: #5b61ff; }
         .custom-select-wrapper.open .arrow { transform: rotate(180deg); }
 
-        .search-wrapper { position: relative; width: 280px; }
+        /* --- ИСПРАВЛЕНИЕ Z-INDEX ДЛЯ ПОИСКА --- */
+        .search-wrapper { position: relative; width: 280px; z-index: 5; }
         .custom-search-input {
             width: 100%;
             box-sizing: border-box;
@@ -170,6 +175,7 @@
         .close-modal { position: absolute; top: 20px; right: 25px; font-size: 35px; color: #fff; cursor: pointer; z-index: 1010; background: rgba(0,0,0,0.5); border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; transition: 0.2s; }
         .close-modal:hover { background: #5b61ff; }
         .modal-body { display: flex; flex-direction: row; height: 100%; }
+        @media (max-width: 900px) { .modal-body { flex-direction: column; } }
         
         .gallery-container { flex: 3; position: relative; background-color: #08090b; display: flex; align-items: center; justify-content: center; padding: 10px; }
 
@@ -183,6 +189,7 @@
         .thumb-img:hover, .thumb-img.active { opacity: 1; border-color: #5b61ff; }
         
         .info-panel { flex: 1; padding: 40px; border-left: 1px solid #1f222e; overflow-y: auto; background-color: #12141c; }
+        @media (max-width: 900px) { .info-panel { border-left: none; border-top: 1px solid #1f222e;} }
         
         .info-panel::-webkit-scrollbar { width: 8px; }
         .info-panel::-webkit-scrollbar-track { background: #12141c; border-radius: 10px; }
@@ -252,11 +259,22 @@
                 width: 100%; 
                 max-width: 100%; 
             }
+            .custom-options {
+                max-height: 250px; /* Чтобы длинный список не улетал за экран */
+            }
 
             /* Главная сетка: в 1 колонку на смартфонах */
             .container { 
                 grid-template-columns: 1fr; 
                 padding: 0 15px 30px; 
+            }
+            
+            /* Плашка с датой (делаем компактнее) */
+            .date-badge {
+                font-size: 0.75em;
+                padding: 4px 8px;
+                top: 5px;
+                right: 5px;
             }
 
             /* --- МОДАЛЬНОЕ ОКНО (ФИКС) --- */
@@ -284,10 +302,13 @@
                 border-top: 1px solid #1f222e;
             }
 
-            /* Кнопки перелистывания (делаем аккуратными) */
+            /* Кнопки перелистывания (убираем огромное размытое синее пятно) */
             .nav-btn { 
-                padding: 15px 15px; 
-                font-size: 20px; 
+                padding: 10px 15px; 
+                font-size: 18px; 
+                background-color: rgba(11, 12, 16, 0.8); /* Плотный темный фон */
+                backdrop-filter: none; /* ОТКЛЮЧАЕМ МЫЛО */
+                border-radius: 8px;
             }
             .prev-btn { left: 5px; } 
             .next-btn { right: 5px; }
