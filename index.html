@@ -101,7 +101,6 @@
             margin-bottom: 40px; position: relative; z-index: 100;
         }
 
-        /* --- ИСПРАВЛЕНИЕ Z-INDEX ДЛЯ МЕНЮ --- */
         .custom-select-wrapper { position: relative; width: 280px; z-index: 10; }
         .custom-select-wrapper.open { z-index: 999; }
         
@@ -131,7 +130,6 @@
         .arrow { transition: transform 0.3s; font-size: 0.8em; color: #5b61ff; }
         .custom-select-wrapper.open .arrow { transform: rotate(180deg); }
 
-        /* --- ИСПРАВЛЕНИЕ Z-INDEX ДЛЯ ПОИСКА --- */
         .search-wrapper { position: relative; width: 280px; z-index: 5; }
         .custom-search-input {
             width: 100%;
@@ -153,7 +151,7 @@
             box-shadow: 0 0 15px rgba(91, 97, 255, 0.15);
         }
 
-        .container { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; max-width: 1400px; margin: 0 auto; padding: 0 20px 40px; }
+        .container { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; max-width: 1400px; margin: 0 auto; padding: 0 20px 20px; }
         .spot-card { background-color: #12141c; border-radius: 16px; padding: 15px; cursor: pointer; transition: all 0.3s; border: 1px solid #1f222e; display: flex; flex-direction: column; }
         .spot-card:hover { transform: translateY(-5px); border-color: #5b61ff; box-shadow: 0 10px 30px rgba(91, 97, 255, 0.1); }
         .image-container { position: relative; width: 100%; height: 200px; margin-bottom: 15px; border-radius: 10px; overflow: hidden; }
@@ -166,16 +164,36 @@
         .info-coords { color: #5b61ff; font-weight: 800; font-size: 1.15em; }
         .no-results { grid-column: 1 / -1; text-align: center; color: #8a8d98; font-size: 1.2em; padding: 40px; }
 
-        .load-more-container { text-align: center; padding-bottom: 80px; }
+        .load-more-container { text-align: center; padding-bottom: 30px; }
         #load-more-btn { display: none; margin: 0 auto; } 
 
-        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(11, 12, 16, 0.95); display: none; justify-content: center; align-items: center; z-index: 1000; opacity: 0; transition: opacity 0.3s; backdrop-filter: blur(5px); }
+        /* --- СТИЛИ ДЛЯ АККУРАТНОЙ НАДПИСИ ВНИЗУ (FOOTER TEXT) --- */
+        .footer-text {
+            text-align: center;
+            color: #565966;
+            font-size: 0.85em;
+            padding: 20px;
+            margin-top: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            line-height: 1.6;
+            font-weight: 400;
+        }
+        .footer-text a {
+            color: #6e717e;
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: 600;
+        }
+        .footer-text a:hover {
+            color: #5b61ff;
+        }
+
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(11, 12, 16, 0.95); display: none; justify-content: center; align-items: center; z-index: 10000; opacity: 0; transition: opacity 0.3s; backdrop-filter: blur(5px); }
         .modal-overlay.active { display: flex; opacity: 1; }
         .modal-content { background-color: #12141c; width: 98%; max-width: 1600px; height: 95vh; border-radius: 16px; display: flex; flex-direction: column; overflow: hidden; position: relative; border: 1px solid #1f222e; }
         .close-modal { position: absolute; top: 20px; right: 25px; font-size: 35px; color: #fff; cursor: pointer; z-index: 1010; background: rgba(0,0,0,0.5); border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; transition: 0.2s; }
         .close-modal:hover { background: #5b61ff; }
         .modal-body { display: flex; flex-direction: row; height: 100%; }
-        @media (max-width: 900px) { .modal-body { flex-direction: column; } }
         
         .gallery-container { flex: 3; position: relative; background-color: #08090b; display: flex; align-items: center; justify-content: center; padding: 10px; }
 
@@ -189,7 +207,6 @@
         .thumb-img:hover, .thumb-img.active { opacity: 1; border-color: #5b61ff; }
         
         .info-panel { flex: 1; padding: 40px; border-left: 1px solid #1f222e; overflow-y: auto; background-color: #12141c; }
-        @media (max-width: 900px) { .info-panel { border-left: none; border-top: 1px solid #1f222e;} }
         
         .info-panel::-webkit-scrollbar { width: 8px; }
         .info-panel::-webkit-scrollbar-track { background: #12141c; border-radius: 10px; }
@@ -227,28 +244,26 @@
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background-color: rgba(0, 0, 0, 0.95);
             display: none; justify-content: center; align-items: center;
-            z-index: 2000;
+            z-index: 20000;
             opacity: 0; transition: opacity 0.3s;
         }
         .lightbox-overlay.active { display: flex; opacity: 1; }
         .lightbox-img { max-width: 95%; max-height: 95%; object-fit: contain; border-radius: 8px; box-shadow: 0 0 30px rgba(0,0,0,0.8);}
-        .lightbox-close { position: absolute; top: 20px; right: 30px; font-size: 45px; color: #fff; cursor: pointer; z-index: 2010; transition: 0.2s; }
+        .lightbox-close { position: absolute; top: 20px; right: 30px; font-size: 45px; color: #fff; cursor: pointer; z-index: 20100; transition: 0.2s; }
         .lightbox-close:hover { color: #5b61ff; }
-        .lightbox-btn { position: absolute; top: 50%; transform: translateY(-50%); background: transparent; color: rgba(255,255,255,0.5); border: none; font-size: 60px; cursor: pointer; z-index: 2010; transition: 0.2s; padding: 20px;}
+        .lightbox-btn { position: absolute; top: 50%; transform: translateY(-50%); background: transparent; color: rgba(255,255,255,0.5); border: none; font-size: 60px; cursor: pointer; z-index: 20100; transition: 0.2s; padding: 20px;}
         .lightbox-btn:hover { color: #ffffff; }
         .lightbox-prev { left: 20px; }
         .lightbox-next { right: 20px; }
 
         /* ==================================================== */
-        /* --- ПОЛНАЯ МОБИЛЬНАЯ АДАПТАЦИЯ (ИСПРАВЛЕНО) --- */
+        /* --- ИДЕАЛЬНАЯ МОБИЛЬНАЯ АДАПТАЦИЯ --- */
         /* ==================================================== */
         @media (max-width: 900px) {
-            /* Шапка и навигация */
             .navbar { padding: 15px 20px; }
             .hero h1 { font-size: 2.2em; }
             .hero { padding: 40px 15px; }
             
-            /* Фильтры: выстраиваем в столбик, тянем на 100% ширины */
             .filter-section { 
                 flex-direction: column; 
                 align-items: center; 
@@ -260,16 +275,14 @@
                 max-width: 100%; 
             }
             .custom-options {
-                max-height: 250px; /* Чтобы длинный список не улетал за экран */
+                max-height: 250px; 
             }
 
-            /* Главная сетка: в 1 колонку на смартфонах */
             .container { 
                 grid-template-columns: 1fr; 
-                padding: 0 15px 30px; 
+                padding: 0 15px 10px; 
             }
             
-            /* Плашка с датой (делаем компактнее) */
             .date-badge {
                 font-size: 0.75em;
                 padding: 4px 8px;
@@ -277,43 +290,40 @@
                 right: 5px;
             }
 
-            /* --- МОДАЛЬНОЕ ОКНО (ФИКС) --- */
             .modal-content { 
-                height: 90vh; /* Отступаем от краев экрана */
-                overflow-y: auto; /* Разрешаем всему окну прокручиваться */
-                display: block; /* Убираем жесткий flex-box */
+                height: 90vh; 
+                overflow-y: auto; 
+                display: block; 
                 border-radius: 12px;
             }
             .modal-body { 
-                display: block; /* Элементы идут друг за другом (сверху вниз) */
+                display: block; 
                 height: auto;
             }
             .gallery-container { 
-                height: 40vh; /* Фиксируем высоту фото, чтобы оно не плющилось */
+                height: 40vh; 
                 min-height: 250px;
                 padding: 0;
                 display: flex;
             }
             .info-panel { 
                 height: auto; 
-                overflow-y: visible; /* Отключаем двойной скролл внутри панели */
+                overflow-y: visible; 
                 padding: 20px 15px; 
                 border-left: none; 
                 border-top: 1px solid #1f222e;
             }
 
-            /* Кнопки перелистывания (убираем огромное размытое синее пятно) */
             .nav-btn { 
                 padding: 10px 15px; 
                 font-size: 18px; 
-                background-color: rgba(11, 12, 16, 0.8); /* Плотный темный фон */
-                backdrop-filter: none; /* ОТКЛЮЧАЕМ МЫЛО */
+                background-color: rgba(11, 12, 16, 0.8); 
+                backdrop-filter: none; 
                 border-radius: 8px;
             }
             .prev-btn { left: 5px; } 
             .next-btn { right: 5px; }
 
-            /* Миниатюры на фото (уменьшаем, чтобы не лезли на текст) */
             .thumbnails-container { 
                 bottom: 10px; 
                 padding: 5px 10px;
@@ -321,14 +331,11 @@
             }
             .thumb-img { width: 40px; height: 40px; }
 
-            /* Крестик закрытия */
             .close-modal { 
-                top: 10px; 
-                right: 10px; 
-                width: 35px; 
-                height: 35px; 
+                top: 10px; right: 10px; 
+                width: 35px; height: 35px; 
                 font-size: 24px; 
-                background: rgba(11, 12, 16, 0.8); /* Темный фон, чтобы не терялся на фото */
+                background: rgba(11, 12, 16, 0.8); 
             }
         }
     </style>
@@ -436,6 +443,11 @@
         <button id="load-more-btn" class="btn-main">Показать еще</button>
     </div>
 
+    <div class="footer-text">
+        © 2026 RR4 Spots. Сайт носит информационный характер и не является официальным ресурсом Русской Рыбалки 4.<br>
+        <a href="policy.html" target="_blank">Политика конфиденциальности</a> | <a href="terms.html" target="_blank">Пользовательское соглашение</a>
+    </div>
+
     <div class="modal-overlay" id="modal-overlay">
         <div class="modal-content">
             <span class="close-modal" id="close-modal">&times;</span>
@@ -477,6 +489,7 @@
     </div>
 
     <script>
+        // --- ЛОГИКА ТВИТЧА И САЙТА ---
         let twitchPlayer = null;
         let isOnline = false;
 
@@ -689,7 +702,6 @@
         }
 
         function openModal(spot) {
-            // СКРЫВАЕМ ТВИТЧ ПРИ ОТКРЫТИИ КАРТОЧКИ
             document.getElementById('twitch-widget').classList.add('force-hide');
 
             currentSpotImages = spot.images || [];
