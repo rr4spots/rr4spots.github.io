@@ -1,5 +1,55 @@
 [
     {
+        "id": "rf4map_13891",
+        "timestamp": 1778328958,
+        "date": "09.05.2026",
+        "waterbody": "оз. Медное",
+        "tag": "Фарм",
+        "coordinates": "56:50",
+        "description": "Водоем: - Температура воды: нормальная - Рыба: Карасекарп, Разнорыбица - Координаты: 56:50 - Клипса: 5 - Комментарий: Клёв не пулемётный — рыба подходит точечно, лучше всего показывает себя утром и под вечер. Точка больше про ожидание и удачный заход крупняка, чем про стабильный фарм. Мне утром повезло: зашёл Квольсдорфский и следом Карасекарп. Скрины с уловом приложены, всё по-честному 😁 Для любителей спокойной ловли и шанса на хороший улов — место вполне интересное. (Честный обзор) Добавить пост: https://vk.com/rf4map?w=wall-134739321_12213",
+        "images": [
+            "https://sun9-25.userapi.com/s/v1/ig2/K1vWO9JY2r6hiCOteBHOVeQxC9Wpnu47lRpBz_XQUKx8zi5jVppwnpS3XCuQ7hi8GRt-78iqdPGXVAW02-q7iGJu.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-64.userapi.com/s/v1/ig2/Gz-m_bMj8NghTv8sKMc3K67pwc4v5TZgD2AvmPuLXPmx4E6hSXOOGNkijdbkIsb2SN0N85pG2d2V8JCveIViaCCO.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-72.userapi.com/s/v1/ig2/aUTzmH52esUxyTaKu-gX2PVTdJvCZL6RyHDtMyyVhgsx8x7y_MS0Im5o0feOzP2MNOzRuU2hzXTLkZtPvOggr_OS.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-69.userapi.com/s/v1/ig2/UHWB51ml4n5hn4KzqJHxEQV4vG3AMoW1cg847GZGZs14E8TsNTKNVF6uIILRMvAUx72ZhQ2G69NKTY5s3gmB6ge4.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-21.userapi.com/s/v1/ig2/xNp8LGcJK0_nRp2ZVUhnOrQxEzubHYYvezIPVRh_bhBPDQB3yecLYdCQAQSJRHMOiMw1bXx07vMW-VpEwJgI9FlX.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-70.userapi.com/s/v1/ig2/mGh_I-Am0d40ZcJ0uOUkZLNEalDVG8LJSf06wZFiRbjWD6zX_YlRak86yV3RkXgkZNZZfmZ_bbEPFDDY2M2zaejH.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-56.userapi.com/s/v1/ig2/CxuyvdJk_s0662s7n--ILaiQIadpui5aBUfv0ow0u4ABz2sgAaHnWoy4gjWuJEZSkEpasmIMh7USNC2I3jupcH9b.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-38.userapi.com/s/v1/ig2/tDroEBnVlUVqrdazoIUD6cq3EruDboWO48T1JWBtT9yFbe0tnpkgN6UmHvkSsufqZMw8wwWz0ZVZC_7G00e1e9aI.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-39.userapi.com/s/v1/ig2/wyTvnrzKZEoMXW-oEzYuvUC4HDT5iWklG6thvk7VQVv_vqlgoCWEU7spTNctaVqPuMypZ53ja0qJzoMZc5CufvP-.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-41.userapi.com/s/v1/ig2/jPjYFYFsH6CBIJnHEBa5dP21BB_T_ff6r437HxpPcCv5Px768SQAOGQrm8OPcdcCOxanbZVhNMUfrfP3uyG0JQ6s.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0"
+        ]
+    },
+    {
+        "id": "pp4farmtrof_363303",
+        "timestamp": 1778327228,
+        "date": "09.05.2026",
+        "waterbody": "оз. Медное",
+        "tag": "Трофей",
+        "coordinates": "67:57",
+        "description": "🇨🇳 Китай КАРАСЕКАРП Точка клева: 67:57 Клипса: 5 метров Наживка: 2 иск. кукурузы Черная смородина Дип: Черная смородина Прикормка: молотая кукуруза + Черная смородина 5 + Черная смородина 8 + Северная ежевика 8 + Северная ежевика 12 + черная смородина Температура воды: нормальная Комментарий игрока: \"Дерево богатства снова в деле. За час 1300, без трофеев и карточек. Утром карасекарпа много и чисто. Вечером рыба смешанная. Есть чёрный линь.\"",
+        "images": [
+            "https://sun9-39.userapi.com/s/v1/ig2/Qnt6XND5fQ_rlb3IXh0SYhG3AhInn8R-eJe0lDh518x26u0BAGBj94QS2jaCU3W8u8A17ue9h7phC-2TSFH_iXgr.jpg?quality=96&as=32x16,48x24,72x36,108x54,160x80,240x120,360x179,480x239,540x269,640x319,720x359,1000x498&from=bu&cs=1000x0",
+            "https://sun9-20.userapi.com/s/v1/ig2/4Y_dYrhl1KX5Y2P5TZs9X3gdXaS1wgRQnEL2VzBVPqO-2qZGjKv6R-_7TgEaqitXcScc8wvSDg_m-JWeNSTNKme1.jpg?quality=96&as=32x16,48x24,72x36,108x54,160x80,240x120,360x180,480x240,540x270,640x320,720x360,1000x500&from=bu&cs=1000x0",
+            "https://sun9-72.userapi.com/s/v1/ig2/kaohziHqOV1CxZ-iKoFRzl1qzH6-EMaHUbVyS9scx2sASx-29B2s2AF9dgFe6_CHY6qPaoEumCI6rxiSnsmNWlAR.jpg?quality=96&as=32x47,48x71,72x106,108x160,160x236,240x354,360x532,480x709,540x798,640x945,720x1063,1000x1477&from=bu&cs=1000x0",
+            "https://sun9-74.userapi.com/s/v1/ig2/MGPHGDBAF81FUYJBU722svSDPT0FbSVdehhgnBIOqBNgDKtg9JYeItXQ2WVdY9MYP6pIWbHRU8uzhybqJxKMjjG0.jpg?quality=96&as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x270,540x304,640x360,720x405,1000x563&from=bu&cs=1000x0"
+        ]
+    },
+    {
+        "id": "pp4farmtrof_363302",
+        "timestamp": 1778327111,
+        "date": "09.05.2026",
+        "waterbody": "оз. Лосиное",
+        "tag": "Обычная",
+        "coordinates": "64:94",
+        "description": "🇨🇳 Китай СОЛНЕЧНИК СИНЕЖАБЕРНЫЙ Точка клева: 64:94 Приманка: Finesse Micro Jig 1/8 oz 002 Скорость: 50 Комментарий игрока: \"На работе скучно — побросал пару раз. Дёргаю джиг — с каждой проводки поклёвка.\"",
+        "images": [
+            "https://sun9-66.userapi.com/s/v1/ig2/gbKBt-i4flrLSWR8Fw7U7mzPfymbPzNxCPN-NmLFGRs0wolniVD40ldGKANUwrxxCVNyHYosRzLHSADLT56VPApS.jpg?quality=96&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1000x750&from=bu&cs=1000x0",
+            "https://sun9-67.userapi.com/s/v1/ig2/iGPRqXfsnMfgszfEhPuBy-D9B5uwABs5gfwafftgLlPqU8Zw0kNxeFhRe-_BK00FpSQNJZRDTOWFBblAGF7YWooo.jpg?quality=96&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x854,720x960,1000x1334&from=bu&cs=1000x0",
+            "https://sun9-20.userapi.com/s/v1/ig2/vRkhW5TeVsw7HiPSu_luF8-TYKIMHvr8iVmzyktCKXJ_rUFNY40NORc-2m-iNtYJAGAbRBxiLcSi4-OkPfkUw1mw.jpg?quality=96&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x854,720x960,1000x1334&from=bu&cs=1000x0"
+        ]
+    },
+    {
         "id": "pp4farmtrof_363301",
         "timestamp": 1778326956,
         "date": "09.05.2026",
