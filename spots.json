@@ -1,5 +1,634 @@
 [
     {
+        "id": "rf4map_16922",
+        "timestamp": 1782557014,
+        "date": "27.06.2026",
+        "waterbody": "р. Вьюнок",
+        "tag": "Обычная",
+        "coordinates": "112:126",
+        "description": ": - Рыба: Ёрш-носарь - Координаты: 112:126 - Клипса: 5 - Комментарий: шел за раком а перезакрыл ерша Добавить пост: https://vk.com/rf4map?w=wall-134739321_12213",
+        "images": [
+            "https://sun9-3.userapi.com/s/v1/ig2/_VDm4iemk6aH8cRfev0YCGSbESrZsA4wP6814q-KoIE8HLVNtoMgrowB4Pkm-jQhQR3HqsjAxqqEIGRxxnk1UUsg.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&cs=1280x0",
+            "https://sun9-10.userapi.com/s/v1/ig2/gVch9As3rFobqgvh1lpzdINsBwUuK2Uvq7durfXIjN1FosIaiuNSK4kpQFjYi6qiZ1mvVKpf26a5EpqFx903OCzm.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&cs=1280x0",
+            "https://sun9-6.userapi.com/s/v1/ig2/DA8H5O6X4UxtNmOSceGZlCjeXkmKE6raMiYpGPquQmWIEjr0uXMyBVAUPBJd_L9dkDt5e4VQYQDLhK3nNVmq4DfN.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&cs=1280x0",
+            "https://sun9-45.userapi.com/s/v1/ig2/O9S9khMTYAVp_flk6xQ6N6fdnRlqD3WpwhXL2LwuuR-GksjUXwlAfLJjW3IUR3_JElN91l-ClPAUlFHjaycLky4G.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&cs=1280x0"
+        ]
+    },
+    {
+        "id": "pp4farmtrof_405742",
+        "timestamp": 1782556101,
+        "date": "27.06.2026",
+        "waterbody": "р. Белая",
+        "tag": "Обычная",
+        "coordinates": "66:34",
+        "description": "🇷🇺 Россия ОКУНЬ Точка клева: 66:34 Скорость: 50 Проводка: джиг-ступенька",
+        "images": [
+            "https://sun9-25.userapi.com/s/v1/ig2/Loq9qT4oxUc9b2B1WYDuaQPL5VFOaqv7jSyRVvLkqBPRzdFUEHZhcYrX5g-H42sUixITPbBoMssWbqgvktzcbOFt.jpg?quality=96&as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x270,540x304,640x360,720x405,1080x608,1280x720,1440x810,1919x1080&from=bu&cs=1919x0",
+            "https://sun9-41.userapi.com/s/v1/ig2/0YgvcOoMClHHy-WqBfNUjBFrYNz73WIxkzSAag90bSOYqpIWUVVn8hHzcN_GoncIvETmL8j7A4W2eqxcHuO0jBlX.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun1-85.userapi.com/s/v1/ig2/B1y6nVEsdgRlenIdxbPQcrRjHVRF-mCe84Cmx6bv6NhhWtXdCzU0gyVAujlaWktfe46wqjp26YMe___nywRS2JPb.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-85.userapi.com/s/v1/ig2/QYZxJrvVFYvEEoR4WQ_MuuNfs9Z_azUTbqXsPoJ5erojXQYcl2iHxRW5CAAJYdC7zUSk9zpQiMGmjZT_R0pHBLSX.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0"
+        ]
+    },
+    {
+        "id": "pp4farmtrof_405741",
+        "timestamp": 1782556032,
+        "date": "27.06.2026",
+        "waterbody": "р. Яма",
+        "tag": "Обычная",
+        "coordinates": "113:129",
+        "description": "🇷🇺 Россия КЕТА Точка клева: 113:129 Скорость: 50 Приманка: Handmade Balsa Walker 65F-004",
+        "images": [
+            "https://sun9-74.userapi.com/s/v1/ig2/azsclJxX4OoyJu3QVdNgFUIhsnUImX1OdykZ2TV7HMUtaagZP-bb0-E83c8S0ZY6CBfMmXPDqIZz3dkPYsWLhsrh.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-52.userapi.com/s/v1/ig2/wwObMp1A_46TcJP8dCVkfNo8hby0j-4K8tVWDhAnLvfP6QHmm7FZuh7TaPaK_nCvgM7p-p2ZYzWsH2TVv16XyVz-.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-83.userapi.com/s/v1/ig2/7LaBTcgmJErsCbRF6KFdFSyABsBSZgJTWlmqxdnqq_mfg0AfgAKFh3gVDF6KJB8G0SR0T86AODahvh1lz_xE5bZ6.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0"
+        ]
+    },
+    {
+        "id": "pp4farmtrof_405740",
+        "timestamp": 1782555189,
+        "date": "27.06.2026",
+        "waterbody": "оз. Медное",
+        "tag": "Трофей",
+        "coordinates": "67:59",
+        "description": "🇷🇺 Россия ЛИНЬ КВОЛЬСДОРФСКИЙ Точка клева: 67:59 Температура: Нормальная Клипса: 7 м Наживка: Иск. кукуруза Черная смородина Фиолетовый Прикормка: ПВА: основа: молотая кукуруза. + Тонущий бойлы Черная смородина 10(дробл) + Тонущий бойлы Черная смородина 12(дробл) + черная смородина 5 + черная смородина 8. Ароматизатор: Черная смородина Дип: Черная смородина Поводок: Плетеный шнур 22,5 кг 💬 Сидел на точке совсем немного, повезло на трофей.",
+        "images": [
+            "https://sun9-33.userapi.com/s/v1/ig2/oYOZHIUbluDLaJzBupJmC9B3MNH1CAFvh4J8hPTwZZccltWHsfWqYm5hM-_w7y9_ghUhD3nPrpGMzGuHc9d_CWfX.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,2560x1440&from=bu&cs=2560x0",
+            "https://sun9-11.userapi.com/s/v1/ig2/s_cPJNqX-ak8EP8XwrQwL85fo2pDmWUBYDniLy0u2dY4TjryJMAgL8vUQhBlJKGtAG_nbixD1pdPKpydpeaJ2SXP.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,2560x1440&from=bu&cs=2560x0",
+            "https://sun9-42.userapi.com/s/v1/ig2/S2vkI2hv2wVdkg6ag7CqtZHK6kSac4TIAJCwRUWzIp-sGKoG7qDJikbQyooxRFFLlQVx8XPGecdmtNCfgUxQfdhv.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,2560x1440&from=bu&cs=2560x0",
+            "https://sun9-43.userapi.com/s/v1/ig2/pOal6a2aBH4KPa4VgEHPkHh0mG3ts9c6fPqC4LPHG9I6W9-LXq81ElIMLQ31LiGrnd3BjWI5jYXvW_-20CAOINNt.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,2560x1440&from=bu&cs=2560x0"
+        ]
+    },
+    {
+        "id": "pp4farmtrof_405739",
+        "timestamp": 1782555157,
+        "date": "27.06.2026",
+        "waterbody": "оз. Медное",
+        "tag": "Обычная",
+        "coordinates": "37:32",
+        "description": "🇷🇺 Россия КАРП ЧЕШУЙЧАТЫЙ Точка клева: 37:32 Температура: Нормальная Клипса: 31 м",
+        "images": [
+            "https://sun9-84.userapi.com/s/v1/ig2/6RbRqTiHJKjRBpaFqwqXfm5murOrbbYGxr8APKue6GgFBvQrsdFW5gP9lQPPheAB1uuS8uCsI3csOoXVPzapFWrB.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-56.userapi.com/s/v1/ig2/-2MDXWFh7OEiH4shVmH0Eplp-Ywa8hcFEO6mosX4wCUdnhg-1z4XMyQztnaWV2j9SJR7G72QeHpXq5qSkQCYMZ7L.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-10.userapi.com/s/v1/ig2/bzcdxdeY8FxTNjAxFaJBrm9_bKCKjXo-cUMm3cbQez1m1Iw5Yas-gtUjtZhYKydtkCXEf6296hcc5ZNtP2mobFhL.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-45.userapi.com/s/v1/ig2/QYDSDAePcCfMBQHw6nuumd5d1DRFKSTHgULNqJDZB-Gg7RrgU4ZwW_5ZvvN9PontL161UWVOFhym-38z__ixIrcp.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun1-47.userapi.com/s/v1/ig2/OGf6PcV96lgfZHm8Z4TMKlo1YAVL9E1IOAyVECJT9HYvCks_JylCVAE1P9QrIXS8Tc0_b6CEfd5sZtTW2iu6PCEM.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-51.userapi.com/s/v1/ig2/e5F7KFIXZ-tjTxu6mcjLu7akpP5wbd1poNVlUc_VMd0qoWxwOOiMblXnm3gVEJkXHs2Tp33lmGbMCjQRP44byOgx.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-75.userapi.com/s/v1/ig2/QhPTN7Fp3CHZIUfYMuHd72NwxCsqefSU4rXduQzgcR-mm9vcipX-dQMj469AIxKv1HYNTa5NkAejuoSeJ3iMUht9.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0"
+        ]
+    },
+    {
+        "id": "pp4farmtrof_405738",
+        "timestamp": 1782555152,
+        "date": "27.06.2026",
+        "waterbody": "оз. Медное",
+        "tag": "Фарм",
+        "coordinates": "59:51",
+        "description": "🇷🇺 Россия КАРАСЕКАРП Точка клева: 59:51 Температура: Нормальная Клипса: 8 м 💬 фарм неплохой, линей мало (",
+        "images": [
+            "https://sun9-63.userapi.com/s/v1/ig2/Y-PxVySe-hRkeASEZ_bWFiweAu2k07q0CTrXa2X6N7Y-4e542wP0Dqj06BQRYV3PaaDgW-TBq8RgNy8UY041rwR6.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-67.userapi.com/s/v1/ig2/r5-5CvaRB-o2NjgrM60_eUbL9NRY5p0ifYqc1-7L-95t8QPtf0OCAcJJZtJlRFojl7qC9OD-JeUGBZjhdjMTBwXj.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-29.userapi.com/s/v1/ig2/37vll3P1E5XVuGCyiw-neHMdz2ysqWJ6WnWagyofD9RkM2dG3GwPK0VZWvaaOL-04Noih9xnbEIe3lqEmyj32KBq.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-21.userapi.com/s/v1/ig2/IuiEVTEbLunRYScYRHjNJDhjuf1zz-1Gqbacrrglwv23Pr3vl_ao7BLX-6XvYnMzSTwSr4or6JzFKefOkgk0YYZ6.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-45.userapi.com/s/v1/ig2/RYRmZ5LacCqfHOYDPcyiJDC2V5Lrj63321ksI_8cH4pCMNATHL4yUkl2elALpJIZ7RgANm-7gfM6DxCIgn8mJU8R.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0"
+        ]
+    },
+    {
+        "id": "pp4farmtrof_405737",
+        "timestamp": 1782555131,
+        "date": "27.06.2026",
+        "waterbody": "оз. Комариное",
+        "tag": "Обычная",
+        "coordinates": "50:80",
+        "description": "🇷🇺 Россия ЯЗЬ Точка клева: 50:80 Клипса: 8 метров Глубина: 150 см Наживка: сверчок + зерна кукурузы Комментарий игрока: \"Лучше всего берет на сверчок + кузнечик. Всем НХНЧ и синих!\"",
+        "images": [
+            "https://sun9-6.userapi.com/s/v1/ig2/xzxLY5a_7VVVyB1Xpn57QEOS6M0VuhF2yko_7Pnn4DZVN31_ijvhZXsWqppGDpN4TEmr2eoNNzDYMHzIThBSkKIt.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1760x990&from=bu&cs=1760x0",
+            "https://sun9-66.userapi.com/s/v1/ig2/MJpPrNUdIXp8BxUsFUl4VHmD0mOnYEGAk4MM-O17lyilhYJw7nWTMH1PG8hxruvNGvpcMhwnm-pwsSf_jc6tFzPw.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1760x990&from=bu&cs=1760x0",
+            "https://sun9-86.userapi.com/s/v1/ig2/zWgNGHVLEM1LT-5OLDI0gGnSwXDUIAhy1FdRQe7vvQzA-7Y_ycSsSSgwMri_xfd6iFwP9V7ssQIWPUNyuzFiuBeq.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1760x990&from=bu&cs=1760x0",
+            "https://sun9-88.userapi.com/s/v1/ig2/_4A6a8zlE0wpeAIEUBTbwFvuOQWjlXeBbDqTDkzKQfk64BLW-3LDMOlJ3nLEFcfzGk-mAGk3E6Iwgat4ERmYbSCD.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1760x990&from=bu&cs=1760x0",
+            "https://sun9-32.userapi.com/s/v1/ig2/C8hl6CUvgfLqZ1WKuaNNVIMvT1OT0pKzcZZTbYOFtW-rYcB3T0D32HKLv1MmjSDBbt1pEJCX-XurbM6ubJoOz7H0.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1760x990&from=bu&cs=1760x0"
+        ]
+    },
+    {
+        "id": "pp4farmtrof_405736",
+        "timestamp": 1782555094,
+        "date": "27.06.2026",
+        "waterbody": "р. Северский Донец",
+        "tag": "Обычная",
+        "coordinates": "106:132",
+        "description": "Донец 🇷🇺 Россия ВЫРЕЗУБ Точка клева: 106:132 Клипса: 15 метров Комментарий игрока: \"Первая поклевка за 1.5 часа. Стояло две палки — носорог, одна — дрейссена. Очень долго гонялся за ним. И именно в этот день, в мой день рождения, игра решила сделать мне вот такой подарок.\"",
+        "images": [
+            "https://sun9-28.userapi.com/s/v1/ig2/QxveZS2QIDYYTAije3I4lfEspaCt6aEQk16fRFnct0KZV0m5VlO-y_-d3ufe_YCAo_w7_g0ZFJLA0VVHdPAhSAR6.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-86.userapi.com/s/v1/ig2/qDLwBtb3LTsz43PcNJ8qvOg6ck0Qfp7Gd28C1uSJsP7gBDkRh7-Z1t7kwLgipQJ_URAUoCZjF9HwJs_TGligDxr_.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-30.userapi.com/s/v1/ig2/kPCcEMBqQHURl0sjhlA-1jDWGDnHZ4o6rfiy1jYr0KtUwDSfgCYnUsaBvxB1BBhzEM6AGXHaGX4UZqZxJdrYdTf1.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-64.userapi.com/s/v1/ig2/9EwpiowYlSdI1w859MnT1IxZ5qpkWI04lzkhmiVoeZbZaRlNirIHhF7Kecs_P_j-sy08f1rY-8pLehXqsOE5_fCi.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-64.userapi.com/s/v1/ig2/r3Rd_l81wDjE0ZoTu5LKBn6Gk0v4YpHATtrK9Odlauv5Irjp2eSQ2UKJF7yptZZUaHfhlTCmOUXeQAjotwVRCVg0.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0"
+        ]
+    },
+    {
+        "id": "pp4farmtrof_405735",
+        "timestamp": 1782555077,
+        "date": "27.06.2026",
+        "waterbody": "р. Ахтуба",
+        "tag": "Трофей",
+        "coordinates": "89:96",
+        "description": "🇷🇺 Россия УСАЧ КОРОТКОГОЛОВЫЙ Точка клева: 89:96 Клипса: 17 м Наживка: икра желтый Дип: черная икра Поводок: 22.6кг плетеный шнур под глину 💬 жалко что не троф, я его отпустил думаю потом вырастет и станет трофеем и кому то это трофей попадется",
+        "images": [
+            "https://sun9-19.userapi.com/s/v1/ig2/CPblhbgOBTFoL9-t4YQSy5Ioi0eEqpb4y2tlHq4AVxM8VhEg3asyKfHSPNM3me04qp0ki-hTbUKsckPbYGY8GCbx.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-58.userapi.com/s/v1/ig2/bT32o5ch_1q4ApnP8YBNUJBkOquh-jade3W49aw9re50X_EmNOCPbrBobaeNqcPu2W7IcXNEIlADiiVtMsVSxyST.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-38.userapi.com/s/v1/ig2/YAU8-VJWVzoLlo0yQECVgPhCHskzLJUEm1sT6bHGj_0UUf-uAMNLRto9xb-COCODQTh1_Bok-3iKwJcCQ1M4m3lx.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-21.userapi.com/s/v1/ig2/yZV5mWKb6ieGiHbNaGD-lkupi7-b-TrYwyQq4_KhnqEwpHNSdpI-C0YmdhZCFBKRSNGQ_BHuF98_H9eg9x-jT_Px.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-63.userapi.com/s/v1/ig2/z4gxiTI5kVDmYO6q-WHJfGLqOeRDqT_dmDRZ9D0J9WKgV2YL2S43LWtzufBxFCVpLO6MjN_6wRc9dCs5_t1uOvqw.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-72.userapi.com/s/v1/ig2/E-Sg3SwyWps7MhjUj1p9N-opD_0IrUvfV5MEyOGBjqFpnWKWrNGgCwOuJ3B7jX-uq0ulTdSVgZj8zsMXQR7e2XLC.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0"
+        ]
+    },
+    {
+        "id": "pp4farmtrof_405732",
+        "timestamp": 1782554471,
+        "date": "27.06.2026",
+        "waterbody": "оз. Медное",
+        "tag": "Обычная",
+        "coordinates": "34:31",
+        "description": "🌍🌍🌍 КАРАСЕКАРП Точка клева: 34:31 Клипса: 12 метров Температура воды: нормальная Наживка: 2 иск. кукурузы Тутти Фрутти Желтый Дип: Тутти Фрутти Прикормка: молотая кукуруза + сливки 4, 8, 10 + сладкие сливки 3 + кремовый",
+        "images": [
+            "https://sun9-41.userapi.com/s/v1/ig2/QrfBfJfPUHe2EaiMT6BZ4K1U1zrbSKgw8YwSFQ_U0v0U-rwwq7CMhWnN36RRHFH9Su8DTq0jgk5IMmSNydKpPs-n.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-12.userapi.com/s/v1/ig2/nrtJ9xir6kHzOmQKZ3HB7Ueo3jZLesUPBHWrLU66CRTd2Xo6CADiwvJGGwU110CBDa1A7SpMJew7ABeEUOyYPAl7.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-59.userapi.com/s/v1/ig2/QGXtHV8rU0k3zMtHd98_SpCEYmDIBY6xMurS7Am-044iqm-KSfsvVeCR5cqgrjpkDq98YOVJ1y2BjpLDo0xCxUf4.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0"
+        ]
+    },
+    {
+        "id": "pp4farmtrof_405728",
+        "timestamp": 1782554286,
+        "date": "27.06.2026",
+        "waterbody": "оз. Янтарное",
+        "tag": "Фарм",
+        "coordinates": "95:136",
+        "description": "🇨🇳 Китай КАРП ЗЕРКАЛЬНЫЙ ФАРМ Точка клева: 95:136 Клипса: 8 метров Наживка: 2 иск. кукурузы Мидии Дип: Мидии Температура воды: нормальная Комментарий игрока: \"За час — 90 рыб. Новичок наловился вволю.\"",
+        "images": [
+            "https://sun9-37.userapi.com/s/v1/ig2/0kaGeDP2yneuLaUlTtsRyPOIXObLfxrZe8lCjFULsk5FaIb9CDNt2Ae6PHExF8xp1i8Q6LNy0xXjW7DVqlwnSp0f.jpg?quality=96&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1000x750&from=bu&cs=1000x0",
+            "https://sun1-14.userapi.com/s/v1/ig2/utZF0Z_-eE78ZPcVC6Zswxi-ybdg9hDg_TH9V1-UlHGFc8H9J9PTcMFz-DKGjL2nB-JQMLuUe0p6t8kbKWfkym4c.jpg?quality=96&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1000x750&from=bu&cs=1000x0",
+            "https://sun9-46.userapi.com/s/v1/ig2/cDmacaax5krDHbSfu8vOCAFY7On_CACo8VDNINwXTJxky-2xYZwjdMXARdrxm22JIOs12U0PXXRZVbYcNAikG1eD.jpg?quality=96&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1000x750&from=bu&cs=1000x0",
+            "https://sun9-46.userapi.com/s/v1/ig2/UzPcRm10l2UHlrMwdPss-zFdm52VUQCW9PAMhaplkk1mVNnZZQ_9o4Ub_D-0U94fNRnCVUu74Gtnt4sLIn3yWZh1.jpg?quality=96&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1000x750&from=bu&cs=1000x0",
+            "https://sun9-3.userapi.com/s/v1/ig2/Nrl5GTs2VfR4ZzDTTwrq87qAzGINhZ6zV2usFx8DoMs84dfLfMlyG02a7HUxzhgkc2Qvblej1jyVpLXBrARRfR2K.jpg?quality=96&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1000x750&from=bu&cs=1000x0"
+        ]
+    },
+    {
+        "id": "pp4farmtrof_405727",
+        "timestamp": 1782554285,
+        "date": "27.06.2026",
+        "waterbody": "оз. Лосиное",
+        "tag": "Трофей",
+        "coordinates": "70:94",
+        "description": "🇨🇳 Китай ДОРОСОМА СЕВЕРНАЯ Точка клева: 70:94 Скорость: 20 Приманка: Spiker Комментарий игрока: \"За игровой день — два трофея. Забрасывать в сторону глубокой ямы на полную силу. Два оборота — пауза.\"",
+        "images": [
+            "https://sun9-81.userapi.com/s/v1/ig2/LLeW4kHREdZfEcq9nhYE6PcQ-CJuVQnENJgwj_4O0sMkE-hK6-6j3O-d1fAwYsTSg-KRRXa6M_I6qG0nFmGQp5DO.jpg?quality=96&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x404,640x479,720x539,1000x749&from=bu&cs=1000x0",
+            "https://sun9-77.userapi.com/s/v1/ig2/NizCBi89IPVFtCub5X6xqk0zrb3HcolJz6bpnX9zpNSocsB-7_y_dae5ibNRZUvxVjw5aPwDK19xJHyLJNJe9Pzf.jpg?quality=96&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x404,640x479,720x539,1000x749&from=bu&cs=1000x0",
+            "https://sun9-22.userapi.com/s/v1/ig2/5-B7WiB43ftugNzfb4rLqCMFta9VuPFZA1Q7SXA3k8uvt9yeE2T5QSZoiHEwSbrm195WZMnveUmE1nXdZnY93XTS.jpg?quality=96&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x404,640x479,720x539,1000x749&from=bu&cs=1000x0"
+        ]
+    },
+    {
+        "id": "pp4farmtrof_405726",
+        "timestamp": 1782554265,
+        "date": "27.06.2026",
+        "waterbody": "оз. Лосиное",
+        "tag": "Трофей",
+        "coordinates": "113:106",
+        "description": "🇨🇳 Китай ДОРОСОМА СЕВЕРНАЯ Точка клева: 113:106 Клипса: 6 метров Глубина: 40 см Наживка: червь Комментарий игрока: \"Новичкам: поплавочной удочкой — и фарм, и трофей.\"",
+        "images": [
+            "https://sun9-49.userapi.com/s/v1/ig2/SnvGt41gCnwnRwn4_kPSng8d04tMSkB1oi7XRNKTw68xf-eJ5xRbuMYAB_qcUukcaPLglwTbd8jlcRN9RQmOPn9E.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1776x999&from=bu&cs=1776x0",
+            "https://sun9-84.userapi.com/s/v1/ig2/ftyEOr94wGAYSAOCoIKsTMi54UNjzSqVR10b5nOXA3iRok8vPGUjSydIaTUWFITER2oKh9cxRt5bQ3nWXjABTBU5.jpg?quality=96&as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x270,540x304,640x360,720x405,1080x608,1280x721,1440x811,1748x984&from=bu&cs=1748x0",
+            "https://sun9-53.userapi.com/s/v1/ig2/Ad2RpKdiMeoDNn6RvlcwPLoj2mgOhueEKJhERmlJpcbNQm-zaespf7JJrWRbRj__5bqQ8zaQWSn1jLEEo6mmqsTP.jpg?quality=96&as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x270,540x304,640x360,720x405,1080x608,1280x720,1440x810,1779x1001&from=bu&cs=1779x0",
+            "https://sun9-75.userapi.com/s/v1/ig2/YBkee_N7lvigIv-Bi-z2OSUys_31j-R2N87FU0_DoykzaYlJ6kcvWsQ9RpGyansEEYn9jiQigu5nVF06wn8VuxAs.jpg?quality=96&as=32x18,48x28,72x41,108x62,160x92,240x138,360x207,480x276,540x310,640x368,720x413,1080x620,1280x735,1360x781&from=bu&cs=1360x0"
+        ]
+    },
+    {
+        "id": "pp4farmtrof_405724",
+        "timestamp": 1782554166,
+        "date": "27.06.2026",
+        "waterbody": "оз. Комариное",
+        "tag": "Обычная",
+        "coordinates": "47:72",
+        "description": "🇨🇳 Китай РОТАН Точка клева: 47:72 Глубина: 50 см Наживка: кусочки рыбы Комментарий игрока: \"Точка на ротана работает. Забрасывать к коряге. Нет поклевок — перезаход.\"",
+        "images": [
+            "https://sun9-74.userapi.com/s/v1/ig2/NAcLJxYmT4Fkkmf8v_WNmpH5AfFu52hjwwA2-1Kub_3D4OlLeALUC1iXv4hPFJ_3PMmCN1vQRMHc_vkOz4HBrWXP.jpg?quality=96&as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x270,540x304,640x360,720x405,1000x563&from=bu&cs=1000x0",
+            "https://sun9-67.userapi.com/s/v1/ig2/-wW5OBo0ha49LGomgx3sk6JbVA1tzWVKgb_W-oQTBC8XTZOCWTh5AGkfm6RYJZq0fxaeMB4L_phIYbMiXO-j26qu.jpg?quality=96&as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x270,540x304,640x360,720x405,1000x563&from=bu&cs=1000x0",
+            "https://sun9-13.userapi.com/s/v1/ig2/4Hm9PckWwxNKjMVCc6-6FFuxdkfySxihXvN5OH5EXvD5UzEHxg6FSFzbTXJDyHfpgnuFKhsQFhDB5v45ED3tSDQ5.jpg?quality=96&as=32x48,48x72,72x108,108x162,160x240,240x360,360x540,480x720,540x810,640x960,720x1079,1080x1619,1280x1919,1376x2063&from=bu&cs=1376x0"
+        ]
+    },
+    {
+        "id": "pp4farmtrof_405723",
+        "timestamp": 1782554152,
+        "date": "27.06.2026",
+        "waterbody": "оз. Янтарное",
+        "tag": "Обычная",
+        "coordinates": "83:145",
+        "description": "🇨🇳 Китай КАРП ЛИНЕЙНЫЙ Точка клева: 83:145 Клипса: 35 метров Наживка: Нейтральные 20 + Пикантная вишня Soluble 20 Дип: Дикая вишня Температура воды: нормальная Комментарий игрока: \"Бешеный клев на Янтарном. Скорее, скорее!\"",
+        "images": [
+            "https://sun9-10.userapi.com/s/v1/ig2/bhTPgph4gf7yi_zWP6y3N0U_2Y-wECK2yK59CK8kLmq4ZM8vhKTVTl6Bpe00K4VJi_p6zZTl6oORECNHP9rNbWo6.jpg?quality=96&as=32x19,48x29,72x43,108x65,160x96,240x144,360x216,480x288,540x324,640x384,720x432,1080x648,1280x768&from=bu&cs=1280x0",
+            "https://sun1-15.userapi.com/s/v1/ig2/WOdDWUiDPPRB558yTCQnWU-zs2LY4fsAOXd_7G__522cOXvs6mAip3L0exBwWWfmTafAFnG31FUT1ty0IozupRcx.jpg?quality=96&as=32x19,48x29,72x43,108x65,160x96,240x144,360x216,480x288,540x324,640x384,720x432,1080x648,1280x768&from=bu&cs=1280x0",
+            "https://sun9-31.userapi.com/s/v1/ig2/zehfoyFhOc-Wf_l3MomlqwOegitTmwoFFmUtB84TReULV6Lg0bOvoIttNSA03H2Qi4MaWYwGF0OOwuvy4Pn9XY07.jpg?quality=96&as=32x19,48x29,72x43,108x65,160x96,240x144,360x216,480x288,540x324,640x384,720x432,1080x648,1280x768&from=bu&cs=1280x0",
+            "https://sun9-74.userapi.com/s/v1/ig2/2ZYrIea4sh_9U9hTeDVHuT0NQN1BIo3I3LmD9-QBut1DWvIYFNzKbBwwKRXGC-Vj0LK2Irq75I0zgSXjEi0v0lYY.jpg?quality=96&as=32x19,48x29,72x43,108x65,160x96,240x144,360x216,480x288,540x324,640x384,720x432,1080x648,1280x768&from=bu&cs=1280x0"
+        ]
+    },
+    {
+        "id": "pp4farmtrof_405719",
+        "timestamp": 1782554008,
+        "date": "27.06.2026",
+        "waterbody": "р. Сура",
+        "tag": "Фарм",
+        "coordinates": "36:115",
+        "description": "🇨🇳 Китай ДРЕЙССЕНА РЕЧНАЯ ФАРМ ГН Точка клева: 36:115 Клипса: 10 метров Наживка: пучок водорослей Комментарий игрока: \"Старая точка воскресла. Чистая дрейссена! Клюет очень-очень быстро!\"",
+        "images": [
+            "https://sun9-60.userapi.com/s/v1/ig2/Cc0kyZmERz1jUYn_uwlc_EuC4TmJ778M4acS4gFzEPk-tn8q_QtgM2c9BuPMKa5LrPvrqE_humhWoUuD7r2QwIRJ.jpg?quality=96&as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x270,540x304,640x360,720x405,1000x563&from=bu&cs=1000x0",
+            "https://sun9-18.userapi.com/s/v1/ig2/SlNsJJpXowEZavDkdJxCw2dywoTlJqCIO-CqaL0gRlOiYNQQpp0A_h-0dyFvXeF3jC0T64nC0e9vwLd4VtutVDvP.jpg?quality=96&as=32x26,48x38,72x58,108x86,160x128,240x192,360x288,480x384,540x432,640x512,720x576,1000x800&from=bu&cs=1000x0",
+            "https://sun9-85.userapi.com/s/v1/ig2/73khz6AdFQFapBw43SZ_yd6Lmn_Sc9NQ5vn6B20I4HWEDQrWz4VvQIH1nVpVdGTqROPElzM3Dw27fIlbBmeAWWcA.jpg?quality=96&as=32x22,48x32,72x49,108x73,160x108,240x162,360x243,480x324,540x364,640x432,720x486,1000x675&from=bu&cs=1000x0"
+        ]
+    },
+    {
+        "id": "pp4farmtrof_405718",
+        "timestamp": 1782553952,
+        "date": "27.06.2026",
+        "waterbody": "р. Белая",
+        "tag": "Трофей",
+        "coordinates": "68:48",
+        "description": "🇨🇳 Китай ГУСТЕРА РАК РЕЧНОЙ Точка клева: 68:48 Глубина: 120 см Наживка: червь навозный + сырный кубик Комментарий игрока: \"Снова я. Вчера взял ельца и рака, сегодня — густера. Клюет довольно быстро. На красного червя + сырный кубик — трофеи густеры и рака. Два красных червя тоже работают. Для одной наживки советую красного червя. Удочку лучше потяжелее, или берите запас крючков — будут мощные поклевки. Днем можно мелкие крючки — ловить живца.\"",
+        "images": [
+            "https://sun9-57.userapi.com/s/v1/ig2/TNhLz7xF3O4A4dX5zuix-3dq3lTNWl6AhTcfd9nH9jtjd7IcNABJuN4GWtMZ1kUZ0e1Hm4MeUcJhN_qe3tk39Uew.jpg?quality=96&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x404,640x479,720x539,1000x749&from=bu&cs=1000x0",
+            "https://sun9-78.userapi.com/s/v1/ig2/WiOsoP6ggSWf65fzX1-uRgDrTEvgUetTSwlSzVWkGhc_flYiw6ZU1zyD2OquFubNTtZJ643gW8qW2wCI3TAsJygu.jpg?quality=96&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x404,640x479,720x539,1000x749&from=bu&cs=1000x0",
+            "https://sun9-35.userapi.com/s/v1/ig2/f6qj3DH9SvJev05FPqGl3sqXky2F4Vi4gjHdTH-ZONds8x4l60G9xovYPgtT0VGWjr-ssW1brvTfYSqYwWNmEQ_C.jpg?quality=96&as=32x37,48x55,72x83,108x124,160x184,240x276,360x413,480x551,540x620,640x735,720x827,1000x1148&from=bu&cs=1000x0",
+            "https://sun9-17.userapi.com/s/v1/ig2/7rhksdkf-O0YbRpXK95vRept2iyRjpyHqzUZp2hATE5USacnwmoKsxAnH4ut3fQnx9uPKT65yRXorMVpJCEbK-q2.jpg?quality=96&as=32x29,48x44,72x66,108x99,160x147,240x221,360x332,480x442,540x497,640x589,720x663,1000x921&from=bu&cs=1000x0"
+        ]
+    },
+    {
+        "id": "pp4farmtrof_405716",
+        "timestamp": 1782553906,
+        "date": "27.06.2026",
+        "waterbody": "оз. Янтарное",
+        "tag": "Трофей",
+        "coordinates": "83:145",
+        "description": "🇨🇳 Китай КАРП КРАСНЫЙ СТАРВАС - ЗЕРКАЛЬНЫЙ Точка клева: 83:145 Клипса: 36 метров Наживка: Нейтральные 25 + Пикантная вишня Soluble 20 Дип: Дикая вишня Прикормка: молотая кукуруза + Пикантная вишня Soluble 16 (дробл) + Черная вишня 8 + Черная вишня 12 + Черная вишня 15 + Вишневый ликер Температура воды: нормальная Комментарий игрока: \"Обидный недотроф!!! Хорошая новость: попал в рекорды. Плохая: без трофея...\"",
+        "images": [
+            "https://sun9-61.userapi.com/s/v1/ig2/dF4o7inHLdAKFNNc_bOr3_RGa5BgoHzoEJlsxVuburMGJjYKpx0LuQ5uZGrvIo9tDlMcupyCovkA0AbBqQu6gkM9.jpg?quality=96&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1000x750&from=bu&cs=1000x0",
+            "https://sun9-11.userapi.com/s/v1/ig2/ZMm2l_72Sb7DQlTIXd1ASCaT2yHuJTOTVqBfmZv3DFVvjcvIjkkN_lX_W595iadmk1VhmDiJw0rxeg9IwYMW4qMc.jpg?quality=96&as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x270,540x304,640x360,720x405,1000x563&from=bu&cs=1000x0",
+            "https://sun9-13.userapi.com/s/v1/ig2/kfp2jzjSq9P0dvmwL3sDIqkvpejK4Ll6GewY_g5IpxAV1pVln6IsIM8psjJdSpbjhGTlv4P-4G5Qej0CU3ydVMKp.jpg?quality=96&as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x270,540x304,640x360,720x405,1000x563&from=bu&cs=1000x0",
+            "https://sun9-68.userapi.com/s/v1/ig2/bfen5i6bw9oJxYPGO_V0oXc9mMhK4pbX98pJiN6DUer1sGSNMlSd8Ltx4fRogClAsXPbRVEBnoPmxNPEBd7GLk4k.jpg?quality=96&as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x270,540x304,640x360,720x405,1000x563&from=bu&cs=1000x0"
+        ]
+    },
+    {
+        "id": "rr4pepper_53373",
+        "timestamp": 1782553855,
+        "date": "27.06.2026",
+        "waterbody": "р. Северский Донец",
+        "tag": "Фарм",
+        "coordinates": "40:145",
+        "description": "💰 Тарань, фарм 50мин 📌 Точка 40:145, спуск 100 👤",
+        "images": [
+            "https://sun9-15.userapi.com/s/v1/ig2/7sq3fdAobClxJVnbEfpFpEiDMTrZHGAOI6M7SZ7tJTabATlQm9Aa__T3NHknkHimWmwMvgJp9eNi-JVIGNJ_S0q7.jpg?quality=95&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&cs=1280x0",
+            "https://sun9-80.userapi.com/s/v1/ig2/yCLqNv94vo4d8OyART8ES9P0Lgqq3eo-l6bfO3XZqnDY0nMRffexl11uc5YphEHLihmxe8YlTBPK-FBBEdB6lYr6.jpg?quality=95&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&cs=1280x0",
+            "https://sun9-84.userapi.com/s/v1/ig2/3ktQFt0YRneL0J4fQYgNoIhGw9pmSRfQERZM-m_A7Iqbu3RHDfO7F7o3Ew4SAjhMWYjIIiykopVuGa_WGhJZLmfj.jpg?quality=95&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&cs=1280x0",
+            "https://sun9-7.userapi.com/s/v1/ig2/ozF-rZ_zr5Rl6YEOIek8JEdDIT-rSA0sVOuodpC454XS-dA1O148orD65HbJmAK7KVoJeX2OOeZEg_pQl3qrTkE6.jpg?quality=95&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&cs=1280x0",
+            "https://sun9-40.userapi.com/s/v1/ig2/ZNelosL0Xbg3WP2_ZHCSVj6uZLF_o5-3Ba0IDsW7-OlojWWK_9UhZuSH-hwRk-QEspDfbhpx_Cq8cxikmCbn0TOT.jpg?quality=95&as=32x17,48x26,72x38,108x57,160x85,240x128,360x192,480x255,511x272&from=bu&cs=511x0"
+        ]
+    },
+    {
+        "id": "pp4farmtrof_405715",
+        "timestamp": 1782553812,
+        "date": "27.06.2026",
+        "waterbody": "оз. Янтарное",
+        "tag": "Трофей",
+        "coordinates": "83:145",
+        "description": "🇨🇳 Китай КАРП ГОЛЫЙ - АЛЬБИНОС КАРП ЛИНЕЙНЫЙ Точка клева: 83:145 Клипса: 35 метров Наживка: Северные ягоды 20 + Пикантная вишня Soluble 20 Дип: Дикая вишня Прикормка: молотая кукуруза + Пикантная вишня Soluble 16 (дробл) + Черная вишня 8 + Черная вишня 12 + Черная вишня 15 + Вишневый ликер Температура воды: нормальная Комментарий игрока: \"Новичок. Первый раз в недельном рейтинге — на память. Увидел в гайде, что клюет. Как раз сессия — в перерывах между зубрежкой сидел рамчатого. Нейтрального не было — заменил на северные ягоды. И по дикой удаче — белый голый карп, да еще первый в неделе. Жаль, без трофея. Через час еще и линейный клюнул. Кстати, делать чучело или нет?\"",
+        "images": [
+            "https://sun9-67.userapi.com/s/v1/ig2/d4G1csmdd8oNMBqpggNb1YiJlzNBxk2QBgxPPy8w683k0HEzTMQl6BbdxlyyBz9d5CAKFCgmjxLPcI24zBKuBE6m.jpg?quality=96&as=32x20,48x30,72x45,108x67,160x99,240x148,360x223,480x297,540x334,640x396,720x445,1080x668,1280x792,1440x891,1665x1030&from=bu&cs=1665x0",
+            "https://sun9-23.userapi.com/s/v1/ig2/4jFW8zQ8wCV5KEvxJPmKy8Y15H7WIRnDra9uPqRtoOaTkcd6XX9A0UaAh0pfYYI4tcsJS-kQw-81GQHiGRpye6y3.jpg?quality=96&as=32x18,48x28,72x41,108x62,160x92,240x138,360x207,480x276,540x311,640x368,720x414,1080x622,1280x737,1440x829,1770x1019&from=bu&cs=1770x0",
+            "https://sun9-61.userapi.com/s/v1/ig2/_Q_gmn1DJaPhRY-subVt8HKy9IaE5fDCqeJNHMzFpRFNsokF-as-oAsxxh4Upc21XJpgRBqBze4QeZljmjDTSiAI.jpg?quality=96&as=32x19,48x28,72x43,108x64,160x94,240x142,360x213,480x284,540x319,640x378,720x425,1080x638,1280x756,1440x851,2184x1290&from=bu&cs=2184x0",
+            "https://sun9-35.userapi.com/s/v1/ig2/ciLbQZFNbLEkRp9FM7ZDHe2f2XelLX90FTaTliWkc9k02o_XrOehLuis7a_LO9FWSlVWiv-5JhVpa51x5cZ_5uJI.jpg?quality=96&as=32x30,48x45,72x68,108x102,160x151,240x226,360x339,480x452,540x508,640x602,720x678,1080x1017,1194x1124&from=bu&cs=1194x0",
+            "https://sun9-46.userapi.com/s/v1/ig2/GjY28XPWgxULN0xWC0KNve4coJOv-3-zO-HUdFMIGAglbJfbRH_3jePIaQ3o8jz6TMnz7koCnbH2wUisJ81aGV1k.jpg?quality=96&as=32x39,48x59,72x88,108x132,160x195,240x293,360x440,412x503&from=bu&cs=412x0",
+            "https://sun9-78.userapi.com/s/v1/ig2/xE0claiHg51k5rFgKV9UbJ7XrFMhmgPXczCnBWwoGcQYEZ4jMs3pSwqZOQoFEHI92nLAr-cww9hgpDyUXOS_eVqo.jpg?quality=96&as=32x29,48x43,72x65,108x98,160x145,219x198&from=bu&cs=219x0"
+        ]
+    },
+    {
+        "id": "pp4farmtrof_405714",
+        "timestamp": 1782553661,
+        "date": "27.06.2026",
+        "waterbody": "р. Северский Донец",
+        "tag": "Обычная",
+        "coordinates": "61:146",
+        "description": "Донец 🇨🇳 Китай ШЕМАЯ ЧЕРНОМОРСКАЯ Точка клева: 61:146 Глубина: 100 см Наживка: личинка короеда Комментарий игрока: \"Старая точка живее всех живых. Можно ловить и с соседнего причала. Я люблю бросать на полную силу, поэтому с берега. Ближе к центру реки — часто бьет крупная чехонь.\"",
+        "images": [
+            "https://sun9-61.userapi.com/s/v1/ig2/RRumO-1xVk_frgbLrx_ong2PqA_vPbNXQU3Nooc4__EaZwDWdvwvzQ2V88TUoA8BOqItoai5xuMIuYIr0_0hCspW.jpg?quality=96&as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x270,540x304,640x360,720x405,1000x563&from=bu&cs=1000x0",
+            "https://sun9-14.userapi.com/s/v1/ig2/bj_pBkcliDcpmul0cFmg8xC-vWcvIO7odYAzohTnqscdtjgRtage6BpVA4NeVK6dOQwJnab7UDgiMz6B99rWIkk5.jpg?quality=96&as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x270,540x304,640x360,720x405,1000x563&from=bu&cs=1000x0",
+            "https://sun9-87.userapi.com/s/v1/ig2/dzI-psn9RSt1C1js--Lue72mBaB8ruMAICq_QCGsiQS43_yThdxDj4qKXtYI7r-ScZLsSZkq6cvpeH9eTs37_Y5V.jpg?quality=96&as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x270,540x304,640x360,720x405,1000x563&from=bu&cs=1000x0"
+        ]
+    },
+    {
+        "id": "pp4farmtrof_405712",
+        "timestamp": 1782553609,
+        "date": "27.06.2026",
+        "waterbody": "р. Яма",
+        "tag": "Обычная",
+        "coordinates": "138:196",
+        "description": "🇨🇳 Китай СИМА ЖИЛАЯ Точка клева: 138:196 Клипса: 40 метров Глубина: 150 см Наживка: кузнечик + жук навозный Комментарий игрока: \"Точка для симы на матчевое удилище. Утром и вечером клюет. Три наживки: кузнечик, жук навозный, майский жук — две из трех работают.\"",
+        "images": [
+            "https://sun9-31.userapi.com/s/v1/ig2/Emx8MHXoUj0qQOhcJtS-Che6LaslL3YjJjQLO-_GEk3sSnJW5v4jJ5ZlvIJlP0aq3wJ8s3v-7fuIqf_gMIvhowwW.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x203,480x270,540x304,640x360,720x405,1080x608,1280x720,1440x810,1527x859&from=bu&cs=1527x0",
+            "https://sun9-3.userapi.com/s/v1/ig2/u6DyFx6i4K172nQmJHQn6zExKgrh3pEr-cNsJN5lRJm7RNYgJMWqnJ_LktY1HDo0raoSv6tlK-dsqg46wqwFg__Y.jpg?quality=96&as=32x24,48x35,72x53,108x79,160x118,240x177,360x265,480x353,540x397,640x471,720x530,935x688&from=bu&cs=935x0",
+            "https://sun9-55.userapi.com/s/v1/ig2/aSSExvTRWjR7-1lWvwvvfyZX1IPaC4_tttRZPjDO0ERnBByIOKVJF18uFlxTl2asRga1MAybO9qN3-qPsAbiOK4R.jpg?quality=96&as=32x21,48x31,72x47,108x71,160x105,240x157,360x235,480x314,540x353,640x418,720x470,1080x706,1102x720&from=bu&cs=1102x0"
+        ]
+    },
+    {
+        "id": "pp4farmtrof_405711",
+        "timestamp": 1782553512,
+        "date": "27.06.2026",
+        "waterbody": "оз. Комариное",
+        "tag": "Трофей",
+        "coordinates": "35:87",
+        "description": "🇨🇳 Китай КАРАСЬ СЕРЕБРЯНЫЙ КАРАСЬ ЗОЛОТОЙ Точка клева: 35:87 Клипса: 8 метров Наживка: Клубника Pop-Up 15 + Свежая клюква Pop Ups 16 Дип: Клубника Комментарий игрока: \"Золотой и серебряный караси — трофей или синяя. Клубничный набор, классический поп-ап.\"",
+        "images": [
+            "https://sun9-80.userapi.com/s/v1/ig2/AcKvK0FkYNd7ho0H9c8J9ZEzPfGtwraq6HpY_W6gU5XixERMTJIy0wKRBuWuEgMQtbFa_WDS_CLxcp19xDpmbK2X.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,2559x1439&from=bu&cs=2559x0",
+            "https://sun9-9.userapi.com/s/v1/ig2/6dtet4wX9LzTkFdSljEtwMn_aTKY3buHKPqwg0CA1NiNzqtAIcW4u0oPR9TwbetbfRbNwGEdNrKwtjKBs5rNbGcQ.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,2256x1269&from=bu&cs=2256x0",
+            "https://sun9-58.userapi.com/s/v1/ig2/4mYupG5dHzrS2ciWiZOna_HGaj0i7ZL0vjkgr75HD_LozOiNB29XchEjBODGH43zBFMigYx1GYAgOHuW6PvuiLdg.jpg?quality=96&as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x270,540x304,640x360,720x405,1080x608,1194x672&from=bu&cs=1194x0",
+            "https://sun9-26.userapi.com/s/v1/ig2/B_dOJ5Un00_WNoDHRJ0GycLvNYXhzmYUC4-wWCdbYDgMlBA0za66RhZVAS-77nxyfmRlq82eUehzXD33csdJ53ky.jpg?quality=96&as=32x25,48x37,72x56,108x84,160x124,240x187,360x280,436x339&from=bu&cs=436x0"
+        ]
+    },
+    {
+        "id": "pp4farmtrof_405710",
+        "timestamp": 1782553484,
+        "date": "27.06.2026",
+        "waterbody": "оз. Янтарное",
+        "tag": "Трофей",
+        "coordinates": "83:145",
+        "description": "🇨🇳 Китай КАРП ЛИНЕЙНЫЙ Точка клева: 83:145 Клипса: 35 метров Наживка: Нейтральные 25 + Пикантная вишня Soluble 20 Дип: Дикая вишня Прикормка: молотая кукуруза + Пикантная вишня PopUp 16 (дробл) + Черная вишня 8 + Черная вишня 12 + Черная вишня + Вишневый ликер Температура воды: нормальная Комментарий игрока: \"План на сто звезд — 72-я. Улов на фото.\"",
+        "images": [
+            "https://sun9-75.userapi.com/s/v1/ig2/ifzDFteEy8zTErBjkgkUS6h3t_i8v0CRM35Ay8oZzGvEXRsqwcKXrn7ztzZJDE1_bLXFfibO892YFy4h5XiIvabo.jpg?quality=96&as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x270,540x304,640x360,720x405,1000x563&from=bu&cs=1000x0",
+            "https://sun9-18.userapi.com/s/v1/ig2/Z0A-b5DP6-6YFqfTfJnZp1jaEiw4BiVTVLJN5tLEpvfJ7GaRfd0ZHhFwpZLXcDGc6SVirE7gA5D4Y6hlm8rsC4Lp.jpg?quality=96&as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x270,540x304,640x360,720x405,1000x563&from=bu&cs=1000x0",
+            "https://sun9-49.userapi.com/s/v1/ig2/nEzMTWBSkjdOJkGNGD3EkgOkDIEsUl1SJsJowVHKwZ4YCf2KocSdJXx0v_SfZ2c8hrbvHwCjEmXxhz7Q3YhNeeN_.jpg?quality=96&as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x270,540x304,640x360,720x405,1000x563&from=bu&cs=1000x0",
+            "https://sun9-37.userapi.com/s/v1/ig2/sVx8bOqRdY3BF5axxE-H7BmM7b5G7z7g5BovED0UZFII2TPF6veGvFQ12AZdTUhk-dwzTLRomXe-0UG-QVwEhVI0.jpg?quality=96&as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x270,540x304,640x360,720x405,1000x563&from=bu&cs=1000x0"
+        ]
+    },
+    {
+        "id": "pp4farmtrof_405709",
+        "timestamp": 1782553391,
+        "date": "27.06.2026",
+        "waterbody": "р. Вьюнок",
+        "tag": "Трофей",
+        "coordinates": "112:126",
+        "description": "🇨🇳 Китай ЕРШ-НОСАРЬ РАК РЕЧНОЙ Точка клева: 112:126 Клипса: 5 метров Наживка: червь навозный Астраханский живучий Прикормка: семена рапса + рубленый червь + дрейссена + сушеные рачки + глина + краб и мидии Комментарий игрока: \"Бешеный клев речного рака на Вьюнке. Бонусом — трофей носаря. Клипса 5. Обязательно: черный плетеный шнур 3.5 кг, без поводка — голая основная леска.\"",
+        "images": [
+            "https://sun9-11.userapi.com/s/v1/ig2/Clhtp41ndTsgWqe5wUq2AvaEzNPGVHDASKNYpbUBOjyH0X18QC0JUx_a36rph0rq1xDE5_je0jg3_4cPlnXkpfss.jpg?quality=96&as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x270,540x304,640x360,720x405,1000x563&from=bu&cs=1000x0",
+            "https://sun9-77.userapi.com/s/v1/ig2/dPC-ymK2Pw0IdpJdS7fM6Y-TIql28Q-p2f5FsifvD7wteYHvEzEbKilDJ9sDHsjBCU-rjfOEVqnbSmy_BhX4R0YK.jpg?quality=96&as=32x35,48x52,72x78,108x117,160x173,240x259,360x389,480x519,540x584,640x692,720x778,1000x1081&from=bu&cs=1000x0",
+            "https://sun9-32.userapi.com/s/v1/ig2/DD5-J95Eb-4n_b_7vBrqmBO8VfPwS_0I5bhOw6fqyPR8he3bJt_2tIH3AdnfA9J-0UbC-2zpxFSy7j50inj0P40-.jpg?quality=96&as=32x19,48x29,72x43,108x65,160x96,240x144,360x216,480x288,540x323,640x383,720x431,1000x599&from=bu&cs=1000x0"
+        ]
+    },
+    {
+        "id": "pp4farmtrof_405708",
+        "timestamp": 1782553292,
+        "date": "27.06.2026",
+        "waterbody": "р. Волхов",
+        "tag": "Обычная",
+        "coordinates": "90:103",
+        "description": "🇷🇺 Россия ЛЕЩ Точка клева: 90:103 Клипса: 10 метров",
+        "images": [
+            "https://sun9-15.userapi.com/s/v1/ig2/mtHiN20gf3Nd0_60XRZ0dq15nhUdHW4cwN0GjbvpaRwTzW7UFoBdew8uLHadZalKj0TOXBwOduLgvCBBdr1JYH5T.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-80.userapi.com/s/v1/ig2/ESFyXRqcfXu7uhxQSr_aqYUZzSxgqJieXQ6115CcLiWXpLFyFPpoLds1XjS2gIq6td4YCmKTxllRDMeHRU5xuPVA.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-84.userapi.com/s/v1/ig2/V02xZ1kFDfub3Rb2jv_QDOFPZeLs5doSxO8m_GhYRAbaTCJZnqRmWq73KxxbNWJwNN9R9wbH3Ad4MxQnBj_jQ1t2.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-58.userapi.com/s/v1/ig2/EC1TfXuqajG4BdcNgFHZqCOgtbYA1Y1Uyl27ERv9mo-C5qFq1gs07zyrSEf9g44tv4LLqdXfipjYDiTBCDc1uIAv.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-73.userapi.com/s/v1/ig2/9-xym2L-tRipnIUzHW4E2AvYUmVVOjRM0OCfiosgHvV9nBRIhuBfEIk2211_A_ap5czSITI1EK9kuE5ww8inaq90.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0"
+        ]
+    },
+    {
+        "id": "rr4pepper_53370",
+        "timestamp": 1782553176,
+        "date": "27.06.2026",
+        "waterbody": "р. Яма",
+        "tag": "Трофей",
+        "coordinates": "105:167",
+        "description": "⭐ Краснопёр-Угай крупночешуйчатый 📌 105:167, проводка по течению",
+        "images": [
+            "https://sun9-6.userapi.com/s/v1/ig2/BiYufqCnrPXugAoJjJsqF0HO0d6neflQ8ZBdUe-kX1FfQ6BhFwuOn-dMSKmoBEQkxllJdcOXxs5maE8HB7NK1brm.jpg?quality=95&as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x270,540x304,640x360,720x405,1000x563&from=bu&cs=1000x0",
+            "https://sun9-3.userapi.com/s/v1/ig2/31MOds6Vqvz56q2Qqug4gSUfryiJq29tOxDjko4jbGb93zKXkx78VGQcXfF7tqSltvrAZVrn_P4SoyD18EpKIGIl.jpg?quality=95&as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x270,540x304,640x360,720x405,1000x563&from=bu&cs=1000x0",
+            "https://sun9-21.userapi.com/s/v1/ig2/JplQmiFq_s99dytPs6sSu_xv9Jr9v6zCXMsLUWRdoTKCWcDuUt0y6v-30IaE4kc_eswlaSk4hApBxFMuz8DnTw9T.jpg?quality=95&as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x270,540x304,640x360,720x405,1000x563&from=bu&cs=1000x0",
+            "https://sun1-17.userapi.com/s/v1/ig2/f9h-ZjBu6BjNJ1w0BqtkAUxYWQXQxvoO6i3TRG2XPCk-S_I6f5G4-yl63m1zGd32KgxoHDM3DMb2gQwcb1GZz4Pb.jpg?quality=95&as=32x17,48x26,72x39,108x59,160x87,240x131,360x197,480x262,540x295,640x350,717x392&from=bu&cs=717x0"
+        ]
+    },
+    {
+        "id": "pp4farmtrof_405706",
+        "timestamp": 1782553103,
+        "date": "27.06.2026",
+        "waterbody": "оз. Медное",
+        "tag": "Обычная",
+        "coordinates": "66:59",
+        "description": "🇷🇺 Россия ЛЕЩ Точка клева: 66:59 Клипса: 8 метров Температура воды: нормальная Наживка: Пряная атака 15 + Смесь специй 16 Дип: Острый перец Комментарий игрока: \"Можно пробовать закрыть картинку леща\"",
+        "images": [
+            "https://sun9-28.userapi.com/s/v1/ig2/Mgy4YafT1c02U-WIqLtxBD9zsm4q8MBz-1Xw1bh_gKm3a4QPGuVz5BXI6OFTbb08aRMdk7LeD5ngrVTEOLfsxUle.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,2560x1440&from=bu&cs=2560x0",
+            "https://sun9-14.userapi.com/s/v1/ig2/1040J8GKPr73oTqInHHWVPxpnrs7LtYCcbRS0Tpad4Xc5end1un9JDnzcX53T1DI1hLO2Zq-sWTxGpUfjEDOWkUD.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,2560x1440&from=bu&cs=2560x0",
+            "https://sun9-3.userapi.com/s/v1/ig2/iq0cVyvFTVAVejZqwz_NRXBLmAFQfGqde2lLnxAA8l9YNUGJExlW9ecPp8GumIrwx-KuudjypSBcl-qDSaGoGGgK.jpg?quality=96&as=32x42,48x62,72x93,108x140,160x208,240x312,315x409&from=bu&cs=315x0",
+            "https://sun9-62.userapi.com/s/v1/ig2/tjc61iE1rHBqI1kHjEFWxvZYsJm7LF0ICteE0gOW2j-TBi-_60euggRkKBLwNVP05RsKEBx6nltRgk_GXulkizqB.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,2560x1440&from=bu&cs=2560x0"
+        ]
+    },
+    {
+        "id": "pp4farmtrof_405705",
+        "timestamp": 1782553028,
+        "date": "27.06.2026",
+        "waterbody": "р. Северский Донец",
+        "tag": "Обычная",
+        "coordinates": "41:144",
+        "description": "Донец 🇷🇺 Россия ТАРАНЬ Точка клева: 41:144 Наживка: Личинка короеда + Каша перловая Комментарий игрока: \"спуск 1 метр\"",
+        "images": [
+            "https://sun9-39.userapi.com/s/v1/ig2/91eJU2ny0sR4WfM16q2Gwrh7qsgTvFwUmu6WKniA-Xl6uLrOj4L9MDC8b9MYd0w4N4nXNVkpHJIsanMiOonjjtFd.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,2560x1440&from=bu&cs=2560x0",
+            "https://sun9-72.userapi.com/s/v1/ig2/X8QHwwkLECrmMBbxc3G7etYibbyPrLq4W4gkJ5AGk1K_zDqmmfME6vfOIA7e5ZzmTL0YgpqoYFypQZP7b6wiTCqf.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,2560x1440&from=bu&cs=2560x0",
+            "https://sun9-8.userapi.com/s/v1/ig2/MtBrkXDDs7ooY7ZIkw37Wg86SbFQavdvy5FONGdNnYhPKzuyBXkqc6RkkbJ8NGotyW2UXYQBuxqLLjQQ5Tb0V2QY.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,2560x1440&from=bu&cs=2560x0",
+            "https://sun9-3.userapi.com/s/v1/ig2/0rVZUI3EIVymT7Utw28pTJNRtE1abvijWb9xTgBR_RZWqoM8v2g_q6NFs7IF9XuzvSt9XPs8gcNOZZp09X_-BUDU.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,2560x1440&from=bu&cs=2560x0"
+        ]
+    },
+    {
+        "id": "rr4pepper_53369",
+        "timestamp": 1782552981,
+        "date": "27.06.2026",
+        "waterbody": "р. Северский Донец",
+        "tag": "Фарм",
+        "coordinates": "26:142",
+        "description": "✅ Фарм гн (раковая шейка) 📌 Точка 26:142, клипса 5 💬 Червь астраханский. Прикорм - семена рапса, рубленый червь, глина, сушеные рачки, дрейссена, краб и мидии.",
+        "images": [
+            "https://sun9-20.userapi.com/s/v1/ig2/sTKs4FnBsu3Fs9__ADdGtrihhL-QJ6TzJ7Pxi32W08RK_Gs8Mw3uuQ8O97IeqILxsx17w2ZUS9E5fk0UOB6AxQSa.jpg?quality=95&as=32x20,48x31,72x46,108x69,160x102,240x153,360x229,480x305,540x343,640x407,720x458,1000x636&from=bu&cs=1000x0",
+            "https://sun9-73.userapi.com/s/v1/ig2/YG8R8L5vk3v753kXyUr7e-DbQGE4lJbm4OVM9qthwqQQ_IMzVLg3y8TA1IHetwY-NlnL2bN4PHaT5yTo1p3HOBmG.jpg?quality=95&as=32x19,48x29,72x43,108x65,160x96,240x144,360x216,480x288,540x323,640x383,720x431,1000x599&from=bu&cs=1000x0",
+            "https://sun9-40.userapi.com/s/v1/ig2/zHZZx_GrXXFcCfLBcxlTucEUiBshDm_zehuZPYKi22bvA0FgaGej7nKJUS6-r7ozswz6IBXZLRzOlMGOkvaneww0.jpg?quality=95&as=32x35,48x52,72x78,108x118,160x174,240x261,360x392,480x523,540x588,640x697,720x784,800x871&from=bu&cs=800x0",
+            "https://sun9-67.userapi.com/s/v1/ig2/2_8ZG_hk4Zb3Jq2EbRyMUpdd87ojxzHYf6vjPFeINHDvAcv1XC341oGPLB61k7lxc0MfY0n3645eeihX4YOPNJiM.jpg?quality=95&as=32x17,48x25,72x37,108x56,160x83,240x124,360x186,480x248,540x279,579x299&from=bu&cs=579x0"
+        ]
+    },
+    {
+        "id": "pp4farmtrof_405704",
+        "timestamp": 1782552968,
+        "date": "27.06.2026",
+        "waterbody": "оз. Медное",
+        "tag": "Обычная",
+        "coordinates": "37:32",
+        "description": "🇵🇱 Польша КАРП ДИНКЕНБЮЛЬСКИЙ ЗЕРКАЛЬНЫЙ Точка клева: 37:32 Клипса: 30 метров Наживка: Тунец 24 + Икра 20 Дип: Черная икра Комментарий игрока: \"вышел на мягко\"",
+        "images": [
+            "https://sun9-31.userapi.com/s/v1/ig2/kW6P4zAjiAxijz1A21p3jl5AzkwvnywtGWJ4s5JrkCUwtzAG_Q10eyba6UO-XJ8Pd-g_0WzgTMMS9Emtk2YaW9ew.jpg?quality=96&as=32x19,48x28,72x42,108x63,160x94,240x141,360x211,480x282,540x317,640x375,720x422,1080x634,1280x751,1440x845,1841x1080&from=bu&cs=1841x0",
+            "https://sun9-21.userapi.com/s/v1/ig2/vDuUVJs2WAGPUykw_VXTeWK_CxEmhrA9tbVs9EPmIzIAM_WTrGaNI1qgiZa4gIF1ZBIRkF0BHGRbq8gLRAQVeYO1.jpg?quality=96&as=32x17,48x25,72x37,108x56,160x83,240x124,360x186,480x248,540x279,640x330,720x372,777x401&from=bu&cs=777x0",
+            "https://sun9-49.userapi.com/s/v1/ig2/exeUEg2uAA4kHdOu84RRXqOtKeWIIXElejDuHu5G90zkR-OG9q7h8VV_WmPPN1lFv_4keiyCCyQX2-J3zcI406Mt.jpg?quality=96&as=32x18,48x27,72x41,108x62,160x92,240x137,360x206,480x275,540x309,640x366,720x412,951x544&from=bu&cs=951x0",
+            "https://sun9-78.userapi.com/s/v1/ig2/rzANxG3P9RjPe2T0JS7uY_McO6B4VmNbDxPHvJCRT0HrfyjghNkUSiELs_0ejSl9uywKw-_5jcq8nEvm3yFEMSak.jpg?quality=96&as=32x42,48x64,72x96,108x143,160x212,240x318,312x414&from=bu&cs=312x0",
+            "https://sun9-21.userapi.com/s/v1/ig2/TwwazwBeKhjr0ZYp8Cp6lK5YFHkdPTcoZNwBLoJq8d5mhTtCsVAObDosLFSq6Aci0LArztUCuTKInK_rT9eYXr1I.jpg?quality=96&as=32x20,48x30,72x45,108x68,160x100,240x150,360x225,480x300,540x338,640x400,720x451,1080x676,1280x801,1440x901,1726x1080&from=bu&cs=1726x0"
+        ]
+    },
+    {
+        "id": "pp4farmtrof_405703",
+        "timestamp": 1782552850,
+        "date": "27.06.2026",
+        "waterbody": "р. Сура",
+        "tag": "Трофей",
+        "coordinates": "59:32",
+        "description": "🇷🇺 Россия ТОЛСТОЛОБИК ПЕСТРЫЙ Точка клева: 59:32 Клипса: 35 метров Наживка: Десерт из трав 25 + Весенние травы 25 Комментарий игрока: \"3 раз в недельках помотал не так уж и много 24 минуты думал синяк до конца но чучуть не хватило зато в недельках)\"",
+        "images": [
+            "https://sun9-34.userapi.com/s/v1/ig2/tJmekbmMaQVTmiVYxqStR-vP68nj3aJ5t3E68ErnA2_q6JLGWsYOIx1Ci-gsoCPmXwmzC_IHgWp36EZARAEe0OqE.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-50.userapi.com/s/v1/ig2/oiblDxlNbW6n-eWF0sB-YSw8Y_XNR75WatwalTO8PBZnswLDXUTxApgF16MBaIcFz451UBlq1HARs9JKojJHc3Y5.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-77.userapi.com/s/v1/ig2/SXSMWCcy8rgHn59Qz3gR2SNdZ91H8sp5nMdWbtRI9Kr51lMHDRtE4aepxY4Uhx6zm1g3vxxZSzfy9GudzOZg8Uxh.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-75.userapi.com/s/v1/ig2/fhanc8BlP7xVdoSlZHj5eNHpUh_PIV25s_5bGNiq-XkzkBKD48r9i9LijfDwbvkaypOy8nf_zY9xNVyL4Vy_Vc1J.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-29.userapi.com/s/v1/ig2/XMWACXSwSJxuGgoaabQNahhO1uSed8vj7Idn5rP97JZogW1LnpluljoPBPuOqVbG0a8AHcqkqzzw6ywrbOrdh1e2.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-5.userapi.com/s/v1/ig2/P_P2DH8luEb7oTCmxDyhsunuf0Agrzf5GypLhJ6uw2mnt-sOVpMbShaUnN4IkEwl4oytlMrtyUC0K9lVKACtV3Dz.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0"
+        ]
+    },
+    {
+        "id": "pp4farmtrof_405702",
+        "timestamp": 1782552794,
+        "date": "27.06.2026",
+        "waterbody": "р. Ахтуба",
+        "tag": "Обычная",
+        "coordinates": "71:130",
+        "description": "🌍🌍🌍 САЗАН Точка клева: 71:130 Клипса: 17 метров Наживка: Пресноводный криль 25 + Лосось 20 Дип: Пикантный лосось Прикормка: молотая кукуруза + Лосось и тунца 3 + Лосось и тунца 6 + Криль 12 + Пресноводный криль 14 (дробл) + Лосось",
+        "images": [
+            "https://sun9-74.userapi.com/s/v1/ig2/V75IXkMEXbwWlmsIGbE7mS3Qnfyh9-ts28TBhrQ8UXBgBZzkY_D6trgLPRQ81eo_WkYpQGdWmRyTmh29Y_9Qk7iC.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,2560x1440&from=bu&cs=2560x0",
+            "https://sun9-85.userapi.com/s/v1/ig2/Zf2kLtXrUkAyKBy3pUf2_dOn_rMtP9NuRUM9ZVxd8badEn6wgPKGa39KhxcPAguscbI-trNm1XSvrXh8aJwdc3Y7.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,2560x1440&from=bu&cs=2560x0",
+            "https://sun9-12.userapi.com/s/v1/ig2/uBHGmn7JKNfs5sEohypZVrKFpTT4_8wUCVLB5lptFe8CQ8rfLK53uyKKxCjBaZyYqtoGCjpDxEcxBI4UenlTZ-8A.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,2560x1440&from=bu&cs=2560x0",
+            "https://sun9-31.userapi.com/s/v1/ig2/qk7iD7Q_7cVd_AXPr3KJU_bNz_GmKgqnhFVdQAY9iyFLS-UEs1ZrDCp-mTK3iDrRb3OFpVJODRdh_qbP7hEBL4WH.jpg?quality=96&as=32x32,48x48,72x72,108x107,160x159,240x239,360x358,480x478,540x538,640x637,651x648&from=bu&cs=651x0"
+        ]
+    },
+    {
+        "id": "pp4farmtrof_405701",
+        "timestamp": 1782552740,
+        "date": "27.06.2026",
+        "waterbody": "Ладожский архипелаг",
+        "tag": "Обычная",
+        "coordinates": "286:234",
+        "description": "архипелаг 🇷🇺 Россия СИГ-ЛУДОГА Точка клева: 286:234 Глубина: 420 см Наживка: пиявка + бокоплав пресноводный Комментарий игрока: \"14 банка. Оснастка мах глухая. Крюк 1/0. Остальное на скринах.\"",
+        "images": [
+            "https://sun9-7.userapi.com/s/v1/ig2/5O5AOPbQ2sb8yc5A1CV_EvDmVWN1C5ikaFNZalTT_Fpkr4ASTKk7gCiWghOUq8gB8PQqUC3u1ygoWcjfTuXkwMFF.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-20.userapi.com/s/v1/ig2/AAl8BoUGH2zzeYpqaG9hDDB9X3gD2Ucd8u5BlsGsH4_hb-tAb-sO17ZT55VALVVPznKv6784mrGH1KraUDWQlHYi.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-42.userapi.com/s/v1/ig2/u4OS0Rrd1oHO2l8LnbpaO01545oVYYFsIy0Meayv0UKK6qfCwrdWfO5hc6b3f1K4A-VB_chqWdSevuW8QopkioG9.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-74.userapi.com/s/v1/ig2/KZfuOUHYnmCQ95NWW1gINCNg9vdjcrVHRKVeozr5ROPmJuh0aiaeFci5ZiGA1yrNxDHFlnwjdd71din_jF7mztsd.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-67.userapi.com/s/v1/ig2/1dwP-LBczjez9DJS-7bLF7BbSyjsIjgLomDGRy9vV9GQYT03o8T28zuwy9-DTD6n_kx85agYYcfi2t0AUpF4HQF7.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-69.userapi.com/s/v1/ig2/Uwv8YnuOCObII5hEZHzBsJyCfhBBVdJdJovXsUJodhlczUa2yqWXtw0ZHpZ7fhGay6ncIoVmhgoU1jxgm0TJ0viV.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0"
+        ]
+    },
+    {
+        "id": "rr4pepper_53367",
+        "timestamp": 1782552633,
+        "date": "27.06.2026",
+        "waterbody": "р. Ахтуба",
+        "tag": "Трофей",
+        "coordinates": "100:57",
+        "description": "⭐ Стерлядь 📌 100:57, клипса 17 💬 Прикорм осетровый",
+        "images": [
+            "https://sun9-21.userapi.com/s/v1/ig2/49Y1g8GmcAb5zfExDf2ZkZMMlSZXtcdqtqGiVg4KggccZh4KfQUamcIfPYnThh_1SA5qm-MiEqjukJSehSBS9wMy.jpg?quality=95&as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x270,540x304,640x360,720x405,1000x563&from=bu&cs=1000x0",
+            "https://sun9-49.userapi.com/s/v1/ig2/BEEOf8MzCkMssrITDdWX2thvD95LrxphKO3wbhjj6WwQtTCjxN7sEA4qA0j0QTmrC4PptyfZvK188ngtaflJp_nq.jpg?quality=95&as=32x15,48x23,72x34,108x52,160x76,240x114,360x172,480x229,540x258,640x305,720x343,1000x477&from=bu&cs=1000x0",
+            "https://sun9-25.userapi.com/s/v1/ig2/ZOKHvQH8HN5YfedJVIUspKOfZSUylMGUDXtkFEfA7iyDBDCO5IkULbKgZL2dmb4nWVBbkRNqf2fsH5VkxdU7IiZy.jpg?quality=95&as=32x18,48x27,72x41,108x62,160x91,240x137,360x205,480x274,540x308,640x365,720x410,1000x570&from=bu&cs=1000x0",
+            "https://sun9-41.userapi.com/s/v1/ig2/aiYEZqf1H2VN8TY4fMG7-0QHbTAbls5WjkRwxo5etvXfUcP8SxULgLsBwkcP89ujRWqZV-ova7Hu1OF4Df4Kh9Tr.jpg?quality=95&as=32x16,48x24,72x36,108x55,160x81,240x122,360x183,480x243,540x274,640x324,720x365,1000x507&from=bu&cs=1000x0",
+            "https://sun9-42.userapi.com/s/v1/ig2/MrOfjeA1CW4VOY6TR0f35p4bD2kX69AiNTJyT2vT53kuFxGH5OfIvFHpF-975gVORZem2lPRfWayDOGyg9W366J9.jpg?quality=95&as=32x18,48x28,72x41,108x62,160x92,240x138,360x207,480x276,540x311,640x369,720x415,743x428&from=bu&cs=743x0"
+        ]
+    },
+    {
+        "id": "pp4farmtrof_405698",
+        "timestamp": 1782552535,
+        "date": "27.06.2026",
+        "waterbody": "Ладожский архипелаг",
+        "tag": "Обычная",
+        "coordinates": "286:234",
+        "description": "архипелаг 🇷🇺 Россия РЫБЕЦ Точка клева: 286:234 Глубина: 420 см Наживка: пиявка + пиявка Комментарий игрока: \"14 банка. Оснастка мах глухая. Крюк 1/0. Остальное на скринах.\"",
+        "images": [
+            "https://sun9-40.userapi.com/s/v1/ig2/DhTDGkz9rfwCjcR6F0uRNXBARDzGUGoLM5ebMukM6YL0iFB8rs13O4JTtiUS0JFQ1XsfBATOxVHWwSwKViMicjo8.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-73.userapi.com/s/v1/ig2/J-VBmmMoWKhej0kHFx2GYe-Sld9cHYq0CY7n_XgL4AegZ6wu8arLVJX19qX1AR_hJ39t-AN9hoh2osIOK8erEJL6.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-29.userapi.com/s/v1/ig2/lrjTd-Kq2fZ3vvml4OpyJIAQdHEPsk_ExHSqkmW3TvYpibBZ50nDTbmMnen1QtXYLoP_HkjH9xy6I0vREXm2ub0G.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-24.userapi.com/s/v1/ig2/RLApBCrHfrADKB5mOFGDjG8FhHJI0elF1PwmLPRtPTJQfFUGmjG_866pEhtd4u5eliD-_g4tjOwprWuDFh_SYGKy.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-23.userapi.com/s/v1/ig2/YQlVQdEonat_1QBLtTYrGZKX_iP49XWnCfpO3DnugZ_5-brrs69_HYTJnb7zA4uzvUPWFYg3LFMc3rdnrWvN4mzI.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0"
+        ]
+    },
+    {
+        "id": "rr4pepper_53366",
+        "timestamp": 1782552451,
+        "date": "27.06.2026",
+        "waterbody": "р. Северский Донец",
+        "tag": "Фарм",
+        "coordinates": "61:146",
+        "description": "💰 Шемая, фарм 45 минут 📌 61:146, глубина 100",
+        "images": [
+            "https://sun9-16.userapi.com/s/v1/ig2/pgd0bQRAndRbfDHitJZ6Gft81LmImPtkAdtSbbDvQ1EnKCp395mQoQeTjCyjCVWNe1fl7tA6UCw4EtOETYJl10k8.jpg?quality=95&crop=51,0,897,505&as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x270,540x304,640x360,720x405,897x505&from=bu&cs=897x0",
+            "https://sun9-80.userapi.com/s/v1/ig2/EIU8mKXqAVI3ZL_idUNA3uV6N3pz9Vw0NLALkcFqdrIZYhh05n12IfUYJOorIuBRNIs453eNsYFo8_LgYzySlthI.jpg?quality=95&as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x270,540x304,640x360,720x405,1000x563&from=bu&cs=1000x0",
+            "https://sun9-32.userapi.com/s/v1/ig2/4KNWEWyDCp95rYKVrEa0tNaFJI5rzSTTbrIJxWKK72iUx-RmasYXpuB7y8VQQhUsrMeN2x81e7OByNxey9uQDbj6.jpg?quality=95&as=32x16,48x24,72x36,108x55,160x81,240x121,360x182,480x243,540x273,640x324,720x364,1000x506&from=bu&cs=1000x0",
+            "https://sun9-83.userapi.com/s/v1/ig2/vKPAefYsvovfZb89b2O2jiflDzql85jFp1-O0Jm9mZt6WStX5rQu8YDOznPFQDMf2T_DgIb7PW3fGKJrdb25vxnq.jpg?quality=95&as=32x20,48x29,72x44,108x66,160x98,240x147,360x221,480x294,540x331,640x392,720x441,1080x662,1170x717&from=bu&cs=1170x0"
+        ]
+    },
+    {
+        "id": "pp4farmtrof_405696",
+        "timestamp": 1782552444,
+        "date": "27.06.2026",
+        "waterbody": "р. Сура",
+        "tag": "Обычная",
+        "coordinates": "132:92",
+        "description": "🇷🇺 Россия СУДАК БЕРШ Точка клева: 132:92 Наживка: Lynns Twister 70-009 Комментарий игрока: \"Сплав\"",
+        "images": [
+            "https://sun9-39.userapi.com/s/v1/ig2/xHbCU5iVNYmotxtwXdsXU2ajaytbUyw_1vNRYale5cJmIIOyOz6OPn3263FM58i7y75-IFeefm97uDjGRtQwGMEC.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-5.userapi.com/s/v1/ig2/6Zv6cRTI5QMnnRb8Cc9I8ik2D5sgP0sCB96fe2d0yjWbYHSmywAwPPEglVvbt0TX1Cfmgd0s4eoWqgZhYZFpjUC4.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-12.userapi.com/s/v1/ig2/IE5scwjexghYHpcFZekxg0ayt2zQq-gh6Yz43ewLaKSVYVHzoIUulZ0ahP-lrbM2fNblKENgEijtD0KbFUUDR_8o.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-31.userapi.com/s/v1/ig2/2Pi2ZUD4skF0Ae4lZgoVMPu8Vuzkhst4crcIihCz1AGj743BHXykLNDg6thfWm6PLzAa7IuLWbynNBv02USZSLEp.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-29.userapi.com/s/v1/ig2/CObWzEhR59vqCMJynyLPMXZKLnPCo2GMUkQC8g42L-hftxO4YsodrqMlf1LBjGNGvT1TolOQ4PJBFdYO6W5NJlMZ.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0"
+        ]
+    },
+    {
+        "id": "pp4farmtrof_405694",
+        "timestamp": 1782552440,
+        "date": "27.06.2026",
+        "waterbody": "Ладожский архипелаг",
+        "tag": "Трофей",
+        "coordinates": "450:275",
+        "description": "Архипелаг 🇷🇺 Россия ПАЛИЯ ОБЫКНОВЕННАЯ Точка клева: 450:275 Приманка: Nasty Worm 4.5-001 Комментарий игрока: \"Архипелаг радует синяком, пока море дает недотрофов.\"",
+        "images": [
+            "https://sun9-68.userapi.com/s/v1/ig2/G-sOb7_z1QePKPb4tp7VtzDffQV8XmrJHLW5363f96NoecUBtYl5_F7nbCneYdtFYla3JrZKNx7ZGWtgDA84E9sk.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-56.userapi.com/s/v1/ig2/T14g8w_RHHjUuIbQwfiUrjmrood7i6JNk9-6L1GAb2YyA5GYOv0ZKytqaDAMICQkr9leK4xT3bQ2iPu06mTq-TeF.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-15.userapi.com/s/v1/ig2/A9dFyHiM99ObB0w1GVGXdDhFvL_0pAgq7C05NONqOGDvHA-Lyk44eekJ_fhanwAbhTw2Ts9RNqqM_PuM-cYacsn3.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-62.userapi.com/s/v1/ig2/dsfA846bxJMCe1D2qn8OQjs3u2RFn4FBiLdZqhmNYuYK3trjef1ur6YoS4clHg7_Ki2mnRPJpxq-OhHhaPIN_8N6.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0"
+        ]
+    },
+    {
+        "id": "pp4farmtrof_405692",
+        "timestamp": 1782552379,
+        "date": "27.06.2026",
+        "waterbody": "р. Сура",
+        "tag": "Трофей",
+        "coordinates": "110:110",
+        "description": "🇷🇺 Россия БЕРШ НАЛИМ Точка клева: 110:110 Наживка: Lynns Twister 30-005 Комментарий игрока: \"Трофеи Налим и Берш. Ловил 1 час 20 минут в 2 палки, вышли из 8 ямы.\"",
+        "images": [
+            "https://sun9-87.userapi.com/s/v1/ig2/xbfH66u3vdVHDDpEqjEp4DLT9n0giG7D0BxSN-TbcV0uphjR1D634q7J1Eku9gQLSibayE7lvpx8y5pmjwS4slEi.jpg?quality=96&as=32x14,48x21,72x31,108x47,160x70,240x105,360x157,480x210,540x236,640x280,720x315,1080x472,1280x560,1440x630,1596x698&from=bu&cs=1596x0",
+            "https://sun9-7.userapi.com/s/v1/ig2/S0bouCtzUhb7u6-8KTMJ_cZbQlFFbhROA8DyGo_ssA08OA1G_MPbmZTKZqYZW7lsyczKWW8l9oQo7THh-2CKoCtu.jpg?quality=96&as=32x18,48x28,72x42,108x62,160x92,240x138,360x208,480x277,540x311,640x369,720x415,1080x623,1280x738,1440x831,1602x924&from=bu&cs=1602x0",
+            "https://sun9-78.userapi.com/s/v1/ig2/mbY68pLyeNFoxW7vETsVBT91fnxhwVTwBtTQkrUHEN_h793A-Ynbj3aCsc8bDMiUEPAmVmqhXebWQ4fErByfG_Oh.jpg?quality=96&as=32x18,48x27,72x40,108x60,160x89,240x134,360x201,480x268,540x302,640x358,720x403,1080x604,1280x716,1440x805,1597x893&from=bu&cs=1597x0",
+            "https://sun9-59.userapi.com/s/v1/ig2/kaLC265qnvwkxsfbEcWToR6NkBGf6ghi_o3huiw364Lg1F5iouwiPiYe7ophnuejldxEWhAjrcU4UZaaubTbfb5J.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x719,1440x809,1594x896&from=bu&cs=1594x0",
+            "https://sun9-14.userapi.com/s/v1/ig2/e5SAhHQzVDy-UY1zrnv4T7eDqiBWNG97qIj7uf965SGk9QMbMDhdFL8J0hGNxnC-5mwt06dGfyJKuomtlX08pTj6.jpg?quality=96&as=32x18,48x27,72x40,108x60,160x90,240x134,360x201,480x269,540x302,640x358,720x403,1080x604,1280x716,1440x806,1594x892&from=bu&cs=1594x0"
+        ]
+    },
+    {
+        "id": "pp4farmtrof_405691",
+        "timestamp": 1782552369,
+        "date": "27.06.2026",
+        "waterbody": "р. Сура",
+        "tag": "Обычная",
+        "coordinates": "131:92",
+        "description": "🇷🇺 Россия СУДАК Точка клева: 131:92 Наживка: Lynns Twister 70-009 Комментарий игрока: \"Сплав\"",
+        "images": [
+            "https://sun9-39.userapi.com/s/v1/ig2/EPFIPMlPF3ZKuHZcyTVtI59Jrx9ST9a33swyvX_JZC9geDGENDxTawyLqINy7dZZ_X_hfL7rrmPm6wHnq51PJbMo.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-71.userapi.com/s/v1/ig2/U3Mjan58Feq3-QzMIJqojXGv0Mop6ysbVdBgd9n1sDiLuhfEWzngslhKUsuM_Uv66BEEPv9-JAI07YEPoVmXCVkI.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-31.userapi.com/s/v1/ig2/bImQdV74tpcEfMqwnlK3Fr3YqHji20Pve3ISuavGbql0lSXV72qU-LyO2WmgFM-avZI4gsP6rpP5qiFtejMuaGds.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
+            "https://sun9-29.userapi.com/s/v1/ig2/KP5wrxjDB336y4zmFjNJQCzlGDnvxNzC59jkULA4564FkFBRDQ1VNaO1PguyK91i01n2uek0FBokizzLtzDq1V3G.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0"
+        ]
+    },
+    {
         "id": "pp4farmtrof_405688",
         "timestamp": 1782551828,
         "date": "27.06.2026",
@@ -151461,626 +152090,6 @@
             "https://sun9-60.userapi.com/s/v1/ig2/o-LI4Ew_-kKRGsVYYUMC68n-KnN3jZulOoyB7oDah5D5xIhKsSxfB-v7U0EBN9rfsEA5uzCe0qiLtbq97xtWp0Q4.jpg?quality=96&as=32x17,48x26,72x39,108x59,160x87,240x131,360x197,480x262,540x295,640x350,720x394,1080x591,1280x700,1440x787,1920x1050&from=bu&cs=1920x0",
             "https://sun9-63.userapi.com/s/v1/ig2/LO3stBbD8FfiV3ZzZSGenDoPS5zzqFOBtSnryNg9cU6F2jblAXEfH_EqQroOFXgZgbEl8mwqHrSE10XInLaTY37z.jpg?quality=96&as=32x17,48x26,72x39,108x59,160x87,240x131,360x197,480x262,540x295,640x350,720x394,1080x591,1280x700,1440x787,1920x1050&from=bu&cs=1920x0",
             "https://sun9-34.userapi.com/s/v1/ig2/jb7FOgGzazABR6LslqyiPTPMgEH_Y9XUsarbt26hqxTtMo5rG681ljexEwxtrLZ219FJBuWW3Fz2eObE-KMfvhNJ.jpg?quality=96&as=32x17,48x26,72x39,108x59,160x87,240x131,360x197,480x262,540x295,640x350,720x394,1080x591,1280x700,1440x787,1920x1050&from=bu&cs=1920x0"
-        ]
-    },
-    {
-        "id": "pp4farmtrof_375126",
-        "timestamp": 1779890114,
-        "date": "27.05.2026",
-        "waterbody": "р. Волхов",
-        "tag": "Обычная",
-        "coordinates": "66:78",
-        "description": "🇨🇳 Китай ЛОСОСЬ ЛАДОЖСКИЙ Точка клева: 66:78 Приманка: Ylin-Uistin Snatcher-S002 Скорость: 50 Комментарий игрока: \"Без према 7-1. Слева от большого острова — в глубокую яму с рывками. Три дня сидел. Первые два дня практически пусто. Новая приманка — первый раз поводок отгрызли. Сегодня вдруг решил попробовать прямо в яму. Сменил две приманки: S002 и F10-005.\"",
-        "images": [
-            "https://sun9-47.userapi.com/s/v1/ig2/WVq1OZIM3YRQFsthyj_nvAZ_64CfckMYcl9BaRPLQYbmZXiTPB3pFEt6zGX8ZfzsMTjoH9mXq33jUxPBcXhPHoXM.jpg?quality=96&as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x270,540x304,640x360,720x405,1000x563&from=bu&cs=1000x0",
-            "https://sun9-51.userapi.com/s/v1/ig2/4-UTa58jczfEBYDCIUH7pvp5aLasrTgAT6_nQvgonIf_kWvyycpM2IgyQd1tOAVDtbRfaHP0iZbfoohJlmRJ87rQ.jpg?quality=96&as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x270,540x304,640x360,720x405,1000x563&from=bu&cs=1000x0",
-            "https://sun9-87.userapi.com/s/v1/ig2/8hNZUTfHBMwUguiFw56IeuoWNFFJuMomkQH83FrhpU1mBEQvQoRkdlwNbXgWCPDbdJ_KA4mJQbd3uEpRprLzZ6wi.jpg?quality=96&as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x270,540x304,640x360,720x405,1000x563&from=bu&cs=1000x0"
-        ]
-    },
-    {
-        "id": "pp4farmtrof_375123",
-        "timestamp": 1779889867,
-        "date": "27.05.2026",
-        "waterbody": "оз. Куори",
-        "tag": "Обычная",
-        "coordinates": "76:113",
-        "description": "🇨🇳 Китай ФОРЕЛЬ СЕВАНСКАЯ Точка клева: 76:113 Приманка: Blast AngryWalker S8-004 Комментарий игрока: \"С лодки, две удочки S8-004 топвотер. Несколько штук на 3.4. Нет клёва — почаще релог.\"",
-        "images": [
-            "https://sun9-16.userapi.com/s/v1/ig2/FOCfNyG1x_I-YX2JdVrjOxcnIkOcDaAGr0jhzMKEy4zuoXQjAuLbexcDAVjZz_joRh2ooACcbn9ucI2DDjPJiD9z.jpg?quality=96&as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x270,540x304,640x360,720x405,1000x563&from=bu&cs=1000x0",
-            "https://sun9-79.userapi.com/s/v1/ig2/-2Gc6fOvnhiTRIPM5KEmrLdmHQnxASOG1AkULckY8BehualEWBZyXRtaUhZFLEi9fuCKA-n6LfljezLR6UXQUTMw.jpg?quality=96&as=32x17,48x26,72x38,108x57,160x85,240x128,360x192,480x255,540x287,640x340,720x383,1000x532&from=bu&cs=1000x0",
-            "https://sun9-24.userapi.com/s/v1/ig2/jAXPS8WE-isHQDBRUlhBcQ6wFVCepALyD9hqeul5DVCCciHE4y7DtnyqMCklrG0I4Si6stfYw3qEitL8PY8_H1nW.jpg?quality=96&as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x270,540x304,640x360,720x405,1000x563&from=bu&cs=1000x0",
-            "https://sun9-24.userapi.com/s/v1/ig2/htz9thmYo_FawBW0NDF3iECIjUJAUKQ-aVX0u_dIUJl_sNAl4n2eaAyom1yyzoe_3m2-7CuVDeo0AyugfvLQ7A4E.jpg?quality=96&as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x270,540x304,640x360,720x405,1000x563&from=bu&cs=1000x0"
-        ]
-    },
-    {
-        "id": "pp4farmtrof_375120",
-        "timestamp": 1779889570,
-        "date": "27.05.2026",
-        "waterbody": "оз. Куори",
-        "tag": "Обычная",
-        "coordinates": "120:90",
-        "description": "🇨🇳 Китай ГОЛЕЦ КУОРСКИЙ Точка клева: 120:90 Клипса: 35 метров Приманка: Ylin-Uistin Orig Minnow 13-S006 Скорость: 50 Комментарий игрока: \"На твинке тоже вышел из этой тюрьмы. Просто хочу поделиться мыслями. Пересмотрел кучу гайдов, купил кучу приманок. Перепробовал всё. Видел чужие поплавки, троллинг, мелкие и крупные приманки — закупился. Даже тени целевой рыбы не видел. В итоге как и на основном — здесь же береговой заброс. С перерывом в пару дней. Севанка и голец оба есть. Но чисто для справки.\"",
-        "images": [
-            "https://sun9-2.userapi.com/s/v1/ig2/lS9xjAsMmCDv42mB_4tzu6Nt3xVA-Yof1BSheP7SlfSojtSvLeTHe2ufvkVq7yonJUFUR8WKfWnWjGBWt_nnyIZN.jpg?quality=96&as=32x16,48x24,72x35,108x53,160x79,240x118,360x177,480x236,540x265,640x315,720x354,960x472&from=bu&cs=960x0",
-            "https://sun9-75.userapi.com/s/v1/ig2/wg9lb-oCxGulsLxCvlJUs30MlMLJEsv8_ALwmhdc3qXvExUHd7BkP7N4HzobIkBKlaQGBG7M2MGXWLMrDn7oOcqk.jpg?quality=96&as=32x15,48x22,72x34,108x51,160x75,240x112,360x169,480x225,540x253,640x300,720x337,1080x506,1170x548&from=bu&cs=1170x0",
-            "https://sun9-17.userapi.com/s/v1/ig2/LCal8fVhTexknY1-AeevVqil3lV7iJ5L2Hugyvi9B-sL0650tOmR8T_F5uaCE0Lae2yp5j9aqqzndxUJjZ57IuBU.jpg?quality=96&as=32x14,48x21,72x31,108x47,160x70,240x105,360x157,480x210,540x236,640x280,720x315,1080x472,1107x484&from=bu&cs=1107x0",
-            "https://sun9-23.userapi.com/s/v1/ig2/4_6sKjCqCqFVckjv2Eh4wxPMjIRB91pEDxKF6GzbDhnRzlPycsjQgQXVdcgEU4ESBV7fzd_iQxle_1l7E90bva30.jpg?quality=96&as=32x19,48x28,72x43,108x64,160x95,240x142,360x213,480x284,540x320,640x379,692x410&from=bu&cs=692x0",
-            "https://sun9-83.userapi.com/s/v1/ig2/InXKzdR4vKeELiSSTs5iX1Kyp9iWvIxoqjJ6bIuZ-onYmsx97iuPo-OoLDiCxLyzS7TdDyneGY4D8GwStbo0mpMm.jpg?quality=96&as=32x32,48x48,72x72,108x108,160x160,240x239,360x359,480x479,540x538,640x638,704x702&from=bu&cs=704x0"
-        ]
-    },
-    {
-        "id": "pp4farmtrof_375119",
-        "timestamp": 1779889569,
-        "date": "27.05.2026",
-        "waterbody": "оз. Куори",
-        "tag": "Трофей",
-        "coordinates": "75:113",
-        "description": "🇨🇳 Китай ГОЛЕЦ КУОРСКИЙ Точка клева: 75:113 Приманка: Zeiman Spiker 018 Скорость: 20 Комментарий игрока: \"Больше десяти часов в тюрьме. Троллинг, живец, блесна — всё перепробовал. Наконец свобода. В этот раз сидел три с лишним часа. После ужина и до конца. 2018 и 2016 чередовал. На 75:113 всего 6 севанок, 3 гольца. Звезда — на 2018. В сторону E, левее-правее без разницы. Нет рыбы — вся эзотерика просто психология. 98-й далеко не кидаю. На бельевом наборе с обеда до вечера. Попутно сбил рекордную плотву со 149-й ямы.\"",
-        "images": [
-            "https://sun9-62.userapi.com/s/v1/ig2/WTAalv81hy1mN12BsvlHptgB0ShoWZ7GSZJYFKXMLsYe2BEzU_NqVK1MsrCS1hMHyXOZzOqu7MyZK1azGLRu9E9L.jpg?quality=96&as=32x17,48x25,72x37,108x56,160x83,240x125,360x187,480x250,540x281,640x333,720x375,1080x562,1280x666,1440x749,1884x980&from=bu&cs=1884x0",
-            "https://sun9-74.userapi.com/s/v1/ig2/Z_GkkpGuCjoE4PnUAv0qH8SPZZzDu91LvmLK3I0b4C1T5Ic_ZcV_WWIjyW88pv9sIocfkSnNbAOmrJir5Us91K2-.jpg?quality=96&as=32x15,48x23,72x34,108x51,160x75,240x113,360x169,480x225,540x253,640x300,720x338,1080x507,1280x601,1440x676,1914x898&from=bu&cs=1914x0",
-            "https://sun9-64.userapi.com/s/v1/ig2/RLBzQBt_jFhYij7I8fMAlRKSDMFaDbtbSnq9ek2qnefcNENzn12GYluEy9mMynnO-3LsLxIH7WkuddQTXEpmKUUV.jpg?quality=96&as=32x15,48x22,72x33,108x49,160x73,240x109,360x164,480x219,540x246,640x292,720x328,1080x492,1280x583,1440x656,1866x850&from=bu&cs=1866x0",
-            "https://sun9-74.userapi.com/s/v1/ig2/Oe5ltkBXEbc3R9GTGL-pZ7R7ttTHAp8GbeOMGrJmqx3mbnb6SSEV4Oj6unYnKp90d4Tg0ifSZwXoU4vdMa4mSRYP.jpg?quality=96&as=32x30,48x44,72x67,108x100,160x148,240x222,360x333,394x365&from=bu&cs=394x0"
-        ]
-    },
-    {
-        "id": "pp4farmtrof_375118",
-        "timestamp": 1779889351,
-        "date": "27.05.2026",
-        "waterbody": "оз. Куори",
-        "tag": "Обычная",
-        "coordinates": "75:113",
-        "description": "🇨🇳 Китай ГОЛЕЦ КУОРСКИЙ Точка клева: 75:113 Приманка: Zeiman Spiker 016 Скорость: 15 Комментарий игрока: \"Обычный 6-1. Блесна. Есть севанка, есть ветчина. В час ночи взял. Новый бельевой набор, тащил до семи-восьми. Скорость 15. В сторону E, бросок на полную. Равномерка. Можно одновременно Douyin листать. Под утро шёл дождь, листал — и резко удар. Рука устала. Но зато не в тюрьме.\"",
-        "images": [
-            "https://sun9-87.userapi.com/s/v1/ig2/Crm-YrNNfYNoGHfmdxEN4Jjd9dAkMJz2jdXcZsF7BeAL-h5H1o0OD1iLaiTV1HJFkCiBEMk_y6U93OR98z3V5bUN.jpg?quality=96&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1000x750&from=bu&cs=1000x0",
-            "https://sun9-49.userapi.com/s/v1/ig2/nCa8pomgu9RAi2VO60rGnT-d8Oc38lBnln5imXyRjK5EaRbFVC5U46menuLEww44yt9RaVhA_UobKXrO3GlhjhB1.jpg?quality=96&as=32x16,48x24,72x36,108x53,160x79,240x119,360x178,480x238,540x267,640x317,720x356,1000x495&from=bu&cs=1000x0",
-            "https://sun9-46.userapi.com/s/v1/ig2/TZcrioLTs48MZQrG64cy7Nnjn-_-w40rVk8w-8vlb7qmtIkCGVJCbB43XbDnNMj6qgdRFfbDUOsbRXT8Oq6gq5X8.jpg?quality=96&as=32x16,48x24,72x36,108x53,160x79,240x119,360x178,480x237,540x267,640x316,720x356,1000x494&from=bu&cs=1000x0",
-            "https://sun9-51.userapi.com/s/v1/ig2/18XVHROA8JCMXrNA-DIAMkkDPb3bt0jKe5zc8YgM6Dofjuj6T_wmZPq55dxJzv1Xmm6l8V_zXDKjrpPvf76-eSJf.jpg?quality=96&as=32x34,48x51,72x77,108x115,160x170,240x256,360x383,480x511,540x575,640x682,720x767,1000x1065&from=bu&cs=1000x0"
-        ]
-    },
-    {
-        "id": "pp4farmtrof_375117",
-        "timestamp": 1779889330,
-        "date": "27.05.2026",
-        "waterbody": "оз. Куори",
-        "tag": "Обычная",
-        "coordinates": "75:113",
-        "description": "🇨🇳 Китай ГОЛЕЦ КУОРСКИЙ Точка клева: 75:113 Приманка: Zeiman Spiker 016 Скорость: 15 Комментарий игрока: \"Наконец-то 6-1. Этот квест — просто тошнотворный. Сколько дней держал. Пришёл — и бельевой набор тащит 18-килограммового гольца. Полдня вываживал. Казалось, сейчас растаю. 2016, красный крючок S2. Влево от E. Раньше кидал чуть правее. Только сменил направление — сразу. Наконец-то все бесплатные квесты добил.\"",
-        "images": [
-            "https://sun9-4.userapi.com/s/v1/ig2/-VPPVILBGmIWYQ6322nkmjXA8PaK59GWIkCIKRfLbO1WhJ-51iGeZNbWKRT4-6QUk5gCJyzd5UK4q7WrQZpRevtU.jpg?quality=96&as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x270,540x304,640x360,720x405,1000x563&from=bu&cs=1000x0",
-            "https://sun9-8.userapi.com/s/v1/ig2/Drlm7IpVIfH9wCdON4P_Adxv90Imkeky4DvDZIy8rIIAmRhYlm1dFovFB-vJyTNW7ndmde-6V9bxBnYotGiJaWuP.jpg?quality=96&as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x270,540x304,640x360,720x405,1000x563&from=bu&cs=1000x0",
-            "https://sun9-28.userapi.com/s/v1/ig2/nRNbLOgT_AtGpig25X5PIC_rTemeM-ewmi9FNvrtslyZRS__6M2U48mklibnvDYBepUslzARHE364BurALlPNzgg.jpg?quality=96&as=32x14,48x22,72x32,108x49,160x72,240x108,360x162,480x216,540x243,640x288,720x324,1000x450&from=bu&cs=1000x0",
-            "https://sun9-52.userapi.com/s/v1/ig2/dtwiaLOIG8ES2lLgzRQYpGMybMwl9v76J1OzN0OCDPH5E6NpBIMUKnH6b9Z4zu0gDS9GdiKtxrZjsBRAn11FO8p8.jpg?quality=96&as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x271,540x305,640x361,720x406,1000x564&from=bu&cs=1000x0"
-        ]
-    },
-    {
-        "id": "pp4farmtrof_375116",
-        "timestamp": 1779889328,
-        "date": "27.05.2026",
-        "waterbody": "оз. Куори",
-        "tag": "Обычная",
-        "coordinates": "75:113",
-        "description": "🇨🇳 Китай ГОЛЕЦ КУОРСКИЙ Точка клева: 75:113 Клипса: 30 метров Приманка: Zeiman Spiker 018 Комментарий игрока: \"Обычный 6-1. Кто не хочет троллить — пробуйте. Ночью взял. Новый бельевой набор с прочностью 11 кг еле вытянул. Локти отбило. Точка в сторону E. Бросок на полную. Севанка тоже клюет.\"",
-        "images": [
-            "https://sun9-4.userapi.com/s/v1/ig2/xWWBkALQKmXF4q4iG2ZbFdJDosiwYqYTkmFknV2PInd7Y32M_eApK1Rqfo_rVdsNMJA_OKwrwU9wb6U2WTaXjaLf.jpg?quality=96&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x404,640x479,720x539,1000x749&from=bu&cs=1000x0",
-            "https://sun9-27.userapi.com/s/v1/ig2/Vh-NMRZSGVDiVVr5TY7Bt4Hiyx8VaAZ3cCEJZzghfX88oHPYSUhzgRzgO6P51cwfcBIcwrtY1nHegSymKshEbvNS.jpg?quality=96&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x404,640x479,720x539,1000x749&from=bu&cs=1000x0",
-            "https://sun9-36.userapi.com/s/v1/ig2/8AivKex3mLHIW6P0SZT8tISYKT7G4GmnlvDckdP2cE8oFitoSM9LkdlM9SEeuAK8lm1Klqox6yWJiXzN4_Lddm2b.jpg?quality=96&as=32x20,48x30,72x45,108x67,160x100,240x150,360x225,480x300,540x337,640x400,720x450,1000x625&from=bu&cs=1000x0"
-        ]
-    },
-    {
-        "id": "pp4farmtrof_375114",
-        "timestamp": 1779889211,
-        "date": "27.05.2026",
-        "waterbody": "оз. Комариное",
-        "tag": "Обычная",
-        "coordinates": "45:76",
-        "description": "🇨🇳 Китай ЕРШ Точка клева: 45:76 Глубина: 18 см Комментарий игрока: \"Премиум 2-2, леска 2 кг. Качал поплавок — народ жаловался, что 2-2 на 2 кг задолбала. Решил запостить. 1-я карта, 45:76 — поплавок в кувшинки, красный червь, глубина 90-100 см. Ерш и вьюн. 87:87 — глубина 18 см, муха. Днём: лягушка, уклейка, голавль. 2-я карта — с моста у входа, глубина 18 см, красный червь: солнечник, доросома, белый краппи. 3-я карта — у входа, муха, глубина 18 см: елец. Мотыль: окунь, густера. Запомните: везде самые мелкие крючки.\"",
-        "images": [
-            "https://sun9-28.userapi.com/s/v1/ig2/v8EbRZfjBTfZ-1UO9-mfBjKIk_-KQ83VJkc6xqUhBlcNEvqtUpoSQub-y4YEDEPPkszgAdhSQn3r3wHlGCt7vkNk.jpg?quality=96&as=32x13,48x19,72x29,108x44,160x64,240x97,360x145,480x193,540x218,640x258,720x290,1080x435,1280x516,1440x580,2560x1032&from=bu&cs=2560x0",
-            "https://sun9-59.userapi.com/s/v1/ig2/2TE7ZZH_Ps7zo9JjMtRyk7ouZ35P7wSOGkUaNiuhnWnvdDlRXr-ifOafDmFmTX_E4d91H9Eq8V90XAzmpYqgRI7k.jpg?quality=96&as=32x13,48x19,72x29,108x44,160x64,240x97,360x145,480x193,540x218,640x258,720x290,1080x435,1280x516,1440x580,2560x1032&from=bu&cs=2560x0",
-            "https://sun9-13.userapi.com/s/v1/ig2/854mdrGMkIOWwBWcCYiO6OHsVPTEyyzVtQSjCyemQxDsHhpQZ3ZZmVjV86BxPaAJT2dhQqdLoXRHJtulNPH76H4J.jpg?quality=96&as=32x13,48x19,72x29,108x44,160x64,240x97,360x145,480x193,540x218,640x258,720x290,1080x435,1280x516,1440x580,2560x1032&from=bu&cs=2560x0",
-            "https://sun9-4.userapi.com/s/v1/ig2/l92m1EsFh2-u1Mbfx84tuih357x7c4obp2pSnzLoE6A6Vim6RlpV57IiFG5aMbe3EswFgL4CiylgyKBcrfnSJUdZ.jpg?quality=96&as=32x13,48x19,72x29,108x44,160x64,240x97,360x145,480x193,540x218,640x258,720x290,1080x435,1280x516,1440x580,2560x1032&from=bu&cs=2560x0"
-        ]
-    },
-    {
-        "id": "pp4farmtrof_375113",
-        "timestamp": 1779889210,
-        "date": "27.05.2026",
-        "waterbody": "оз. Куори",
-        "tag": "Обычная",
-        "coordinates": "108:90",
-        "description": "🇨🇳 Китай ГОЛЕЦ АРКТИЧЕСКИЙ Точка клева: 108:90 Клипса: 20 метров Приманка: Ylin-Uistin Orig Minnow 13-S006 Троллинг Комментарий игрока: \"Приманка 13-S006. По кругу. На неё и куорский голец, и севанка — можно квесты закрыть.\"",
-        "images": [
-            "https://sun9-7.userapi.com/s/v1/ig2/bIHYY7yG-vjweBe1IFEs4Fu0MVdzmyYyot-FJFhqHQFymr3P_wwbcXt1fO94_dgqUmLMkSQC1ADssfGr0_2v3GDe.jpg?quality=96&as=32x20,48x30,72x45,108x67,160x100,240x150,360x225,480x300,540x337,640x400,720x450,1000x625&from=bu&cs=1000x0",
-            "https://sun9-25.userapi.com/s/v1/ig2/dT_6yj_rmhDn8B09ESmW9SehwRA_nHYHyE1Gsi9dEzZA8qJ3tzgpgbkjED_JzONTeh5ziX3W0XUZF5Yon5SMgaiT.jpg?quality=96&as=32x14,48x21,72x31,108x47,160x69,240x104,360x156,480x208,540x234,640x278,720x312,1000x434&from=bu&cs=1000x0",
-            "https://sun9-39.userapi.com/s/v1/ig2/tkZ-fy-vpTZ2DboLaEEcEYNd3WsgE1VwxAQHH_MajTBsC2-Uytuh6K4taNjHjmRy_K1ha0Mzfehrb4oH58rQ_5Ui.jpg?quality=96&as=32x24,48x36,72x53,108x80,160x118,240x178,360x266,480x355,540x400,640x474,720x533,1000x740&from=bu&cs=1000x0",
-            "https://sun1-13.userapi.com/s/v1/ig2/vhDnLJRgnq92HKznnbRcuUxnEXbsGvdnUT7FbSEICZgIMUvMkle-uE28PcVhaIbejUZhybDw-WPy3GA1PgE5TiiF.jpg?quality=96&as=32x30,48x45,72x67,108x100,160x149,240x223,360x335,480x446,540x502,640x595,720x670,1000x930&from=bu&cs=1000x0"
-        ]
-    },
-    {
-        "id": "pp4farmtrof_375112",
-        "timestamp": 1779889172,
-        "date": "27.05.2026",
-        "waterbody": "оз. Комариное",
-        "tag": "Обычная",
-        "coordinates": "83:86",
-        "description": "🇨🇳 Китай УКЛЕЙКА Точка клева: 83:86 Глубина: 25 см Наживка: муха Комментарий игрока: \"Премиум 7-2. Сидел, живца на судака заготавливал — и как раз закрыл. Кайфовая точка.\"",
-        "images": [
-            "https://sun9-39.userapi.com/s/v1/ig2/5VUbOUhPxtZ-4i0AKtagg1PTNlDvNpIcosEUhKTgsOyMzHQZIZ3iogaPwAdnUVbNs08MZSBwperLC7XB-dDUjPh6.jpg?quality=96&as=32x16,48x23,72x35,108x53,160x78,240x117,360x176,480x234,540x264,640x312,720x351,1000x488&from=bu&cs=1000x0",
-            "https://sun9-18.userapi.com/s/v1/ig2/BRuWKF7fVULTy9pmQK_c7XYRS_MfDAhAt0-wAbXm4pnmHIVMtIah8byRtuX-5buNT6iTDsnWZ0TQXdjL7lKbX5Bg.jpg?quality=96&as=32x29,48x44,72x66,108x99,160x147,240x220,360x330,480x440,540x495,640x586,720x660,1000x916&from=bu&cs=1000x0",
-            "https://sun9-68.userapi.com/s/v1/ig2/SMPz4qRl5tjWWdLdlKlORqQnH43wOfPeQd8gaOmIJkVEO0cxEbJDzUU2_HRsfebOso4gjbvajQ-EMyhziml4y3cy.jpg?quality=96&as=32x19,48x28,72x42,108x63,160x93,240x139,360x208,480x278,540x313,640x371,720x417,1000x579&from=bu&cs=1000x0"
-        ]
-    },
-    {
-        "id": "pp4farmtrof_375111",
-        "timestamp": 1779889152,
-        "date": "27.05.2026",
-        "waterbody": "оз. Комариное",
-        "tag": "Обычная",
-        "coordinates": "56:75",
-        "description": "🇨🇳 Китай РОТАН Точка клева: 56:75 Глубина: 80 см Наживка: кусочки рыбы + кусочки рыбы Комментарий игрока: \"Мрачновато. Заходите с осторожностью.\"",
-        "images": [
-            "https://sun9-57.userapi.com/s/v1/ig2/Sk3D4FnrZD_rPXpZs8Im4N8QJcfWsNXQ9GjsqQ5reumB6CrLNtDDnIdRXbW0hBXlc8welnKeR5HJ8axGgu7R-RsK.jpg?quality=96&as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x270,540x304,640x360,720x405,1000x563&from=bu&cs=1000x0",
-            "https://sun9-47.userapi.com/s/v1/ig2/rBdRKA6koUnvyR3AB_FY6StDYmRNHi1MoRSrE65mSPzhiFZM7yeUDJSpX3lOABzwVHIY6YnIf2VqXCMG8MztdIrK.jpg?quality=96&as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x270,540x304,640x360,720x405,1000x563&from=bu&cs=1000x0",
-            "https://sun9-42.userapi.com/s/v1/ig2/d3f7g4E4aw5j0zKJufDB_Goxgcg6vTj16uqJncERRgFrzW5WHPX95p3gB37OxIkfZEzzK6pdK5ZZP53wif85b9m8.jpg?quality=96&as=32x16,48x25,72x37,108x55,160x82,240x123,360x185,480x246,540x277,640x328,720x369,1000x513&from=bu&cs=1000x0",
-            "https://sun9-67.userapi.com/s/v1/ig2/ElsJoSUQdiaMCYaMKZ5AoQwh0u3RdI7rkG_Yd8kWGe_LDhE7ou4pEcFBs2wjv9CtNVL5Cp9CyG1Ib8MSD_5fAmpF.jpg?quality=96&as=32x15,48x23,72x35,108x52,160x77,240x115,360x173,480x230,540x259,640x307,720x346,1000x480&from=bu&cs=1000x0",
-            "https://sun9-5.userapi.com/s/v1/ig2/jL2XumhpXy52e8ZOnENDmZa62RSxarkHisuqFkrPRxjOwoHO6HoWNb3y98sSis3AZrLG8yol_UYtLyduFVJsfS-j.jpg?quality=96&as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x270,540x304,640x360,720x405,1000x563&from=bu&cs=1000x0"
-        ]
-    },
-    {
-        "id": "pp4farmtrof_375110",
-        "timestamp": 1779889147,
-        "date": "27.05.2026",
-        "waterbody": "оз. Комариное",
-        "tag": "Обычная",
-        "coordinates": "82:72",
-        "description": "🇨🇳 Китай ЛЕЩ Точка клева: 82:72 Клипса: 20 метров Наживка: каша перловая Комментарий игрока: \"Лещ — укрытие от часового клёва. По факту: на перловку клёв лучше. Процент чёрных достаточный. На чеснок хуже, чем на перловку. И много недорослей.\"",
-        "images": [
-            "https://sun9-65.userapi.com/s/v1/ig2/OxDKe0GnhtBhK4wESvjVWjhv_l8cD5nw1SNbslNUQtx3QZWxfWJ3xS5ieF0N62A-dqSi8s2DSvsNWM3Ud-voRU2f.jpg?quality=96&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1000x750&from=bu&cs=1000x0",
-            "https://sun9-70.userapi.com/s/v1/ig2/-5OGi5Hh_clrdxJ019l-9RxGHDw7tgS_7al5ndCfFxAbNSmQumNhtQIwmOq6uUePXTgSQu09uMANh03eaB06jOSv.jpg?quality=96&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1000x750&from=bu&cs=1000x0",
-            "https://sun9-67.userapi.com/s/v1/ig2/aJ68TBCyeyTxskBcpI7B7bDimu9ZiTgCis70g3Oy9k9JR5cwaEdXTIhT4XUIURCRpQGpu6cpgIZ3zSVjNIqt4INh.jpg?quality=96&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1000x750&from=bu&cs=1000x0"
-        ]
-    },
-    {
-        "id": "pp4wikipedia_1006369",
-        "timestamp": 1779889102,
-        "date": "27.05.2026",
-        "waterbody": "р. Северский Донец",
-        "tag": "Обычная",
-        "coordinates": "95:141",
-        "description": "🎂 Юбилейные задания 7.2 🐟 Шемая черноморская (зачетная) 📌 Точка 95:141 🎣 Спуск 70 см 📕Точка для тех, у кого как и у меня, шемая для задания не хочет заходить на точке 26:142.",
-        "images": [
-            "https://sun9-15.userapi.com/s/v1/ig2/EOnCnBS8BGyANR4HXSSl_ZoenIzI4HT1RZX_e6tqmCGqGfxk2JmCDA3hQNnRlH_0Hi_jg0Iwop7C04dqnAKMqUmP.jpg?quality=95&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,2560x1440&from=bu&cs=2560x0",
-            "https://sun1-29.userapi.com/s/v1/ig2/cxVzeaOTVNDRuJEnuEMNPV7Yd-funMqVmCewjjPGhFstTjX9pdRiZZdnjLQrugP6SvLO1op2ErpFjf7OtZrGuiN7.jpg?quality=95&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,2560x1440&from=bu&cs=2560x0",
-            "https://sun1-94.userapi.com/s/v1/ig2/PqDE4Q5gY1O23n5YHrrPf-fB96NXAecCLLdMQ6iVarTc2kXXjPPwGeYegG6sJmBNZ22_ccktpFXUhnr5qfTPjdOz.jpg?quality=95&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,2560x1440&from=bu&cs=2560x0",
-            "https://sun1-93.userapi.com/s/v1/ig2/wALKbPSY60rAk4GmZebcbX2LMEWjriBLTSfK5V_DjANmv2grQknd_AlwWK4MxyWB5CDKpfjwSXvDr6N4UDMQK3El.jpg?quality=95&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,2560x1440&from=bu&cs=2560x0",
-            "https://sun1-85.userapi.com/s/v1/ig2/lgCafVBRKVKQfc6W6OYSqqhg_6h18240QigfgjS95Wi-QQrTyjLN4dwIEvtmY5O8LP90gMhfXO6l7yYrGRis_ALQ.jpg?quality=95&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,2560x1440&from=bu&cs=2560x0",
-            "https://sun1-86.userapi.com/s/v1/ig2/e5GKGxbIG6c2GOdUhrWRQG718ulpg1Wicfnz4kY2CqqrfnlCO4Fdhlhlw3pDI2FWbYAAwY8HWanF2Ey6ORN0I2qY.jpg?quality=95&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,2560x1440&from=bu&cs=2560x0"
-        ]
-    },
-    {
-        "id": "pp4farmtrof_375109",
-        "timestamp": 1779889075,
-        "date": "27.05.2026",
-        "waterbody": "р. Вьюнок",
-        "tag": "Обычная",
-        "coordinates": "118:124",
-        "description": "🇨🇳 Китай ГОЛАВЛЬ Точка клева: 118:124 Клипса: 30 метров Наживка: кузнечик Комментарий игрока: \"Премиум 2-1. Кузнечик. Клипса 30. Сначала ставил 15 — очень мелкий клевал. На 30 — быстро. Ночной клёв, медленный — ждите терпеливо. И ещё: обратите внимание на этот крючок. По личным ощущениям, он гораздо быстрее XM, MG и прочих. Попробуйте.\"",
-        "images": [
-            "https://sun9-73.userapi.com/s/v1/ig2/kEv5goX1uCylbbQc9vOS6lw57Ig2Eo0Kj5Jk5W7Kp90frJK7fB_i5V8VITxzreDLPC-LtkQNk9CiPGh0OiRDn2rD.jpg?quality=96&as=32x17,48x26,72x39,108x59,160x87,240x131,360x197,480x262,540x295,640x350,720x394,1080x591,1280x700,1440x787,1920x1050&from=bu&cs=1920x0",
-            "https://sun9-50.userapi.com/s/v1/ig2/BUY9kKmrLIdIXqjJfBkOdsXfLB4R467T3bD0SMKExplWwJb2PG3KC4ZSyIbK2yBbZNDT5zyqZsGvAOfCBqdD27JT.jpg?quality=96&as=32x17,48x26,72x39,108x59,160x87,240x131,360x197,480x262,540x295,640x350,720x394,1080x591,1280x700,1440x787,1920x1050&from=bu&cs=1920x0",
-            "https://sun9-29.userapi.com/s/v1/ig2/p5bCq6yxyKObn2UlxN3JZsB2_w5Cm5G2A6SY2XmrJfJql17bw-P76lXzPXNBSusHvdbyIvtrx06Ohb9uHJuPrVtS.jpg?quality=96&as=32x17,48x26,72x39,108x59,160x87,240x131,360x197,480x262,540x295,640x350,720x394,1080x591,1280x700,1440x787,1920x1050&from=bu&cs=1920x0"
-        ]
-    },
-    {
-        "id": "pp4farmtrof_375108",
-        "timestamp": 1779889073,
-        "date": "27.05.2026",
-        "waterbody": "р. Волхов",
-        "tag": "Обычная",
-        "coordinates": "66:92",
-        "description": "🇨🇳 Китай ЛОСОСЬ ЛАДОЖСКИЙ Точка клева: 66:92 Клипса: 25 метров Приманка: Handmade Balsa Joined 80S-003 Троллинг Комментарий игрока: \"Без према 7-1. 6.5-я яма — за 30 минут.\"",
-        "images": [
-            "https://sun9-13.userapi.com/s/v1/ig2/EfyhQadjRErCDkI1cPHaOxQRDUmcuV05JBFAKdcOL_rz5R28_ANdcMzhoHbx_8LdC0ybQ-eJXZAvKtAQpmTKjT5f.jpg?quality=96&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x404,640x479,720x539,1000x749&from=bu&cs=1000x0",
-            "https://sun9-37.userapi.com/s/v1/ig2/BcJ9gDzgDHVBTEzkvj0mdhKPG721i8dHoaueTEipyDF4hOwAe61V_1HlPEUOP9KYTxsmK8GBTbvvFW2DMutD9E7p.jpg?quality=96&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x404,640x479,720x539,1000x749&from=bu&cs=1000x0",
-            "https://sun9-21.userapi.com/s/v1/ig2/xJiv5AaayRo7kbnTNgPl4RNQyF8Z-y2zGloW2EhMc91lFdsJ90XTpzaB358eUgQf53FaXbCV4lJrDCSVhMQoBmoQ.jpg?quality=96&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x404,640x479,720x539,1000x749&from=bu&cs=1000x0"
-        ]
-    },
-    {
-        "id": "pp4farmtrof_375107",
-        "timestamp": 1779889063,
-        "date": "27.05.2026",
-        "waterbody": "р. Волхов",
-        "tag": "Обычная",
-        "coordinates": "169:91",
-        "description": "🇨🇳 Китай НАЛИМ Точка клева: 169:91 Клипса: 40 метров Наживка: кусочки рыбы",
-        "images": [
-            "https://sun9-23.userapi.com/s/v1/ig2/wgB2OEKvb7pfflHdkECEbUB4NHW-EjmlzgrZJxCni0IAqppzaWKBCarW32FApIHExm4FAUs2lpwg_IILbxNxgDDf.jpg?quality=96&as=32x15,48x22,72x33,108x49,160x73,240x109,360x164,480x218,540x246,640x291,720x328,1000x455&from=bu&cs=1000x0",
-            "https://sun9-44.userapi.com/s/v1/ig2/jc0Jly0cJQto8ePQXvfwcKDbc-1UwrI26LEnxdW2OAqPsnvL1n8kAkyWW6VnxIbtw9dqr7uZbKAUWQHq-K6vZ3cM.jpg?quality=96&as=32x70,48x106,72x158,108x238,160x352,240x528,360x792,480x1056,540x1188,640x1408,720x1584,982x2160&from=bu&cs=982x0",
-            "https://sun9-37.userapi.com/s/v1/ig2/O586r0NDd4uFuq05OKjXkb8sMPxH6hKeVWIztGCuZvY6N-B_FrsoCYXi-sK6aX6KYJCKiiVzhl16VwUq4iggaxT8.jpg?quality=96&as=32x15,48x22,72x33,108x49,160x73,240x109,360x164,480x218,540x246,640x291,720x328,1000x455&from=bu&cs=1000x0"
-        ]
-    },
-    {
-        "id": "pp4farmtrof_375106",
-        "timestamp": 1779889033,
-        "date": "27.05.2026",
-        "waterbody": "р. Вьюнок",
-        "tag": "Трофей",
-        "coordinates": "120:116",
-        "description": "🇨🇳 Китай БЕЛОГЛАЗКА Точка клева: 120:116 Глубина: 210 см Наживка: червь навозный Комментарий игрока: \"Четыре звезды за час. Вообще-то на ерша-носаря пришёл, а зацепил сразу две неповторные звезды: белоглазку и пескаря.\"",
-        "images": [
-            "https://sun9-62.userapi.com/s/v1/ig2/aDLhk9QkA9lcQNh-PyfOwUcu7FkIhzhNOCO1iBFYf3HY-qVp2f_k5ux4eW-0c6qPtU3rm6w3hi769ucXOg5oUnLu.jpg?quality=96&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x854,720x960,1000x1334&from=bu&cs=1000x0",
-            "https://sun9-17.userapi.com/s/v1/ig2/rE2vq4QzLVU_DJAjwHXtubQ3D8bM200gtANdsFTet0XBO5WUmfnLL_GvJ3KHUZEBZyaFlauuvCwGVbnhIyjKuWyG.jpg?quality=96&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x854,720x960,1000x1334&from=bu&cs=1000x0",
-            "https://sun9-74.userapi.com/s/v1/ig2/NMw7swNb88pAtUIwoyAZRF3vLQYX5fJlegiGp572iqsvGiD_TQ87dxBjSp0IVbCH1z74yTgJ9WX6zMaO5s0JJvhp.jpg?quality=96&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x854,720x960,1000x1334&from=bu&cs=1000x0",
-            "https://sun9-27.userapi.com/s/v1/ig2/3L2IBH-pSBjEfyKUYaWDE7zqQcr3uJ8cp_yx8qd_lPGhv3aggWelDos0qYFIZSp9JOgLHEzr8I2bqvYvKgMNUKbg.jpg?quality=96&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x854,720x960,1000x1334&from=bu&cs=1000x0"
-        ]
-    },
-    {
-        "id": "pp4farmtrof_375105",
-        "timestamp": 1779889003,
-        "date": "27.05.2026",
-        "waterbody": "р. Белая",
-        "tag": "Обычная",
-        "coordinates": "66:36",
-        "description": "🇨🇳 Китай ОКУНЬ Точка клева: 66:36 Клипса: 10 метров Наживка: выползок Комментарий игрока: \"Кто застрял на окуне — пробуйте. Списано у соседа сверху. Пришёл — первый заброс. Выползок. Клипса 10. В сторону сухостоя. У кого окунь не идёт — попробуйте.\"",
-        "images": [
-            "https://sun9-79.userapi.com/s/v1/ig2/3kd0GwD9oOve6NXogHkWYJvRGyUhxKA9eZILXm_7-gmHnxNY9wfc6F_IgcQJDGNvD5aROVV19sBMEDr4Ro4SM1r6.jpg?quality=96&as=32x17,48x26,72x39,108x58,160x86,240x130,360x194,480x259,540x291,640x345,720x389,1080x583,1280x691,1440x777,2520x1360&from=bu&cs=2520x0",
-            "https://sun9-24.userapi.com/s/v1/ig2/dXA7ztzps_Ueza_duKRT9b9ZG08i604eUFdgNRjyPPdvxvelvkznkyY-4IxoL6_oeS-eJGasBZcsvY0Qbu1r7O5w.jpg?quality=96&as=32x11,48x17,72x25,108x38,160x56,240x84,360x126,480x167,540x188,640x223,720x251,1080x377,1280x446,1440x502,2521x879&from=bu&cs=2521x0",
-            "https://sun9-70.userapi.com/s/v1/ig2/BnxIkpB6eg1tjLXn0YvOC2ZHhyG9JLHIDmPX9276sas4rwcUDcpJDBr65o2LQonyVtE3DRGGiiq0Wvpk0R-LZ027.jpg?quality=96&as=32x17,48x25,72x38,108x57,160x84,240x126,360x190,480x253,540x285,640x337,720x379,1080x569,1280x675,1440x759,2425x1278&from=bu&cs=2425x0",
-            "https://sun9-46.userapi.com/s/v1/ig2/_-p_3Ywr0t01ldAfbM8NjeewDzxhuv9Fw8aEYno1-hVHztRrmYs-qEf643te4jRBmJ-_Rbei1BAXyOtQFXpgvRNu.jpg?quality=96&as=32x17,48x25,72x37,108x56,160x83,240x124,360x187,480x249,540x280,640x332,720x373,1080x560,1280x664,1440x747,2469x1280&from=bu&cs=2469x0"
-        ]
-    },
-    {
-        "id": "pp4farmtrof_375103",
-        "timestamp": 1779888912,
-        "date": "27.05.2026",
-        "waterbody": "оз. Старый Острог",
-        "tag": "Обычная",
-        "coordinates": "52:32",
-        "description": "Острог 🇷🇺 Россия ЛЕЩ Точка клева: 52:32 Клипса: 10 метров",
-        "images": [
-            "https://sun9-49.userapi.com/s/v1/ig2/5anOJQHdStn2mC_zQZfBLxsI_tJ4f0pksisgWextwLRwcoTVuZ6bCBQHQHIkhsbh8zliK-1zLTw0-YlsfzRFKJGQ.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
-            "https://sun9-76.userapi.com/s/v1/ig2/ZbKEdPv89Xkol2kNXquaVt3U_m8pUhxfx8xvJ2R9SVjh2iBanPGH3z3VsStGgzCZDRl6qZQNw2VMXiBiRJ7bfvUi.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
-            "https://sun9-77.userapi.com/s/v1/ig2/0oyuIMEPKEv1m1T6HC3JdTO8_3A5pot5NtpoRSRXIr4lPnYNrvLhibOqq2-JYTocJRnMeEP0zGESPUs9bkyk_41d.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
-            "https://sun9-3.userapi.com/s/v1/ig2/9YiYSuA9D6cudkgM6VMBRTk71jkBfmKmeQ3RB1n4UEizXijCZUA5xPDMAWHuCrknHawhmQQfZtFHR0kmyW0xy5yp.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0"
-        ]
-    },
-    {
-        "id": "pp4farmtrof_375102",
-        "timestamp": 1779888908,
-        "date": "27.05.2026",
-        "waterbody": "р. Волхов",
-        "tag": "Обычная",
-        "coordinates": "70:100",
-        "description": "🇨🇳 Китай ЛОСОСЬ ЛАДОЖСКИЙ Точка клева: 70:100 Клипса: 50 метров Приманка: Ylin-Uistin Snatcher-S002 Комментарий игрока: \"Кто застрял на обычном 7-1 — смотрите. Два дня троллил — 4 кг не видел. На живца с донкой тоже не шло. В Douyin спросил капитана — сказал, 70:100 с рывками хорошо дает. Пришёл, второй заброс — готово. Капитану спасибо.\"",
-        "images": [
-            "https://sun9-67.userapi.com/s/v1/ig2/ZeG31qPQkwfA62iPVKUPiHCOI3BOnQyllVimu4-f1NA7Cgv70CCpTU4XxuLoyv04uJUyUs9MQ5rHy65OjME26nC4.jpg?quality=96&as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x270,540x304,640x360,720x405,1000x563&from=bu&cs=1000x0",
-            "https://sun9-20.userapi.com/s/v1/ig2/e6sQuWEnR0turHvA7qYigXpSoT6lVQm1_8ayIpDJ_hTcW7Xmzlyg2GTTFxyypnT5jS2wQsQEnxE5kPESYTs2zEj-.jpg?quality=96&as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x270,540x304,640x360,720x405,1000x563&from=bu&cs=1000x0",
-            "https://sun9-68.userapi.com/s/v1/ig2/hGM6QZPPwQZWdZ85N97F6YGVp_eZkkdvTLtHRiAgMKyFFzHnSSivfLtpnurx3_2n-trJ-YET9MCwSFedxrI-PAAQ.jpg?quality=96&as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x270,540x304,640x360,720x405,1000x563&from=bu&cs=1000x0"
-        ]
-    },
-    {
-        "id": "pp4farmtrof_375100",
-        "timestamp": 1779888851,
-        "date": "27.05.2026",
-        "waterbody": "р. Белая",
-        "tag": "Обычная",
-        "coordinates": "73:48",
-        "description": "🇨🇳 Китай СУДАК Точка клева: 73:48 Клипса: 45 метров Приманка: Texas Lures Perfect Craw 3.5 005 Скорость: 50 Комментарий игрока: \"Без према 6-2 — с первого заброса. Спасибо за домашку. Как на скрине — джиг. Списано у старших. Только пришёл — сразу.\"",
-        "images": [
-            "https://sun9-81.userapi.com/s/v1/ig2/ZMbPMNiwT-HkjY8EdOt02z4mPXNbC_qEoOdXyv-93cLFRswmUVTNVU8ezMvXTYVhoIa1KM2ReKeZLD1jAHWTDTYj.jpg?quality=96&as=32x21,48x31,72x47,108x70,160x104,240x156,360x234,480x312,540x350,640x415,720x467,1080x701,1280x831,1282x832&from=bu&cs=1282x0",
-            "https://sun9-18.userapi.com/s/v1/ig2/aIbkg06ASsjMYMDyLMONEQpOy526Mv57Mconta25tYLuiugEZyvpS48iJZw51nX41htLIWMBs9OXJqF1ZO1zFP8c.jpg?quality=96&as=32x18,48x28,72x41,108x62,160x92,240x138,360x207,480x276,540x310,640x368,720x414,1080x620,1130x649&from=bu&cs=1130x0",
-            "https://sun9-1.userapi.com/s/v1/ig2/eqom2q5ExPsUzQAlaaaY-qhjceVIU3c1kqaZtYyNBnW6DTFcZsfs9GeCO9zSZFL2FTYizFsZ5Lg7II3Qp-ifLSpy.jpg?quality=96&as=32x21,48x31,72x47,108x70,160x104,240x156,360x234,480x312,540x350,640x415,720x467,1080x701,1280x831,1282x832&from=bu&cs=1282x0"
-        ]
-    },
-    {
-        "id": "pp4farmtrof_375099",
-        "timestamp": 1779888792,
-        "date": "27.05.2026",
-        "waterbody": "р. Вьюнок",
-        "tag": "Обычная",
-        "coordinates": "73:89",
-        "description": "🇷🇺 Россия ОКУНЬ Точка клева: 73:89 Клипса: 11 метров Комментарий игрока: \"Хорошая точка на окуня и на берша, его тут тоже можно поймать.\"",
-        "images": [
-            "https://sun9-14.userapi.com/s/v1/ig2/Nb5LPcqqATmKXBH_LpE-vSUF0kGXxDUZCTcbTyL_RBwRMVCvNlR9CWyjbAp5VadvkMlBqDEEoAwuWCew5V36EnO4.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&cs=1280x0",
-            "https://sun1-22.userapi.com/s/v1/ig2/lNfgTv3Tz7gFItCUAXW_sawW71tp2aSDcBWdvNRwIld2yVMgT-stGlO3F4gkkY1qNBtRE5eufyhYusaIlGSw2a7k.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&cs=1280x0",
-            "https://sun9-48.userapi.com/s/v1/ig2/bmkvAQAO__VeVPwXfK1UBvG8RAqgITeM1Ym5BQivpweR97x3bwwANwnxTw2sekOSXrR12fGeFAnoeMCrFVTLg0pY.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&cs=1280x0",
-            "https://sun9-59.userapi.com/s/v1/ig2/BoSoS0LkSSibx7T-TeratC7kY1jd0pClwwuXZ1tu9LEmkUzdf-GHb3Hvd3AXSy7QOVQt9xDG1UjCaL6AY4NPIuUd.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&cs=1280x0"
-        ]
-    },
-    {
-        "id": "pp4farmtrof_375098",
-        "timestamp": 1779888670,
-        "date": "27.05.2026",
-        "waterbody": "р. Ахтуба",
-        "tag": "Трофей",
-        "coordinates": "47:100",
-        "description": "🇨🇳 Китай ШЕМАЯ КАСПИЙСКАЯ Точка клева: 47:100 Глубина: 110 см Наживка: личинка поденки + поденка Комментарий игрока: \"Спустя две недели наконец-то звезда — 97-я. Два дня стоял — полные садки, ни одной звезды. Увидел пост выше — парень взял на личинку подёнки + подёнку. Поменял одну удочку — именно она и дала. Попробуйте. Секрет зависших звёзд — ходить на спиннинг! Две недели спиннинговал — только две звезды озёрной форели.\"",
-        "images": [
-            "https://sun9-24.userapi.com/s/v1/ig2/dyyYERz-Aw6lPJDfne5WmYmzXvVy8X4ptsvRv4IGzpikuhp2BQwAgncYevJHQWbPOvPK_V0USmVMzhEvM9Zqv4se.jpg?quality=96&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1000x750&from=bu&cs=1000x0",
-            "https://sun9-13.userapi.com/s/v1/ig2/dOi-T0-6B6xV6wXlQdKx6fY-_1EyNP-QJSxSqe_8f3b7jRGEyiTBGz1J2LBpre6kvgdwdXfX9HPSFw8kujXQitzX.jpg?quality=96&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x854,720x960,1000x1334&from=bu&cs=1000x0",
-            "https://sun9-60.userapi.com/s/v1/ig2/CDCobGrn9PN-po9rZohWeoxts1E_eYc7I0dUnN1iHNhKAxOdJdgQbh8wPsrpPVm2WzTBYmCRSRG_S5PmDD8R8xTL.jpg?quality=96&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x854,720x960,1000x1334&from=bu&cs=1000x0"
-        ]
-    },
-    {
-        "id": "pp4farmtrof_375097",
-        "timestamp": 1779888667,
-        "date": "27.05.2026",
-        "waterbody": "р. Ахтуба",
-        "tag": "Обычная",
-        "coordinates": "47:100",
-        "description": "🇨🇳 Китай СЕЛЬДЬ БРАЖНИКОВА Точка клева: 47:100 Глубина: 110 см Наживка: личинка поденки + поденка Комментарий игрока: \"Смотрел точку старших — несколько дней подряд приезжал. Наконец взял. Снасти — скрин старших.\"",
-        "images": [
-            "https://sun1-95.userapi.com/s/v1/ig2/wcM4nfRXtkVGVK8Apb8tcinW0tShXNR1fIS1YXzXa2xdR-P3sqgYOHsaxgXzY7iejOcKVYi5szKZktOw8rClAnC3.jpg?quality=96&as=32x19,48x28,72x42,108x63,160x94,240x141,360x212,480x282,540x318,640x376,720x423,1000x588&from=bu&cs=1000x0",
-            "https://sun9-26.userapi.com/s/v1/ig2/5nph4ndwpBh27qAGDt1s1WDr8wcUJEoi7bmiCOfy-uqTAPHKR-lesmfGWDKc985gpfS4AMnzVL6TNffvI5lvGzqy.jpg?quality=96&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1000x750&from=bu&cs=1000x0",
-            "https://sun9-28.userapi.com/s/v1/ig2/a3khFWaxVzoIoxfVJKLOT782mYcq42LnyerR3SPiRrhwKmngOkq0p1nORQt2OU1YFlQwd0k0ILwtOLxw282vtwBk.jpg?quality=96&as=32x35,48x52,72x79,108x118,160x175,240x262,360x393,480x524,540x590,640x699,720x786,1000x1092&from=bu&cs=1000x0"
-        ]
-    },
-    {
-        "id": "rf4map_15004",
-        "timestamp": 1779888515,
-        "date": "27.05.2026",
-        "waterbody": "оз. Куори",
-        "tag": "Трофей",
-        "coordinates": "111:87",
-        "description": "Водоем: - Рыба: Голец Куорский - Координаты: 111:87 - Квадрат: G7 - Клипса: 25 - Комментарий: Пришёл на Куори в первый раз, для задания, этап 6 1, по итогу ничего не получалось, купил Minnow 13-S006 на 15 яме было 3 поклевки сразу, только закинул поклевка, и вот третья этот красавец, первый на аккаунте голец вообще и сразу троф, минут 30 тянул, такой приятности не ожидал Добавить пост: https://vk.com/rf4map?w=wall-134739321_12213",
-        "images": [
-            "https://sun9-54.userapi.com/s/v1/ig2/QHhPd3rNFiSzuG_qNXqjx1d5ST-1Yo1GuXcdwp6wljl7YcalA_vpHOka-h3uQ7cF_uwZXB6W1bOOGed2c4M4OVTR.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&cs=1280x0",
-            "https://sun9-42.userapi.com/s/v1/ig2/f7yu0I8f0P8KT5-1JboZDg2rZggM7e5iHdgGauzzDI0wCPGHiiMK_4h3J4YKSV2mDOh1fOXH3uo5lcmO-asfDZDY.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&cs=1280x0",
-            "https://sun9-50.userapi.com/s/v1/ig2/6eMS3i7to8FyZw2A9RJPcRIMK0OAaoy4elpYigsaFu6yxJvAHsRTTXBsAh9uF4ay-UL5LCDaP3zChghg9laPk0vT.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&cs=1280x0",
-            "https://sun9-45.userapi.com/s/v1/ig2/6X2bO7h6z5sfKx0fpDdd11M0X3XDXW_SEWpk8N3frlOhsnlyW8aEGOWsNIU1Jn7j2UN_7LLOQRDisL6OPP6CEtrS.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&cs=1280x0"
-        ]
-    },
-    {
-        "id": "pp4farmtrof_375095",
-        "timestamp": 1779888162,
-        "date": "27.05.2026",
-        "waterbody": "р. Белая",
-        "tag": "Обычная",
-        "coordinates": "73:50",
-        "description": "🇷🇺 Россия СУДАК Точка клева: 73:50 Клипса: 60 метров Этап 6/задание 2",
-        "images": [
-            "https://sun9-78.userapi.com/s/v1/ig2/vc9KZ9Kkh-fA0zV-yqaMV-JMuHT9GAIKTxdGK1_YK5naUp9ERRqizX2a4cNixtnotp__POLzt1PunjZhdbghJhjS.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1600x900&from=bu&cs=1600x0",
-            "https://sun9-11.userapi.com/s/v1/ig2/egp2uATFjgNvtV9_KhYjRWXAXcZ5dgo8CJ-uAynyNyaM6IHJiWJZocHOyBKhoRQFbNqqjP8XWWQgnR40gqnc8ye_.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1600x900&from=bu&cs=1600x0",
-            "https://sun9-65.userapi.com/s/v1/ig2/5x096IZcNRGB0wKi_ndiskbw0J1o_XtVxRhROUEQQVBrNtPf71-QAM3P8Nv4hSC-RElEOR17KSSNCFk2yn2jMqc8.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1600x900&from=bu&cs=1600x0",
-            "https://sun9-76.userapi.com/s/v1/ig2/ORsS4rgTy1akuxeRwh77y8sLp3OuFyLpkdrlkZlEL1mzgaAOc5ukWrb803ErknfiyoAjwp31ob-RXZZT8ELHYfEg.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1600x900&from=bu&cs=1600x0",
-            "https://sun9-64.userapi.com/s/v1/ig2/OQ-MNJyE_nbli3R8KkXDxVge0f791P-GJjiR9q1OpavBoXkMNqXSKEpCRR4TKEL_KN95pkvANBsq55JEOb7a3WsC.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1600x900&from=bu&cs=1600x0",
-            "https://sun9-37.userapi.com/s/v1/ig2/JX4eB1Mt_JbcR2XyuOwhF5Rjn0TJWDbQL24QLvP06ZtYhuqPR89g44lHWnyzHufA0BFFlVicD_HJoTn7dvYjwd4s.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1600x900&from=bu&cs=1600x0"
-        ]
-    },
-    {
-        "id": "pp4farmtrof_375094",
-        "timestamp": 1779887768,
-        "date": "27.05.2026",
-        "waterbody": "Ладожское оз.",
-        "tag": "Обычная",
-        "coordinates": "73:55",
-        "description": "озеро 🇷🇺 Россия СИГ-ЛУДОГА Точка клева: 73:55 Клипса: 12 метров Глубина: 120 см Комментарий игрока: \"Пришел по заданию на виды/сигов, попался такой экземпляр.\"",
-        "images": [
-            "https://sun9-52.userapi.com/s/v1/ig2/jDAvnkW2HBwS3VFY6-OJ542Vga2ZbiKyF11iuI3ptw0LBkorzz9vgd4y20F_IB1Hr4uQ55w0Ki_2TCrkxJxQm00G.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&cs=1280x0",
-            "https://sun9-54.userapi.com/s/v1/ig2/XxPAvQt2y6zNhSCmMl0euM9n5JhAvCurV8Dt9VMHxs9IJ4sLsPYKduSy0hnnsklN4RAwKB99MokoaaOsjCjb_3Z9.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&cs=1280x0",
-            "https://sun9-30.userapi.com/s/v1/ig2/2INVMUmrOVyuKxtVUP9fcE-XebX_4b7ysIGfEEMK33HrfMNUJzaNbPpQ4U4I0-9zwPWEoEU-87YbCDDN1jJbIQTz.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&cs=1280x0",
-            "https://sun9-71.userapi.com/s/v1/ig2/lLEO86QNWtE3VfTWRMy1BGH0_cVT_tme7TmWSYXAq8b-8TZM558JdUPMxgeSU-dd0p64dJJJbUWmXqIVLpmEGF8f.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&cs=1280x0"
-        ]
-    },
-    {
-        "id": "pp4farmtrof_375093",
-        "timestamp": 1779887709,
-        "date": "27.05.2026",
-        "waterbody": "оз. Комариное",
-        "tag": "Обычная",
-        "coordinates": "87:87",
-        "description": "🇷🇺 Россия ЕРШ Точка клева: 87:87 Клипса: 8 метров Комментарий игрока: \"Единственная из известных мне точек на Комарином, где сейчас клюет ёрш (50:80 мертва).\"",
-        "images": [
-            "https://sun9-32.userapi.com/s/v1/ig2/e0VnL8VbSH3yzL2RKE9cBRYRJmh-RblMBsI2wEDZTobae136gbsyfg7hxky9W8FJlpGKqsX5opNm-mAZuv60uQAz.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&cs=1280x0",
-            "https://sun9-70.userapi.com/s/v1/ig2/zUuRw3U4B6_n2myk7_vgGrDK3J2GLhvsuoQhPIsvKD2Onsy7J6fGP-ns2Nw3d15dlQEAGQmVRJolLxF9bbAtW2m-.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&cs=1280x0",
-            "https://sun9-41.userapi.com/s/v1/ig2/rBZhC2shg7JInZ4VCCbeN0vEExiK_LBwQnrXxJ8axlv_5zM3Lt4CbN9wqI-x4hd2-QehdU77I7X0hNy_5gNLnOoh.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&cs=1280x0",
-            "https://sun9-12.userapi.com/s/v1/ig2/0LQBzEI4l76gcaJ_vgix1LPNW9ZX0u2vRHpS6_6FDdriU9erqDzQHI7D08gHDbtizUd4aPmQYYlnJL_ZToEg-myJ.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&cs=1280x0"
-        ]
-    },
-    {
-        "id": "pp4farmtrof_375092",
-        "timestamp": 1779887674,
-        "date": "27.05.2026",
-        "waterbody": "оз. Лосиное",
-        "tag": "Обычная",
-        "coordinates": "65:93",
-        "description": "🇷🇺 Россия КРАППИ БЕЛЫЙ Точка клева: 65:93 Скор. проводки: 25 Приманка: Zeiman Spiker 016 💬 Активно клюет краппи, можно легко закрывать мелкие заказы в кафе",
-        "images": [
-            "https://sun9-16.userapi.com/s/v1/ig2/dH3bbaumLA2ABizcmlmpFuZv_kGAFjXgAnsopc1WtyGgL1b1f-87xL2G-EdzA1coqk1b55YYR10HbO1MB3EU-3Gn.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x303,640x359,720x404,1080x607,1280x719&from=bu&cs=1280x0",
-            "https://sun9-57.userapi.com/s/v1/ig2/jm6gu0taPlM0xBm3leielT1y0etFaTs8nHvv-o1j6lfQd3lPcZRNSAu1Qokmezmh9tFYEymT547TP3iHc3YNl3rl.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x303,640x359,720x404,1080x607,1280x719&from=bu&cs=1280x0",
-            "https://sun9-38.userapi.com/s/v1/ig2/ZjZ9vFYJvEKWOq6zP8UIt-H_-uK-sZDUjGIfnBg_vlQeGvtBJPzY_T3V3SfD_e3vRE0WDkNmZYMOw66kik2a_cRp.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x303,640x359,720x404,1080x607,1280x719&from=bu&cs=1280x0",
-            "https://sun9-11.userapi.com/s/v1/ig2/jm3dv71peRrw-bQKmyG10XmTL11NY60PVMCFFXcetF_LjrHDhuBwtL9bjaAd1IHSbsekYAv07AZmniueDDrtKJyp.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x303,640x359,720x404,1080x607,1280x719&from=bu&cs=1280x0"
-        ]
-    },
-    {
-        "id": "rf4map_15003",
-        "timestamp": 1779886702,
-        "date": "27.05.2026",
-        "waterbody": "р. Северский Донец",
-        "tag": "Обычная",
-        "coordinates": "126:120",
-        "description": "Водоем: - Рыба: Подуст - Координаты: 126:120 - Клипса: 8 - Комментарий: Время ловли: 1 час. экстра Этап 3.1. Не знаю, что еще говорить. Прикорм не использовал. Добавить пост: https://vk.com/rf4map?w=wall-134739321_12213",
-        "images": [
-            "https://sun9-84.userapi.com/s/v1/ig2/c33l1-Gzkv0dIW0yrF5tu19_8t44nH_ohr7scieEIIiSPNZKISmnT55gvVt-9WZXx2UojmwM1B6Cw9fFlMaYfl3B.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&cs=1280x0",
-            "https://sun9-55.userapi.com/s/v1/ig2/S7Fy22KhaSvk6GQj7XersdePWKMxRPann_SmfCKFpzURn1-SIfSuLWJat07wk7F7zB0lUQNOFpp816hkh0lX4FIY.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&cs=1280x0",
-            "https://sun9-35.userapi.com/s/v1/ig2/bGni6Kk_W6fQld0-RwwMekPIOWpBFwJ1eRtKb_QYfOAZbsjNOPQRIudGYXMooe8WrRJJGIjpLBU5_6pgXlsCM6B8.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&cs=1280x0",
-            "https://sun9-12.userapi.com/s/v1/ig2/kBVdX2kTSHN4-cZ-_1Dd5-A8Tgjp72VbfQqH5uMzTJj5rBVtwsnWRjgCOAEF9o2KmMB6KBSJyAFN5sE5fdxBuu9C.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&cs=1280x0",
-            "https://sun9-77.userapi.com/s/v1/ig2/WRxZQJIbkwCXYcw6rQ3WlCxfAn26poqWOVZFyUaq2uLqOfJret6VyNtYz-vFsHqBR2OfUoqai6sJJdQW_4LJ0xgw.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&cs=1280x0"
-        ]
-    },
-    {
-        "id": "rf4map_15002",
-        "timestamp": 1779884913,
-        "date": "27.05.2026",
-        "waterbody": "р. Вьюнок",
-        "tag": "Трофей",
-        "coordinates": "110:104",
-        "description": "Водоем: - Рыба: Рак речной - Координаты: 110:104 - Квадрат: G5 - Клипса: 10 - Скорость: 50 - Комментарий: поймал трофа с картой чему несказанно рад, хотя изначально шел закрывать пескаря т.к не могу выполнить с ним заданку не клюет он мне, а тут такой подарок Добавить пост: https://vk.com/rf4map?w=wall-134739321_12213",
-        "images": [
-            "https://sun9-25.userapi.com/s/v1/ig2/f-5r9izqPtIgm_65FrVgBAeTMLN5tKVnlmHEiOh0Lnp9tvMmNQKeoONSdtKmg78xnOTdSMSoa302lIgcw3uiwjAF.jpg?quality=96&as=32x26,48x39,72x58,108x87,160x129,239x193&from=bu&cs=239x0",
-            "https://sun9-33.userapi.com/s/v1/ig2/FAlYsFP_QzqBGl_KcYFSBks3LuxiAMCpCmFOJPIJZ-tlTUQLijCQLPpWe90zuPCWfvotNnSlmpUuj5BQHe3cl0vd.jpg?quality=96&as=32x29,48x43,72x65,108x97,160x144,240x216,360x325,480x433,540x487,640x577,720x649,934x842&from=bu&cs=934x0",
-            "https://sun1-14.userapi.com/s/v1/ig2/Olo53N7fOsQDIzxj3F2qA70gpUbpOETH_EQ1T46be60Q8zP98lODg5b2T9QLCAIaBh9Z13EvRU1MftVYPSUpKg5A.jpg?quality=96&as=32x18,48x26,72x40,108x59,160x88,240x132,360x198,480x264,540x297,640x352,720x396,1080x594,1280x704,1440x792,1822x1002&from=bu&cs=1822x0",
-            "https://sun9-64.userapi.com/s/v1/ig2/tlrc2u-Z5ZL-ga7QzgOPf8gaq8blNOrKK6kzpEHzOwk8exU0vMR4K2phF9exiwxVdFrueLBpbgeIvsB9w1SKeNNx.jpg?quality=96&as=32x21,48x31,72x47,108x70,160x103,240x155,360x233,480x310,540x349,640x413,720x465,1080x698,1280x827,1440x930,1670x1079&from=bu&cs=1670x0"
-        ]
-    },
-    {
-        "id": "pp4farmtrof_375088",
-        "timestamp": 1779884767,
-        "date": "27.05.2026",
-        "waterbody": "оз. Старый Острог",
-        "tag": "Обычная",
-        "coordinates": "52:32",
-        "description": "Острог 🇷🇺 Россия ЛЕЩ Точка клева: 52:32 Клипса: 10м 💬 ловил с 21.00 до 10.00",
-        "images": [
-            "https://sun9-13.userapi.com/s/v1/ig2/qXzltl9VhkK6CugnH6zAUYMqGNPVN26NBPKTfpQNo0ErZ_qeSBuACEsTd7h0QVLSD2NzbdVhWT90yf9yURDQGseq.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&cs=1280x0",
-            "https://sun1-18.userapi.com/s/v1/ig2/AbBslR0GiM24z8kaEhPNdcQuVhLEY0VXl3b1w2VDCrCx8meHjEPC2I4TjOLoj1W3YhHfgynFXT46XEovEho0SbFP.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&cs=1280x0",
-            "https://sun9-19.userapi.com/s/v1/ig2/hKSsKKRU_Rpd5PjFd-TAqqlcpykk8U10DS0sv_ZQvuBLZR3NwWp0UNRjj4QmBjH5BAdXSpbQEIlfMT5foTAwnixc.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&cs=1280x0",
-            "https://sun9-14.userapi.com/s/v1/ig2/gJ3VPQn7VjYfeLdlur4XX3IrZdvbh6o246-psNMawcCuxh1tmUrpLgYm5JRvid-opSEF7wfZiPj2dneRSnEmbMsS.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&cs=1280x0"
-        ]
-    },
-    {
-        "id": "pp4farmtrof_375087",
-        "timestamp": 1779884733,
-        "date": "27.05.2026",
-        "waterbody": "р. Ахтуба",
-        "tag": "Обычная",
-        "coordinates": "117:101",
-        "description": "🇷🇺 Россия БУФФАЛО БОЛЬШЕРОТЫЙ Точка клева: 117:101 Клипса: 8 м Наживка: пресноводный криль 14 лосось 14 Прикормка: мол кука лосось и тунец 3 6 мидии 6 8 дип крас криль",
-        "images": [
-            "https://sun9-7.userapi.com/s/v1/ig2/mZ5T8DJ3rGZLi_FRyvAGsBmikSJbVTyRhFw0e8YNBMoT10jEognza45hWyvDaeQPzWh9BzEGShKh0kYbaY8-Btxn.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
-            "https://sun9-9.userapi.com/s/v1/ig2/qHc4555Qv6Ff7_K5nK7-E6ScCmeQuangiyjZH-1aNsULK3NqCKJs5E70hbZ6Tc4fWHQg3fAzhe_dif0E6qHqDylD.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
-            "https://sun9-30.userapi.com/s/v1/ig2/QSx5eg677o9TnzvC2rhYUZnYZKpjLkZRnkd20bN20YUgNQ7luv7ZikVMM1Hz2pChh8iTuslLogY-YmnQmrhe84UG.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
-            "https://sun9-44.userapi.com/s/v1/ig2/oG8TpCmBRGIUnVtH8sIzf3c-8N9L3j3RPKZE6KgWfqBRwtuhjRpnUT2lzAXFMCAeo-z_coVIBAr7lTb4QN81J1m8.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
-            "https://sun9-65.userapi.com/s/v1/ig2/VKkwfkQnwOtNsaMgNttWLCRMCOMgATDYYsybKAKD-9QAfDIXcIgPDS1jaBf54TGkbKv1uFcZEg_wjKG5iuBSh0hp.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0"
-        ]
-    },
-    {
-        "id": "pp4farmtrof_375086",
-        "timestamp": 1779884710,
-        "date": "27.05.2026",
-        "waterbody": "р. Ахтуба",
-        "tag": "Трофей",
-        "coordinates": "117:101",
-        "description": "🇷🇺 Россия БУФФАЛО БОЛЬШЕРОТЫЙ Точка клева: 117:101 Клипса: 8 м 💬 Хороший клев есть шанс закрыть трофей",
-        "images": [
-            "https://sun9-54.userapi.com/s/v1/ig2/xWNmTvKW1i5S8VISGflSi3olhJeakjDpa5zZcA3kk2_Rzx64oXGyzXyTtahOAAYcbq9oPBG0-VYwkQZFZnDkk8e_.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
-            "https://sun9-86.userapi.com/s/v1/ig2/nPsaQe9Jswxs4Gh9n63ZSFXcWbAe-4cWXZ3aayLta5raa9UVMeUS_nejrMaHli5muVYK_PVkNCbifbmZnRFIlRMZ.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
-            "https://sun9-30.userapi.com/s/v1/ig2/kABdF1yIWebbayTNjZDX3d5LkJ2uLBIF_uxxzafMgYgpJwyHYSiJn_jzAL3JPV30bMiIU-4DdPHN9U9uLksBlI_U.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
-            "https://sun9-43.userapi.com/s/v1/ig2/wFOSZH4cORUUhGoD4jBRDJTZDWiTaROoqzsZMpdZPrFBbepR-Pd2ybs_RVXnUcSweATDee2xRwJbvNPGfzwPppKP.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0"
-        ]
-    },
-    {
-        "id": "pp4farmtrof_375085",
-        "timestamp": 1779884656,
-        "date": "27.05.2026",
-        "waterbody": "Ладожское оз.",
-        "tag": "Обычная",
-        "coordinates": "55:35",
-        "description": "озеро 🇷🇺 Россия СУДАК Точка клева: 55:35 Клипса: 35 м Наживка: снеток Поводок: Флюр 43,2 кг 💬 Заброс как на скрине. Закрыла на первую ночь, очень быстро. Клюнул Под утро. Всем Нхнч!",
-        "images": [
-            "https://sun9-23.userapi.com/s/v1/ig2/1lr8aRaa-S4z7lLWOcm0DmLVFLb7QB2MidXvkt-EKPD4w_bo--LJLQvtiEHaUTpzwOiUvRJPSzQOA93lE9Q8Wx0N.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
-            "https://sun1-19.userapi.com/s/v1/ig2/U4vqo78NkVvx7r_VJPn8JrXe5JwiAO-VO6IxURgUQdh7rOtzzQ5rTIvfcqHZ6kzvqkDfBXLOtfpClw_We1psIg5K.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
-            "https://sun9-27.userapi.com/s/v1/ig2/zbWDJVnQ1bypkZMh_61zK8NoLgOxCQpX-9qsWwuYcJilJP6ql2cr6dOrq4tCZ9xQTCuRFafnrC0LUHqlCn1tdQ-J.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
-            "https://sun9-32.userapi.com/s/v1/ig2/0age8AoQWLd5zHDxBaodq5ItwhSuiZBbUta8Xhzc7ZYv25IU-8XY4XC8KnBKP4ITTP7TQd6fACNets9qgUgxDsHh.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
-            "https://sun9-73.userapi.com/s/v1/ig2/NCIzygQOn7dFjtvohZnm_VIpry_N2soIC5im7CfgESMqdGoVeexFxoSx1Byjr5RWKUPtlhicPihwkuZcnTe7IMZy.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0"
-        ]
-    },
-    {
-        "id": "pp4wikipedia_1006356",
-        "timestamp": 1779883292,
-        "date": "27.05.2026",
-        "waterbody": "оз. Старый Острог",
-        "tag": "Трофей",
-        "coordinates": "52:32",
-        "description": "🐟 Лещ (трофей) 📌 Координаты 52:32 🎣 Клипса 10",
-        "images": [
-            "https://sun1-22.userapi.com/s/v1/ig2/LHz9_MjdISa4JWlc3F-I7glu48rJn_hI3Tc5d9VUkw-GiXvZVqqGX-2LtyWz3H5E3nxv8KVBPPJfrKgy4mBk1Vz9.jpg?quality=95&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
-            "https://sun1-25.userapi.com/s/v1/ig2/ToNF2s1YQxWDAt9hJtNteRLDp0-J5RLAvrjbNfIg6iHsj_w_6lCIPYoFHGhQAfSHEtbA0rxCgI1toDlpHFI30CRW.jpg?quality=95&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
-            "https://sun1-23.userapi.com/s/v1/ig2/mUNwSpHut4yG6_0ZZx4BAHSEsdnBs4zAmHN4MCinXu2g1BsOCDvx4qzu2Mj_fKwFmZNxQxA7n9qGs1M7EwYowEa8.jpg?quality=95&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
-            "https://sun9-27.userapi.com/s/v1/ig2/32QDnSYZDtfQuclohdRBc0eLhUVF8OdwQDMxMmqRzFcyF87AVCYvdnR_0AJjA5tKrON7mXrkDFBpgLiFjWZ-AUei.jpg?quality=95&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0"
-        ]
-    },
-    {
-        "id": "pp4wikipedia_1006355",
-        "timestamp": 1779883201,
-        "date": "27.05.2026",
-        "waterbody": "р. Северский Донец",
-        "tag": "Обычная",
-        "coordinates": "27:140",
-        "description": "🎂 Юбилейные задания Экстра 4.3 🐟 Жерех (зачетный ) 📌 Координаты 27:140 🎣 Клипса: 35-40, Скорость подмотки 50+шифт , рысканье. 📕 Приманка: на скрине",
-        "images": [
-            "https://sun1-88.userapi.com/s/v1/ig2/b_glv87DYhH3JcyMRqVmOnplEoU6JzaQsU8Amcc3iTG0GoFtOM7ran6YDTy5Pq9xcq5-gL7hGpg8u8yvF4u2Deey.jpg?quality=95&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
-            "https://sun1-18.userapi.com/s/v1/ig2/Rj7nHlqmvPAS28fMcbXL9m-Ih87LtifomJ1xWjRYxRd-ebDMXBKtFd1Z-ArQ7Np-YtjUkjmVAY1t2B7xRmzY_MWG.jpg?quality=95&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
-            "https://sun1-18.userapi.com/s/v1/ig2/NmWHVo_johk2CrFNT_zDXFrjIaBDI7Z6lxy54UYO_rBJGbgv46Bvd2fEpX7Oy-EEueCnAc3ROiXi5_QfPRtphHLV.jpg?quality=95&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0",
-            "https://sun1-54.userapi.com/s/v1/ig2/t7KFG3wdEj3ei_76jvbNlsisS0z5RO8ja6YKYPj41FN1677UT601eEB-J37rh1yauLw5Y1yciEXGuRT3rd7zzcCj.jpg?quality=95&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0"
-        ]
-    },
-    {
-        "id": "pp4wikipedia_1006354",
-        "timestamp": 1779883179,
-        "date": "27.05.2026",
-        "waterbody": "р. Северский Донец",
-        "tag": "Обычная",
-        "coordinates": "97:172",
-        "description": "🎂 Юбилейные задания 7.3 🐟 Сазан (зачетный), Налим (зачетный) 📌 Координаты 97:172 🎣 Клипса 17 метров 📝 Ночью на этой точке клюет налим, днём - сазан. Закрытие задания всего лишь вопрос времени.",
-        "images": [
-            "https://sun9-67.userapi.com/s/v1/ig2/DyO8BRPHIb3n3IjvCNOeTFrUjTakPb2xgqwAVBftKG1ooVoGulBxu4HSEef5YcXQ5FNs7Mqaw6P7nmBiPMRN_fdU.jpg?quality=95&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1600x900&from=bu&cs=1600x0",
-            "https://sun1-28.userapi.com/s/v1/ig2/VOG-3ARbBDKkbh4xH4bTrOidEQfySFdTp6RubsdnpSKNsdEpK3SKVuaQDOV5jsevlvx8_xSNNgiyzlVzcbE4z1f6.jpg?quality=95&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1600x900&from=bu&cs=1600x0",
-            "https://sun1-28.userapi.com/s/v1/ig2/HCDqaL3FmL1u7PTQ8EddFgAfz8L79Chme7KzTsJWJpm2zgaQVS3vBR0I8z-TWEsCLZvZTh9o_9a9kdubdDxIO52U.jpg?quality=95&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1600x900&from=bu&cs=1600x0",
-            "https://sun1-89.userapi.com/s/v1/ig2/4r9DRF7L5qe6EX_iJlwsK9pwYxo8-g1bPpAuUf1AbabNpWfsZrlaRb5jnmXiABc1f1i7sKIDHbdY-kxPkbg6P4BH.jpg?quality=95&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1600x900&from=bu&cs=1600x0",
-            "https://sun1-24.userapi.com/s/v1/ig2/42RAUhOsMGCVdcChdFJN4e8FHcgyn5csMLi-ez7Koi4xyf1Ia-Kc3O8HDj1XqxlHUFLt0NjF9Xg2ZAB4Czd6sf_X.jpg?quality=95&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1600x900&from=bu&cs=1600x0"
-        ]
-    },
-    {
-        "id": "rf4map_15001",
-        "timestamp": 1779883108,
-        "date": "27.05.2026",
-        "waterbody": "р. Нижняя Тунгуска",
-        "tag": "Трофей",
-        "coordinates": "29:135",
-        "description": "Водоем: - Рыба: Таймень - Координаты: 29:135 - Квадрат: B5 - Клипса: 60-65 - Скорость: 10 - Комментарий: 2 покля размот, Тянул минут 10 подумал кило 30 но тут обидный не до трофф… Добавить пост: https://vk.com/rf4map?w=wall-134739321_12213",
-        "images": [
-            "https://sun9-46.userapi.com/s/v1/ig2/RpvvnnuMWbuBg8FzexVgV8i0tsWeuLzmdETn_hWpwPfV4XPfZgb-5J4Cpkfflt0tTzCANtARzZMhEKpJVG0Z3_Jh.jpg?quality=96&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960&from=bu&cs=1280x0",
-            "https://sun9-30.userapi.com/s/v1/ig2/KzXmfWnZHPEboyogEzeb4sBdji1iWUtWu-SfmghSzkYp3OHhjzFTRH0yxMUM9aGQobJgPLA74s0fHH4U0f4ZQYMZ.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&cs=1280x0",
-            "https://sun9-12.userapi.com/s/v1/ig2/NcSlFGiMu62Yi-rY8hI32yTF7rAXnB_B2NY4wH3RLMPXhWlhL1B_G7DOIx5PD1qtGwrhjo7gA5orjTnMk5lfISdq.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&cs=1280x0",
-            "https://sun9-75.userapi.com/s/v1/ig2/Oomaxo9syvu407QC3468MddribocgKKxyEV9c3nH9uBGBJ0qMKu5dhaHk3zA5ZvLqVu6VMnnc-_CWk1uNdRj0Y3V.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&cs=1280x0",
-            "https://sun9-41.userapi.com/s/v1/ig2/5WNKIEGOY7KHUsZYx_m_yVZi_ozkKmuwE2p51oTdW_H3tHfs8kDsrHV1TsvbOESt4aPm7llihMp1B6RxvRK9XTSC.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&cs=1280x0",
-            "https://sun9-20.userapi.com/s/v1/ig2/9FHkfsLoQjaiwpcBSmJ84SHRL3uOMuc_F-K642KtfEY2LwCWrdCoarkI5QGzpYVrzlsr_TSCsDo9KnOKvN3NybIl.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&cs=1280x0",
-            "https://sun9-40.userapi.com/s/v1/ig2/79MbASvsvQfS9Jhn7VeAGSbzyYyAtzBCkqd1vgNZDBtHwDb3EzTC2JGZjw93NjPeitoWzGvvR-tqUIRYeRGck-6K.jpg?quality=96&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960&from=bu&cs=1280x0"
-        ]
-    },
-    {
-        "id": "rf4map_15000",
-        "timestamp": 1779881299,
-        "date": "27.05.2026",
-        "waterbody": "р. Ахтуба",
-        "tag": "Обычная",
-        "coordinates": "50:86",
-        "description": "Водоем: - Рыба: Усач короткоголовый - Координаты: 50:86 - Квадрат: С6 - Клипса: 15 - Комментарий: Клёв на 15 клипсе очень бодрый, на 17 было намного хуже.Наконец-то закрыл эту морду усатую всем нхнч. Добавить пост: https://vk.com/rf4map?w=wall-134739321_12213",
-        "images": [
-            "https://sun9-28.userapi.com/s/v1/ig2/lOxmo_h7yjjVNt591-mLxId0yNbLw0zA86YJgw1xCmXweYpGDIFOQFWAu4DWNIUGNLRuFx40vqLrN7Juvc9x0UOx.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x303,640x359,720x404,1080x607,1280x719&from=bu&cs=1280x0",
-            "https://sun9-80.userapi.com/s/v1/ig2/EZ_hQ2i9TCwtwNKulCSiUTJJpI5261CYV8NMVOfLxTf4505d4KFw5yDPDnpGsVTZTH7sgGCKPlLtClM5l4Eqrp7f.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x303,640x359,720x404,1080x607,1280x719&from=bu&cs=1280x0",
-            "https://sun9-80.userapi.com/s/v1/ig2/RfqMi1Omo1rzi_WMnQcqk9qcdxfRUU9g9dUnib2VcJVzPeJ698ToR_Jj66mc-oq4tKQG_wEHPX3JgKBV_v0C7TUK.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x303,640x359,720x404,1080x607,1280x719&from=bu&cs=1280x0",
-            "https://sun9-49.userapi.com/s/v1/ig2/Sc9nG3mM5ObDztn1w40buEi4JLlL4JOeDgbfb94GT70PHN1tou4neYxhlXZI6qEGKV9EWiiOhTO-CiVvwjB_4I1f.jpg?quality=96&as=32x42,48x62,72x94,108x140,160x208,240x312,321x417&from=bu&cs=321x0",
-            "https://sun9-5.userapi.com/s/v1/ig2/vAmgZiACwPYq3FKJuBQUcXGJKSv8kW-uI6hS0Z-_6ayr6xQynWry1n2Pvc6uV8F7gdV1gY3vdkz7tuqhwBa33ohL.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x303,640x359,720x404,1080x607,1280x719&from=bu&cs=1280x0"
-        ]
-    },
-    {
-        "id": "rf4map_14996",
-        "timestamp": 1779879550,
-        "date": "27.05.2026",
-        "waterbody": "оз. Медное",
-        "tag": "Трофей",
-        "coordinates": "67:57",
-        "description": "Водоем: - Температура воды: Пониженная - Координаты: 67:57 - Рыба: Разнорыбица - Клипса: 5 - Глубина: выкл - Скорость: 50 - Квадрат: I4 - Комментарий: я за час поймал 3 троф карася даже умудрился поймпать цветника закидывал по 3 ракеты на 10шт - Ник: Puzakov.Denis Добавить пост: https://vk.com/rf4map?w=wall-134739321_12213",
-        "images": [
-            "https://sun9-1.userapi.com/s/v1/ig2/j-lxYCGtd9D0nbFp2OJob2D4GQzpmY-o7DI99BMovf3ZGFgQ8XFUY-TWNCKs3My_K-Rio-oYEi00RO8G7Yog0Zxa.jpg?quality=96&as=32x26,48x38,72x58,108x86,160x128,240x192,360x288,480x384,540x432,640x512,720x576,1080x864,1280x1024&from=bu&cs=1280x0",
-            "https://sun9-86.userapi.com/s/v1/ig2/ygKmZ-W_G65EKFro_Bxh0Xxe8jnSo_AkqNrvFyhqUVLOd42zDzxnskieWuInippRQzTjei9a7rY6KNEruTppwlzB.jpg?quality=96&as=32x26,48x38,72x58,108x86,160x128,240x192,360x288,480x384,540x432,640x512,720x576,1080x864,1280x1024&from=bu&cs=1280x0",
-            "https://sun9-86.userapi.com/s/v1/ig2/COAUpgtG3dzdQz_Me4gtpFeVqBvoZdJclup5WgJGV79V49757-IJ_LnE0auIur67Kl0DODhrvxeQmPFKW2uGTNgG.jpg?quality=96&as=32x26,48x38,72x58,108x86,160x128,240x192,360x288,480x384,540x432,640x512,720x576,1080x864,1280x1024&from=bu&cs=1280x0",
-            "https://sun9-76.userapi.com/s/v1/ig2/elGbuKIxlUzxckvM3iWXUz4O7CKMoNgKvc5PB4sF8g662yfCPyqi-Ceit96OVMEx7CqEakqD77x0TN_vNihTDEQF.jpg?quality=96&as=32x26,48x38,72x58,108x86,160x128,240x192,360x288,480x384,540x432,640x512,720x576,1080x864,1280x1024&from=bu&cs=1280x0",
-            "https://sun9-14.userapi.com/s/v1/ig2/heSginaIdsxBlCCMcpbfJl9xt5lBRgn8v-SsER1FPQ23lsOjAoOloeV06b18dZidTH_nf4GS6t20futf998jKIRt.jpg?quality=96&as=32x26,48x38,72x58,108x86,160x128,240x192,360x288,480x384,540x432,640x512,720x576,1080x864,1280x1024&from=bu&cs=1280x0",
-            "https://sun9-58.userapi.com/s/v1/ig2/R45IPlW4iXFwGB0dRu1LRT7-ddqsNRug32uMjBawtXeVtM-T5Rp2DBx8HxPCMXljj1ugPkgw555W7BLeJVXsQ1wC.jpg?quality=96&as=32x26,48x38,72x58,108x86,160x128,240x192,360x288,480x384,540x432,640x512,720x576,1080x864,1280x1024&from=bu&cs=1280x0"
         ]
     }
 ]
