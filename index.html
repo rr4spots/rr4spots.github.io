@@ -444,7 +444,7 @@
     </div>
 
     <div class="footer-text">
-        © 2026 RR4 Spots. Сайт носит информационный характер и не является официальным ресурсом Русской Рыбалки 4.<br>
+        © 2026 RR4 Spots. Сайт носит информационный характер и не является официальным ресурсом Русской Рыбалки 4 почта для связи:rr4spots@gmail.com .<br>
         <a href="policy.html" target="_blank">Политика конфиденциальности</a> | <a href="terms.html" target="_blank">Пользовательское соглашение</a>
     </div>
 
@@ -489,7 +489,6 @@
     </div>
 
     <script>
-        // --- УТИЛИТЫ БЕЗОПАСНОСТИ ---
         function escapeHtml(str) {
             if (!str) return '';
             return String(str)
@@ -505,7 +504,6 @@
             return url.startsWith('https://') || url.startsWith('http://');
         }
 
-        // --- ЛОГИКА ТВИТЧА И САЙТА ---
         let twitchPlayer = null;
         let isOnline = false;
 
@@ -551,7 +549,6 @@
                 widget.classList.add('is-online');
 
             } catch (error) {
-                // Twitch init failed silently
             }
         }
 
