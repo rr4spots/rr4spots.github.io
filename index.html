@@ -85,11 +85,17 @@
         .logo { font-size: 1.5em; font-weight: 800; display: flex; align-items: center; gap: 10px; }
         .logo span { color: #5b61ff; }
 
-        .support-btn {
+        .nav-left-btns {
             position: absolute;
             left: 40px;
             top: 50%;
             transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 100;
+        }
+        .support-btn {
             display: inline-flex;
             align-items: center;
             gap: 8px;
@@ -104,14 +110,13 @@
             cursor: pointer;
             transition: 0.25s;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
-            z-index: 100;
             white-space: nowrap;
         }
         .support-btn:hover {
             background-color: #232633;
             color: #ffffff;
             border-color: #3a3f52;
-            transform: translateY(-50%) scale(1.05);
+            transform: scale(1.05);
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
         }
         .support-btn svg {
@@ -297,10 +302,13 @@
         /* ==================================================== */
         @media (max-width: 900px) {
             .navbar { padding: 15px 20px; }
-            .support-btn {
+            .nav-left-btns {
                 left: 12px;
+                gap: 6px;
+            }
+            .support-btn {
                 padding: 8px 12px;
-                font-size: 0.85em;
+                font-size: 0.8em;
                 gap: 6px;
             }
             .support-btn svg {
@@ -421,12 +429,27 @@
     </div>
 
     <nav class="navbar">
-        <a href="https://www.donationalerts.com/r/Ribak_Pinagor" target="_blank" rel="noopener noreferrer" class="support-btn" title="Поддержать проект">
-            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-            </svg>
-            Поддержать
-        </a>
+        <div class="nav-left-btns">
+            <a href="https://www.donationalerts.com/r/Ribak_Pinagor" target="_blank" rel="noopener noreferrer" class="support-btn" title="Поддержать проект">
+                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+                Поддержать
+            </a>
+            <a href="https://t.me/rr4spotsbot" target="_blank" rel="noopener noreferrer" class="support-btn" title="Поделиться точкой">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                </svg>
+                Поделиться точкой
+            </a>
+            <a href="https://t.me/rr4news" target="_blank" rel="noopener noreferrer" class="support-btn" title="Наш канал">
+                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+                </svg>
+                Наш канал
+            </a>
+        </div>
         <div class="logo">
             RR4 <span>Spots</span>
         </div>
