@@ -194,7 +194,7 @@ def parse_vk():
     all_spots = list(old_spots.values())
     all_spots.sort(key=lambda x: x['timestamp'], reverse=True)
 
-    all_spots = all_spots[:10000]
+    all_spots = all_spots[:100000]
 
     with open('spots.json', 'w', encoding='utf-8') as f:
         json.dump(all_spots, f, ensure_ascii=False, indent=4)
