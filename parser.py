@@ -53,6 +53,7 @@ def clean_text(text):
     text = text.replace('Правила публикации постов: vk.com/-rules/', '')
     text = text.replace('Правила публикации постов: vk.com/-rules', '')
     text = text.replace('Обновление игры', '')
+    text = text.replace('Добавить пост: vk.com/-rules', '')
     text = text.replace('Добавить пост: https://vk.com/rf4map?w=wall-134739321_12213', '')
     
     
