@@ -2,6 +2,7 @@ import requests
 import json
 import re
 import os
+import time
 from datetime import datetime
 
 
@@ -115,6 +116,10 @@ def parse_vk():
                     post_id = f"{group}_{post.get('id')}"
                     
                     if post_id in old_spots:
+                        # Обновляем лайки/просмотры только у точек за последние 7 дней
+                        if post.get("date", 0) > time.time() - 7 * 86400:
+                            old_spots[post_id]["likes"] = post.get("likes", {}).get("count", 0)
+                            old_spots[post_id]["views"] = post.get("views", {}).get("count", 0)
                         continue
 
                     raw_text = post.get("text", "")
@@ -181,7 +186,9 @@ def parse_vk():
                         "tag": spot_tag,
                         "coordinates": coordinates,
                         "description": clean_description,
-                        "images": images_list
+                        "images": images_list,
+                        "likes": post.get("likes", {}).get("count", 0),
+                        "views": post.get("views", {}).get("count", 0)
                     }
                     
                     old_spots[post_id] = spot
