@@ -2,7 +2,7 @@ name: Auto Update Spots
 
 on:
   schedule:
-    - cron: '*/30 * * * *' # Запускать каждые 30 минут
+    - cron: '0 */3 * * *' # Запускать каждые 30 минут
   workflow_dispatch: # Позволяет запустить вручную кнопкой
 
 jobs:
