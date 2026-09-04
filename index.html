@@ -503,7 +503,8 @@
                 flex: none;
                 width: 100%;
                 justify-content: center;
-                gap: 6px;
+                gap: 8px;
+                flex-wrap: wrap;
             }
             .nav-right-spacer { display: none; }
             .support-btn {
@@ -630,6 +631,12 @@
 
     <nav class="navbar">
         <div class="nav-left-btns">
+            <a href="https://t.me/rr4spotsbot" target="_blank" rel="noopener noreferrer" class="support-btn" title="Предложить точку в Telegram">
+                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.197 1.006.128.832.942z"/>
+                </svg>
+                Предложить точку
+            </a>
             <a href="https://www.donationalerts.com/r/Ribak_Pinagor" target="_blank" rel="noopener noreferrer" class="support-btn" title="Поддержать проект">
                 <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
@@ -649,7 +656,7 @@
 
     <div class="verified-section" id="verified-section" style="display:none;">
         <div class="verified-header">
-            <h2>Популярные <span class="v-accent">точки</span></h2>
+            <h2>Проверенные <span class="v-accent">точки</span></h2>
         </div>
         <p class="verified-subtitle">ТОП-3 точки с наибольшим количеством лайков за последние 7 дней</p>
         <div class="verified-grid" id="verified-grid"></div>
