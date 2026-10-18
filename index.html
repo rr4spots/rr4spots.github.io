@@ -971,6 +971,7 @@
 
                 if (!response.ok) throw new Error('HTTP ' + response.status);
                 allSpots = await response.json();
+                allSpots = allSpots.filter(s => s && s.id !== 'tg_feef46abbe17' && s.id !== 'tg_8c5c9204bbee' && s.id !== 'tg_0ebfa0d0f760' && s.coordinates !== '1' && s.coordinates !== 'wdad');
 
                 // Подмешиваем свежие одобренные точки из Telegram бота в реальном времени
                 if (tgResponse && tgResponse.ok) {

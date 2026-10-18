@@ -1,19 +1,5 @@
 [
     {
-        "id": "tg_8c5c9204bbee",
-        "timestamp": 1792342612,
-        "date": "18.10.2026",
-        "waterbody": "р. Ахтуба",
-        "tag": "Трофей",
-        "coordinates": "1",
-        "description": "Озеро: р. Ахтуба\nЦель: Трофей\nТочка: 1\nРыба: Камбала\nТемпература: Нормальная\nКлипса: 1 м\nНаживка: 1\nПриманка: 1\nПрикормка/ПВА: 1\nДип: 1\nКомментарий: епонча",
-        "images": [
-            "https://rf4-spots.pronk211rf4.workers.dev/api/photo/8c5c9204bbee/0"
-        ],
-        "likes": 50,
-        "views": 200
-    },
-    {
         "id": "rf4map_21345",
         "timestamp": 1792340008,
         "date": "18.10.2026",
@@ -33667,20 +33653,6 @@
         ],
         "likes": 6,
         "views": 1759
-    },
-    {
-        "id": "tg_feef46abbe17",
-        "timestamp": 1788486617,
-        "date": "04.09.2026",
-        "waterbody": "р. Ахтуба",
-        "tag": "Высед",
-        "coordinates": "1",
-        "description": "Озеро: р. Ахтуба\nЦель: Высед\nТочка: 1\nРыба: Вобла\nТемпература: Пониженная\nКлипса: 1 м\nГлубина: 1 см",
-        "images": [
-            "https://rf4-spots.pronk211rf4.workers.dev/api/photo/feef46abbe17/0"
-        ],
-        "likes": 50,
-        "views": 200
     },
     {
         "id": "rr4pepper_58965",
@@ -85367,18 +85339,6 @@
             "https://sun9-49.userapi.com/s/v1/ig2/rJQFhJ8xg0WUtRGMfevbYPu835chh-YzyfTtTlsDtKBRhYE5N3fr6YMkWTvSG4QjpFB_GZAK3kA8D6eN05U3AKYn.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&cs=1280x0",
             "https://sun9-41.userapi.com/s/v1/ig2/puDn0ux2gB_Y73_8ReU9MuHWtkxOH_OZnamr4Ym-zxdfXjTR1UMWJQYtUU4WTdu_a6Mky3_caDDStuF6-G-OI2c1.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&cs=1280x0"
         ]
-    },
-    {
-        "id": "tg_0ebfa0d0f760",
-        "timestamp": 1783698743,
-        "date": "10.07.2026",
-        "waterbody": "р. Ахтуба",
-        "tag": "Фарм",
-        "coordinates": "wdad",
-        "description": "Озеро: Ахтуба\nЦель: Фарм\nТочка: wdad\nРыба: Амур белый\nТемпература: Нормальная\nКлипса: фывф м",
-        "images": [],
-        "likes": 50,
-        "views": 200
     },
     {
         "id": "rf4map_17493",

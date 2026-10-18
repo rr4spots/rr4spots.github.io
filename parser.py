@@ -208,6 +208,9 @@ def parse_vk():
         if tg_resp.ok:
             tg_data = tg_resp.json().get("points", [])
             for pt in tg_data:
+                coords = str(pt.get('coordinates') or '').strip()
+                if pt.get('id') in ['8c5c9204bbee', 'feef46abbe17', '0ebfa0d0f760'] or not coords or coords == '1' or ':' not in coords:
+                    continue  # Игнорируем тестовые точки без координат
                 spot_id = f"tg_{pt['id']}"
                 if spot_id not in old_spots:
                     ts = int(time.time())
