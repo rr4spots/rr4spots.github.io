@@ -656,7 +656,7 @@
 
     <div class="verified-section" id="verified-section" style="display:none;">
         <div class="verified-header">
-            <h2>Популярные <span class="v-accent">точки</span></h2>
+            <h2>Проверенные <span class="v-accent">точки</span></h2>
         </div>
         <p class="verified-subtitle">ТОП-3 точки с наибольшим количеством лайков за последние 7 дней</p>
         <div class="verified-grid" id="verified-grid"></div>
@@ -964,9 +964,52 @@
 
         async function loadSpots() {
             try {
-                const response = await fetch('spots.json?v=' + Date.now(), { cache: 'no-cache' });
+                const [response, tgResponse] = await Promise.all([
+                    fetch('spots.json?v=' + Date.now(), { cache: 'no-cache' }),
+                    fetch('https://rf4-spots.pronk211rf4.workers.dev/api/points?v=' + Date.now(), { cache: 'no-cache' }).catch(() => null)
+                ]);
+
                 if (!response.ok) throw new Error('HTTP ' + response.status);
                 allSpots = await response.json();
+
+                // Подмешиваем свежие одобренные точки из Telegram бота в реальном времени
+                if (tgResponse && tgResponse.ok) {
+                    try {
+                        const tgData = await tgResponse.json();
+                        if (tgData && tgData.points && Array.isArray(tgData.points)) {
+                            const existingIds = new Set(allSpots.map(s => String(s.id)));
+                            for (const pt of tgData.points) {
+                                const tgId = 'tg_' + pt.id;
+                                if (!existingIds.has(tgId)) {
+                                    let ts = Math.floor(Date.now() / 1000);
+                                    let dateStr = new Date().toLocaleDateString('ru-RU');
+                                    if (pt.approved_at) {
+                                        const d = new Date(pt.approved_at);
+                                        if (!isNaN(d.getTime())) {
+                                            ts = Math.floor(d.getTime() / 1000);
+                                            dateStr = `${String(d.getDate()).padStart(2, '0')}.${String(d.getMonth() + 1).padStart(2, '0')}.${d.getFullYear()}`;
+                                        }
+                                    }
+
+                                    allSpots.unshift({
+                                        id: tgId,
+                                        timestamp: ts,
+                                        date: dateStr,
+                                        waterbody: pt.waterbody || "",
+                                        tag: pt.goal_label || "Трофей",
+                                        coordinates: pt.coordinates || "",
+                                        description: pt.site_text || pt.description || "",
+                                        images: pt.photos || [],
+                                        likes: 50,
+                                        views: 200
+                                    });
+                                }
+                            }
+                        }
+                    } catch (e) {
+                        console.log('TG spots merge notice:', e);
+                    }
+                }
                 
                 allSpots.sort((a, b) => b.timestamp - a.timestamp);
                 renderSpots(true);
