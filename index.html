@@ -979,6 +979,10 @@
                         if (tgData && tgData.points && Array.isArray(tgData.points)) {
                             const existingIds = new Set(allSpots.map(s => String(s.id)));
                             for (const pt of tgData.points) {
+                                const coords = String(pt.coordinates || '').trim();
+                                if (pt.id === '8c5c9204bbee' || pt.id === 'feef46abbe17' || pt.id === '0ebfa0d0f760' || !coords || coords === '1' || !coords.includes(':')) {
+                                    continue; // Игнорируем тестовые точки где 1 1 1 1 или нет валидных координат
+                                }
                                 const tgId = 'tg_' + pt.id;
                                 if (!existingIds.has(tgId)) {
                                     let ts = Math.floor(Date.now() / 1000);
