@@ -593,6 +593,246 @@
                 background: rgba(11, 12, 16, 0.8); 
             }
         }
+
+        /* ================= PARTNER BANNER ================= */
+        .partner-banner-wrapper {
+            max-width: 1200px;
+            margin: 0 auto 35px auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 50;
+        }
+
+        .partner-banner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            background: linear-gradient(135deg, rgba(17, 22, 38, 0.75) 0%, rgba(10, 12, 22, 0.88) 100%);
+            border: 1px solid rgba(91, 97, 255, 0.25);
+            border-radius: 16px;
+            padding: 16px 24px;
+            text-decoration: none;
+            color: #ffffff;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .partner-banner::before {
+            content: '';
+            position: absolute;
+            top: -60%;
+            left: -20%;
+            width: 45%;
+            height: 220%;
+            background: radial-gradient(circle, rgba(91, 97, 255, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+            transition: transform 0.6s ease;
+        }
+
+        .partner-banner:hover {
+            border-color: rgba(91, 97, 255, 0.55);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45), 0 0 25px rgba(91, 97, 255, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        .partner-banner:hover::before {
+            transform: translateX(120%);
+        }
+
+        .partner-banner-main {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex: 1 1 auto;
+            min-width: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .partner-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(91, 97, 255, 0.12);
+            border: 1px solid rgba(91, 97, 255, 0.3);
+            color: #b0b4ff;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            padding: 5px 11px;
+            border-radius: 20px;
+            flex-shrink: 0;
+        }
+
+        .partner-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #5b61ff;
+            box-shadow: 0 0 8px #5b61ff, 0 0 12px rgba(91, 97, 255, 0.8);
+            animation: partnerPulse 2s infinite ease-in-out;
+        }
+
+        @keyframes partnerPulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.25); opacity: 0.5; }
+        }
+
+        .partner-text-group {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            min-width: 0;
+        }
+
+        .partner-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.08rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: -0.2px;
+            white-space: nowrap;
+        }
+
+        .steam-icon-wrap {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(91, 97, 255, 0.2));
+            color: #ffffff;
+            flex-shrink: 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+        }
+
+        .steam-svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .partner-title-muted {
+            color: #8f94a6;
+            font-weight: 500;
+            font-size: 0.9em;
+        }
+
+        .partner-subtitle {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.86rem;
+            color: #9ea3b5;
+            flex-wrap: wrap;
+        }
+
+        .partner-separator {
+            color: rgba(255, 255, 255, 0.25);
+            font-size: 0.8em;
+        }
+
+        .promo-tag {
+            background: rgba(91, 97, 255, 0.18);
+            border: 1px dashed rgba(91, 97, 255, 0.5);
+            color: #d1d4ff;
+            padding: 1px 7px;
+            border-radius: 6px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .partner-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #5b61ff 0%, #464de8 100%);
+            color: #ffffff;
+            padding: 11px 22px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 0.92rem;
+            white-space: nowrap;
+            flex-shrink: 0;
+            box-shadow: 0 4px 16px rgba(91, 97, 255, 0.35);
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            z-index: 1;
+        }
+
+        .partner-banner:hover .partner-cta-btn {
+            background: linear-gradient(135deg, #6c72ff 0%, #5259f5 100%);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 22px rgba(91, 97, 255, 0.5);
+        }
+
+        .partner-arrow {
+            width: 15px;
+            height: 15px;
+            transition: transform 0.25s ease;
+        }
+
+        .partner-banner:hover .partner-arrow {
+            transform: translateX(4px);
+        }
+
+        @media (max-width: 768px) {
+            .partner-banner-wrapper {
+                padding: 0 15px;
+                margin-bottom: 25px;
+            }
+
+            .partner-banner {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 16px;
+                padding: 16px;
+                border-radius: 14px;
+            }
+
+            .partner-banner-main {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+                width: 100%;
+            }
+
+            .partner-title {
+                white-space: normal;
+                font-size: 1rem;
+                flex-wrap: wrap;
+                line-height: 1.35;
+            }
+
+            .partner-subtitle {
+                font-size: 0.82rem;
+                line-height: 1.45;
+                gap: 6px;
+            }
+
+            .partner-separator {
+                display: none;
+            }
+
+            .partner-cta-btn {
+                width: 100%;
+                padding: 12px 18px;
+                box-sizing: border-box;
+                font-size: 0.92rem;
+            }
+        }
+
     </style>
     <link rel="icon" type="image/png" href="favicon.png">
     <meta property="og:site_name" content="RR4 Spots">
@@ -653,6 +893,44 @@
     <section class="hero">
         <h1>Все cамые свежие точки<br>для <span class="highlight">РР4</span></h1>
     </section>
+
+    <!-- Партнёрский баннер Steam -->
+    <div class="partner-banner-wrapper">
+        <a href="https://kupikod-partners.com/tracking/v1/go/c7efd1ec?aff=755c1510-e29e-4869-aa55-f29d2b7a61b6&promo=KKBGO" 
+           class="partner-banner" 
+           target="_blank" 
+           rel="nofollow sponsored noopener">
+            <div class="partner-banner-main">
+                <div class="partner-badge">
+                    <span class="partner-dot"></span>
+                    Партнёр
+                </div>
+                <div class="partner-text-group">
+                    <div class="partner-title">
+                        <span class="steam-icon-wrap" aria-hidden="true">
+                            <svg class="steam-svg" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.979 0C5.642 0 .467 4.908.033 11.135l5.962 2.47a3.52 3.52 0 0 1 2.87-.243l2.844-4.135a3.816 3.816 0 0 1-.09-.816c0-2.11 1.713-3.823 3.824-3.823 2.112 0 3.824 1.713 3.824 3.823 0 2.111-1.712 3.824-3.824 3.824-.262 0-.517-.028-.764-.078l-4.048 2.903a3.55 3.55 0 0 1-.295 2.585l-4.417 1.831A12.008 12.008 0 0 0 11.979 24c6.627 0 12-5.373 12-12S18.606 0 11.979 0zM7.558 16.488l-1.547-.643a2.49 2.49 0 0 0 .532-.835l1.62.673a2.53 2.53 0 0 1-.605.805zm9.894-7.877c-1.328 0-2.406-1.077-2.406-2.405 0-1.328 1.078-2.406 2.406-2.406 1.328 0 2.406 1.078 2.406 2.406 0 1.328-1.078 2.405-2.406 2.405zm-8.87 6.446c-.777 0-1.408-.63-1.408-1.407 0-.777.63-1.408 1.408-1.408.777 0 1.407.63 1.407 1.408 0 .777-.63 1.407-1.407 1.407z"/>
+                            </svg>
+                        </span>
+                        <span>Пополнение баланса Steam <span class="partner-title-muted">(РФ и СНГ)</span></span>
+                    </div>
+                    <div class="partner-subtitle">
+                        <span>Моментальное зачисление без комиссии</span>
+                        <span class="partner-separator">•</span>
+                        <span>Скидка по промокоду <strong class="promo-tag">KKBGO</strong></span>
+                    </div>
+                </div>
+            </div>
+            <div class="partner-cta-btn">
+                <span>Пополнить баланс</span>
+                <svg class="partner-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </div>
+        </a>
+    </div>
+
 
     <div class="verified-section" id="verified-section" style="display:none;">
         <div class="verified-header">
