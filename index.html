@@ -594,7 +594,7 @@
             }
         }
 
-        /* ================= PARTNER BANNER ================= */
+                /* ================= PARTNER BANNER (KUPIKOD STYLE) ================= */
         .partner-banner-wrapper {
             max-width: 1200px;
             margin: 0 auto 35px auto;
@@ -608,16 +608,16 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 20px;
-            background: linear-gradient(135deg, rgba(17, 22, 38, 0.75) 0%, rgba(10, 12, 22, 0.88) 100%);
-            border: 1px solid rgba(91, 97, 255, 0.25);
+            gap: 24px;
+            background: linear-gradient(135deg, rgba(16, 22, 28, 0.88) 0%, rgba(9, 13, 18, 0.94) 100%);
+            border: 1px solid rgba(0, 255, 147, 0.22);
             border-radius: 16px;
-            padding: 16px 24px;
+            padding: 16px 26px;
             text-decoration: none;
             color: #ffffff;
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.05);
             position: relative;
             overflow: hidden;
             transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -630,15 +630,15 @@
             left: -20%;
             width: 45%;
             height: 220%;
-            background: radial-gradient(circle, rgba(91, 97, 255, 0.15) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(0, 255, 147, 0.12) 0%, transparent 70%);
             pointer-events: none;
             transition: transform 0.6s ease;
         }
 
         .partner-banner:hover {
-            border-color: rgba(91, 97, 255, 0.55);
+            border-color: rgba(0, 255, 147, 0.55);
             transform: translateY(-2px);
-            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45), 0 0 25px rgba(91, 97, 255, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5), 0 0 28px rgba(0, 255, 147, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.1);
         }
 
         .partner-banner:hover::before {
@@ -648,47 +648,52 @@
         .partner-banner-main {
             display: flex;
             align-items: center;
-            gap: 16px;
+            gap: 20px;
             flex: 1 1 auto;
             min-width: 0;
             position: relative;
             z-index: 1;
         }
 
-        .partner-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: rgba(91, 97, 255, 0.12);
-            border: 1px solid rgba(91, 97, 255, 0.3);
-            color: #b0b4ff;
-            font-size: 0.72rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.8px;
-            padding: 5px 11px;
-            border-radius: 20px;
+        /* Брендинг KUPIKOD */
+        .kupikod-brand {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
             flex-shrink: 0;
+            line-height: 1.1;
         }
 
-        .partner-dot {
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            background: #5b61ff;
-            box-shadow: 0 0 8px #5b61ff, 0 0 12px rgba(91, 97, 255, 0.8);
-            animation: partnerPulse 2s infinite ease-in-out;
+        .kupikod-wordmark {
+            font-size: 1.55rem;
+            font-weight: 900;
+            letter-spacing: 0.8px;
+            color: #00ff93;
+            text-transform: uppercase;
+            text-shadow: 0 0 16px rgba(0, 255, 147, 0.5), 0 0 30px rgba(0, 255, 147, 0.25);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
 
-        @keyframes partnerPulse {
-            0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.25); opacity: 0.5; }
+        .kupikod-caption {
+            font-size: 0.72rem;
+            color: #e2e8f0;
+            font-weight: 500;
+            letter-spacing: 0.2px;
+            margin-top: 3px;
+        }
+
+        .partner-divider {
+            width: 1px;
+            height: 42px;
+            background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.15) 30%, rgba(0, 255, 147, 0.4) 50%, rgba(255, 255, 255, 0.15) 70%, transparent);
+            flex-shrink: 0;
         }
 
         .partner-text-group {
             display: flex;
             flex-direction: column;
-            gap: 4px;
+            gap: 5px;
             min-width: 0;
         }
 
@@ -696,7 +701,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            font-size: 1.08rem;
+            font-size: 1.06rem;
             font-weight: 700;
             color: #ffffff;
             letter-spacing: -0.2px;
@@ -707,74 +712,106 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 30px;
-            height: 30px;
-            border-radius: 8px;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(91, 97, 255, 0.2));
+            width: 28px;
+            height: 28px;
+            border-radius: 7px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(0, 255, 147, 0.18));
             color: #ffffff;
             flex-shrink: 0;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(0, 255, 147, 0.3);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         }
 
         .steam-svg {
-            width: 18px;
-            height: 18px;
+            width: 16px;
+            height: 16px;
         }
 
         .partner-title-muted {
-            color: #8f94a6;
+            color: #8f96a3;
             font-weight: 500;
             font-size: 0.9em;
+        }
+
+        .partner-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: rgba(0, 255, 147, 0.1);
+            border: 1px solid rgba(0, 255, 147, 0.35);
+            color: #00ff93;
+            font-size: 0.68rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+            padding: 3px 8px;
+            border-radius: 12px;
+            flex-shrink: 0;
+            margin-left: 2px;
+        }
+
+        .partner-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #00ff93;
+            box-shadow: 0 0 8px #00ff93, 0 0 12px rgba(0, 255, 147, 0.9);
+            animation: partnerPulse 2s infinite ease-in-out;
+        }
+
+        @keyframes partnerPulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.3); opacity: 0.45; }
         }
 
         .partner-subtitle {
             display: flex;
             align-items: center;
             gap: 8px;
-            font-size: 0.86rem;
-            color: #9ea3b5;
+            font-size: 0.85rem;
+            color: #9da3af;
             flex-wrap: wrap;
         }
 
         .partner-separator {
-            color: rgba(255, 255, 255, 0.25);
+            color: rgba(255, 255, 255, 0.2);
             font-size: 0.8em;
         }
 
         .promo-tag {
-            background: rgba(91, 97, 255, 0.18);
-            border: 1px dashed rgba(91, 97, 255, 0.5);
-            color: #d1d4ff;
+            background: rgba(0, 255, 147, 0.15);
+            border: 1px dashed rgba(0, 255, 147, 0.55);
+            color: #00ff93;
             padding: 1px 7px;
             border-radius: 6px;
-            font-weight: 700;
+            font-weight: 800;
             letter-spacing: 0.5px;
         }
 
+        /* Фирменная неоновая кнопка действия */
         .partner-cta-btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
-            background: linear-gradient(135deg, #5b61ff 0%, #464de8 100%);
-            color: #ffffff;
+            background: linear-gradient(135deg, #00ff93 0%, #00cc6a 100%);
+            color: #04160c;
             padding: 11px 22px;
             border-radius: 12px;
-            font-weight: 700;
+            font-weight: 800;
             font-size: 0.92rem;
             white-space: nowrap;
             flex-shrink: 0;
-            box-shadow: 0 4px 16px rgba(91, 97, 255, 0.35);
+            box-shadow: 0 4px 18px rgba(0, 255, 147, 0.32);
             transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
             position: relative;
             z-index: 1;
         }
 
         .partner-banner:hover .partner-cta-btn {
-            background: linear-gradient(135deg, #6c72ff 0%, #5259f5 100%);
+            background: linear-gradient(135deg, #1aff9e 0%, #00e676 100%);
             transform: translateY(-1px);
-            box-shadow: 0 6px 22px rgba(91, 97, 255, 0.5);
+            box-shadow: 0 6px 24px rgba(0, 255, 147, 0.5);
         }
 
         .partner-arrow {
@@ -787,6 +824,12 @@
             transform: translateX(4px);
         }
 
+        @media (max-width: 900px) {
+            .partner-divider {
+                display: none;
+            }
+        }
+
         @media (max-width: 768px) {
             .partner-banner-wrapper {
                 padding: 0 15px;
@@ -797,7 +840,7 @@
                 flex-direction: column;
                 align-items: stretch;
                 gap: 16px;
-                padding: 16px;
+                padding: 18px 16px;
                 border-radius: 14px;
             }
 
@@ -808,9 +851,13 @@
                 width: 100%;
             }
 
+            .partner-divider {
+                display: none;
+            }
+
             .partner-title {
                 white-space: normal;
-                font-size: 1rem;
+                font-size: 0.98rem;
                 flex-wrap: wrap;
                 line-height: 1.35;
             }
@@ -832,7 +879,6 @@
                 font-size: 0.92rem;
             }
         }
-
     </style>
     <link rel="icon" type="image/png" href="favicon.png">
     <meta property="og:site_name" content="RR4 Spots">
@@ -894,25 +940,43 @@
         <h1>Все cамые свежие точки<br>для <span class="highlight">РР4</span></h1>
     </section>
 
-    <!-- Партнёрский баннер Steam -->
+    <div class="verified-section" id="verified-section" style="display:none;">
+        <div class="verified-header">
+            <h2>Проверенные <span class="v-accent">точки</span></h2>
+        </div>
+        <p class="verified-subtitle">ТОП-3 точки с наибольшим количеством лайков за последние 7 дней</p>
+        <div class="verified-grid" id="verified-grid"></div>
+    </div>
+
+    <!-- Партнёрский баннер Steam (Kupikod) -->
     <div class="partner-banner-wrapper">
         <a href="https://kupikod-partners.com/tracking/v1/go/c7efd1ec?aff=755c1510-e29e-4869-aa55-f29d2b7a61b6&promo=KKBGO" 
            class="partner-banner" 
            target="_blank" 
            rel="nofollow sponsored noopener">
+            
             <div class="partner-banner-main">
-                <div class="partner-badge">
-                    <span class="partner-dot"></span>
-                    Партнёр
+                <!-- Брендинг KUPIKOD в фирменном стиле -->
+                <div class="kupikod-brand">
+                    <span class="kupikod-wordmark">KUPIKOD</span>
+                    <span class="kupikod-caption">Пополнение сервисов</span>
                 </div>
+
+                <div class="partner-divider" aria-hidden="true"></div>
+
+                <!-- Основная информация -->
                 <div class="partner-text-group">
                     <div class="partner-title">
                         <span class="steam-icon-wrap" aria-hidden="true">
                             <svg class="steam-svg" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M11.979 0C5.642 0 .467 4.908.033 11.135l5.962 2.47a3.52 3.52 0 0 1 2.87-.243l2.844-4.135a3.816 3.816 0 0 1-.09-.816c0-2.11 1.713-3.823 3.824-3.823 2.112 0 3.824 1.713 3.824 3.823 0 2.111-1.712 3.824-3.824 3.824-.262 0-.517-.028-.764-.078l-4.048 2.903a3.55 3.55 0 0 1-.295 2.585l-4.417 1.831A12.008 12.008 0 0 0 11.979 24c6.627 0 12-5.373 12-12S18.606 0 11.979 0zM7.558 16.488l-1.547-.643a2.49 2.49 0 0 0 .532-.835l1.62.673a2.53 2.53 0 0 1-.605.805zm9.894-7.877c-1.328 0-2.406-1.077-2.406-2.405 0-1.328 1.078-2.406 2.406-2.406 1.328 0 2.406 1.078 2.406 2.406 0 1.328-1.078 2.405-2.406 2.405zm-8.87 6.446c-.777 0-1.408-.63-1.408-1.407 0-.777.63-1.408 1.408-1.408.777 0 1.407.63 1.407 1.408 0 .777-.63 1.407-1.407 1.407z"/>
+                                <path d="M11.979 0C5.642 0 .467 4.908.033 11.135l5.962 2.47a3.52 3.52 0 0 1 2.87-.243l2.844-4.135a3.816 3.816 0 0 1-.09-.816c0-2.11 1.713-3.823 3.824-3.823 2.112 0 3.824 1.713 3.824 3.824 0 2.111-1.712 3.824-3.824 3.824-.262 0-.517-.028-.764-.078l-4.048 2.903a3.55 3.55 0 0 1-.295 2.585l-4.417 1.831A12.008 12.008 0 0 0 11.979 24c6.627 0 12-5.373 12-12S18.606 0 11.979 0zM7.558 16.488l-1.547-.643a2.49 2.49 0 0 0 .532-.835l1.62.673a2.53 2.53 0 0 1-.605.805zm9.894-7.877c-1.328 0-2.406-1.077-2.406-2.405 0-1.328 1.078-2.406 2.406-2.406 1.328 0 2.406 1.078 2.406 2.406 0 1.328-1.078 2.405-2.406 2.405zm-8.87 6.446c-.777 0-1.408-.63-1.408-1.407 0-.777.63-1.408 1.408-1.408.777 0 1.407.63 1.407 1.408 0 .777-.63 1.407-1.407 1.407z"/>
                             </svg>
                         </span>
                         <span>Пополнение баланса Steam <span class="partner-title-muted">(РФ и СНГ)</span></span>
+                        <span class="partner-badge">
+                            <span class="partner-dot"></span>
+                            Партнёр
+                        </span>
                     </div>
                     <div class="partner-subtitle">
                         <span>Моментальное зачисление без комиссии</span>
@@ -921,6 +985,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="partner-cta-btn">
                 <span>Пополнить баланс</span>
                 <svg class="partner-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
@@ -932,13 +997,6 @@
     </div>
 
 
-    <div class="verified-section" id="verified-section" style="display:none;">
-        <div class="verified-header">
-            <h2>Проверенные <span class="v-accent">точки</span></h2>
-        </div>
-        <p class="verified-subtitle">ТОП-3 точки с наибольшим количеством лайков за последние 7 дней</p>
-        <div class="verified-grid" id="verified-grid"></div>
-    </div>
 
     <div class="filter-section">
         
