@@ -17,6 +17,8 @@ VK_GROUPS = [
 ]
 
 def normalize_wb(name):
+    if not name:
+        return "Не указан"
     n = name.lower()
     if "комарин" in n: return "оз. Комариное"
     if "лосин" in n: return "оз. Лосиное"
@@ -35,43 +37,34 @@ def normalize_wb(name):
     if "медное" in n: return "оз. Медное"
     if "тунгус" in n: return "р. Нижняя Тунгуска"
     if "яма" in n or "яму" in n: return "р. Яма"
-    if "норвеж" in n or "море" in n: return "Норвежское море"
+    if "норвеж" in n or "море" in n or "банка" in n: return "Норвежское море"
+    if any(c in name for c in ['@', '#', '\n', '\r']) or len(name) > 30 or any(x in n for x in ["водоем", "не указан"]):
+        return "Не указан"
     return name.title()
 
 def clean_text(text):
-    groups_to_remove = ["@rr4mestakleva", "@pp4farmtrof", "@rr4pepper", "@pp4wikipedia", "@rf4map", "@fishzones"]
-    for g in groups_to_remove:
-        text = re.sub(rf'(?i){g}\s*', '', text)
-    
-    text = text.replace('Вся информация по РР4 на нашем сайте - https://rr4farmtrof.com/', '')
-    text = text.replace('Вся информация по РР4 на нашем сайте - http://rr4farmtrof.com/', '')
-    text = text.replace('Вся информация по РР4 на нашем сайте - rr4farmtrof.com/', '')
-    text = text.replace('Вся информация по РР4 на нашем сайте - rr4farmtrof.com', '')
-    text = text.replace('Правила публикации постов: vk.com/-pravila', '')
-    text = text.replace('Правила публикации постов: vk.com/-pravila', '')
-    text = text.replace('Добавить пост: https://vk.com/rf4map?w=wall-134739321_11470/', '')
-    text = text.replace('Добавить пост: https://vk.com/rf4map?w=wall-134739321_11470', '')
-    text = text.replace('Правила публикации постов: vk.com/-rules/', '')
-    text = text.replace('Правила публикации постов: vk.com/-rules', '')
-    text = text.replace('Обновление игры', '')
-    text = text.replace('Добавить пост: vk.com/-rules', '')
-    text = text.replace('Сайт с полезной информацией по РР4 — https://rf4-map.ru/', '')
-    text = text.replace('Беседка группы: https://vk.me/join/AZQ1dzPPqwgJV3Sii73rC5tS', '')
-    text = text.replace('Добавить пост: https://vk.com/rf4map?w=wall-134739321_12213', '')
-    
-    
-    text = re.sub(r'#\w+', '', text)
-    
+    if not text:
+        return ""
+    # Удаляем любые рекламные ссылки, Telegram каналы и группы ВК
+    text = re.sub(r'https?://\S+', '', text)
+    text = re.sub(r'(?:t\.me|vk\.com|vk\.me)/\S+', '', text)
+    # Удаляем любые упоминания каналов (@rf4map, @rr4pepper и т.д.)
+    text = re.sub(r'@[a-zA-Z0-9_]+', '', text)
+    # Удаляем любые хэштеги
+    text = re.sub(r'#[a-zA-Zа-яА-ЯёЁ0-9_]+', '', text)
     stop_words = [
         "- Автор:", "Автор:", "ПРЕДЛОЖИТЬ ПОСТ", "ПОИСК ТОЧКИ", 
         "БОЛЬШЕ ТОЧЕК", "СПАСИБО", "Условия:", "ПРЕДЛОЖИТЬ", 
-        "Понравился пост?", "БОТ для поиска точек", "Наш сайт", "Наш Discord", "Наш дискорд"
+        "Понравился пост?", "БОТ для поиска точек", "Наш сайт", "Наш Discord", "Наш дискорд",
+        "Наш паблик", "Все точки в ТГ", "Подписывайтесь", "Вся информация по РР4",
+        "Правила публикации постов", "Добавить пост:", "Беседка группы:", "Обновление игры"
     ]
     for word in stop_words:
         if word in text:
-            text = text.split(word)[0] 
-            
-    text = text.replace('|  |', '|').replace('| - |', '|').replace('-  -', '-').strip(' |-\n')
+            text = text.split(word)[0]
+    text = re.sub(r'Водо[её]м:\s*-\s*', '', text)
+    text = re.sub(r'^[ :\-|]+', '', text)
+    text = text.replace('|  |', '|').replace('| - |', '|').replace('-  -', '-').strip(' |-\n\r')
     text = re.sub(r'\s+', ' ', text)
     return text
 
@@ -142,20 +135,22 @@ def parse_vk():
                         elif any(word in lower_clean_text for word in ["высед", "высе", "высиж"]):
                             spot_tag = "Высед"
 
-                        coords_match = re.search(r'(\d{1,3}\s*:\s*\d{1,3})', raw_text)
-                        square_match = re.search(r'Квадрат:\s*([A-ZА-Я0-9, ]+)', raw_text, re.IGNORECASE)
+                        coords_match = re.search(r'(\d{1,3}\s*[:\-]\s*\d{1,3})', raw_text)
+                        square_match = re.search(r'Квадрат:\s*([A-ZА-Я0-9\-]+)', raw_text, re.IGNORECASE)
                         if coords_match:
-                            coordinates = coords_match.group(1).replace(" ", "") 
+                            coordinates = re.sub(r'\s*[:\-]\s*', ':', coords_match.group(1).strip())
                         elif square_match:
                             coordinates = square_match.group(1).strip()
                         else:
                             continue 
 
                         waterbody_name = "Не указан"
-                        wb_match = re.search(r'Водоем:\s*([^|]+)', raw_text, re.IGNORECASE)
+                        wb_match = re.search(r'Водо[её]м:\s*([^|\n\r]+)', raw_text, re.IGNORECASE)
                         if wb_match:
                             wb_temp = wb_match.group(1).strip()
-                            if wb_temp and wb_temp != "-" and len(wb_temp) > 1:
+                            wb_temp = re.sub(r'@[a-zA-Z0-9_]+', '', wb_temp)
+                            wb_temp = re.sub(r'#[a-zA-Zа-яА-ЯёЁ0-9_]+', '', wb_temp).strip()
+                            if wb_temp and wb_temp != "-" and len(wb_temp) > 1 and not any(x in wb_temp.lower() for x in ["водоем", "не указан"]):
                                 waterbody_name = wb_temp
                         
                         if waterbody_name == "Не указан":
