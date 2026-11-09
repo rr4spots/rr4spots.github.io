@@ -424,6 +424,16 @@
         .thumb-img { width: 60px; height: 60px; object-fit: cover; border-radius: 6px; cursor: pointer; border: 2px solid transparent; opacity: 0.4; transition: 0.2s; }
         .thumb-img:hover, .thumb-img.active { opacity: 1; border-color: #5b61ff; }
         
+        .gallery-watermark {
+            position: absolute;
+            z-index: 15;
+            pointer-events: none;
+            display: none;
+            filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.85));
+            border-radius: 6px;
+            transition: opacity 0.2s ease;
+        }
+        
         .info-panel { flex: 1; padding: 40px; border-left: 1px solid rgba(91, 97, 255, 0.08); overflow-y: auto; background: rgba(14, 16, 26, 0.5); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
         
         /* ================= PREMIUM CUSTOM SCROLLBAR ================= */
@@ -1141,6 +1151,7 @@
                 <div class="gallery-container">
                     <button class="nav-btn prev-btn" id="prev-btn">&#10094;</button>
                     <img src="" alt="Скриншот РР4" class="main-img" id="main-modal-img" title="Кликните для увеличения">
+                    <img src="assets/watermark_opt.png" id="gallery-watermark" class="gallery-watermark" alt="RR4 SPOTS">
                     <button class="nav-btn next-btn" id="next-btn">&#10095;</button>
                     <div class="thumbnails-container" id="thumbnails-container"></div>
                 </div>
@@ -1171,6 +1182,7 @@
         <span class="lightbox-close" id="lightbox-close">&times;</span>
         <button class="lightbox-btn lightbox-prev" id="lightbox-prev">&#10094;</button>
         <img src="" class="lightbox-img" id="lightbox-img">
+        <img src="assets/watermark_opt.png" id="lightbox-watermark" class="gallery-watermark" alt="RR4 SPOTS">
         <button class="lightbox-btn lightbox-next" id="lightbox-next">&#10095;</button>
     </div>
 
@@ -1377,11 +1389,19 @@
             if (!text || typeof text !== 'string') return '';
             return text
                 .replace(/https?:\/\/\S+/gi, '')
-                .replace(/(?:t\.me|vk\.com|vk\.me)\/\S+/gi, '')
+                .replace(/(?:t\.me|vk\.com|vk\.me|rf4-map\.ru)\S*/gi, '')
                 .replace(/@[a-zA-Z0-9_]+/g, '')
                 .replace(/#[a-zA-Zа-яА-ЯёЁ0-9_]+/g, '')
+                .replace(/Сайт с полезной информацией по РР4\s*[—–-]?\s*/gi, '')
+                .replace(/Вся информация по РР4[^\n—–-]*[—–-]?\s*/gi, '')
+                .replace(/наш\s+(?:telegram|тг|канал|паблик|сайт|дискорд|discord)[^\n\r]*/gi, '')
+                .replace(/подписывайтесь[^\n\r]*/gi, '')
+                .replace(/правила публикации[^\n\r]*/gi, '')
+                .replace(/беседка группы[^\n\r]*/gi, '')
+                .replace(/бот для поиска[^\n\r]*/gi, '')
+                .replace(/все точки в тг[^\n\r]*/gi, '')
                 .replace(/Водо[её]м:\s*-\s*/gi, '')
-                .replace(/^[ :\-|]+/g, '')
+                .replace(/^[ :—\-|]+/g, '')
                 .replace(/[ \t]+/g, ' ')
                 .replace(/\n\s*\n+/g, '\n')
                 .replace(/\|\s*\|/g, '|')
@@ -1400,14 +1420,85 @@
             return clean;
         }
 
-        async function loadSpots() {
+        // --- Быстрый IndexedDB кэш для мгновенной загрузки сайта (0.05 сек) ---
+        const SPOTS_DB_NAME = 'rr4spots_cache_db';
+        const SPOTS_DB_STORE = 'spots_store';
+
+        function openSpotsDB() {
+            return new Promise((resolve) => {
+                if (!window.indexedDB) return resolve(null);
+                try {
+                    const req = indexedDB.open(SPOTS_DB_NAME, 1);
+                    req.onupgradeneeded = (e) => {
+                        const db = e.target.result;
+                        if (!db.objectStoreNames.contains(SPOTS_DB_STORE)) {
+                            db.createObjectStore(SPOTS_DB_STORE);
+                        }
+                    };
+                    req.onsuccess = (e) => resolve(e.target.result);
+                    req.onerror = () => resolve(null);
+                } catch (e) {
+                    resolve(null);
+                }
+            });
+        }
+
+        async function getCachedSpots() {
             try {
+                const db = await openSpotsDB();
+                if (!db) return null;
+                return new Promise((resolve) => {
+                    const tx = db.transaction(SPOTS_DB_STORE, 'readonly');
+                    const store = tx.objectStore(SPOTS_DB_STORE);
+                    const req = store.get('spots_data');
+                    req.onsuccess = () => resolve(req.result || null);
+                    req.onerror = () => resolve(null);
+                });
+            } catch (e) {
+                return null;
+            }
+        }
+
+        async function setCachedSpots(data) {
+            try {
+                const db = await openSpotsDB();
+                if (!db) return;
+                const tx = db.transaction(SPOTS_DB_STORE, 'readwrite');
+                const store = tx.objectStore(SPOTS_DB_STORE);
+                store.put(data, 'spots_data');
+            } catch (e) {
+                // Игнорируем ошибки квоты хранилища
+            }
+        }
+
+        async function loadSpots() {
+            let hasLoadedFromCache = false;
+
+            // 1. Мгновенная отрисовка из кэша (0.05 сек)
+            try {
+                const cached = await getCachedSpots();
+                if (cached && Array.isArray(cached) && cached.length > 0) {
+                    allSpots = cached;
+                    renderSpots(true);
+                    checkSharedSpot();
+                    hasLoadedFromCache = true;
+                }
+            } catch (e) {
+                console.warn('Кэш IndexedDB недоступен:', e);
+            }
+
+            // 2. Сетевая загрузка свежих данных с умным кэшированием (окно 10 минут)
+            try {
+                const cacheWindow = Math.floor(Date.now() / 600000); // Кэшируется на 10 минут
                 const [response, tgResponse] = await Promise.all([
-                    fetch('spots.json?v=' + Date.now(), { cache: 'no-cache' }),
+                    fetch('spots.json?v=' + cacheWindow),
                     fetch('https://rf4-spots.pronk211rf4.workers.dev/api/points?v=' + Date.now(), { cache: 'no-cache' }).catch(() => null)
                 ]);
 
-                if (!response.ok) throw new Error('HTTP ' + response.status);
+                if (!response.ok) {
+                    if (!hasLoadedFromCache) throw new Error('HTTP ' + response.status);
+                    return;
+                }
                 allSpots = await response.json();
                 allSpots = allSpots.filter(s => s && s.id !== 'tg_feef46abbe17' && s.id !== 'tg_8c5c9204bbee' && s.id !== 'tg_0ebfa0d0f760' && s.coordinates !== '1' && s.coordinates !== 'wdad');
 
@@ -1420,7 +1511,7 @@
                             for (const pt of tgData.points) {
                                 const coords = String(pt.coordinates || '').trim();
                                 if (pt.id === '8c5c9204bbee' || pt.id === 'feef46abbe17' || pt.id === '0ebfa0d0f760' || !coords || coords === '1' || !coords.includes(':')) {
-                                    continue; // Игнорируем тестовые точки где 1 1 1 1 или нет валидных координат
+                                    continue; // Игнорируем тестовые точки
                                 }
                                 const tgId = 'tg_' + pt.id;
                                 if (!existingIds.has(tgId)) {
@@ -1464,12 +1555,15 @@
                 }
 
                 allSpots.sort((a, b) => b.timestamp - a.timestamp);
+                setCachedSpots(allSpots); // Сохраняем в IndexedDB для следующего мгновенного открытия
                 renderSpots(true);
                 
                 checkSharedSpot();
 
             } catch (error) {
-                document.getElementById('spots-container').innerHTML = '<p style="text-align:center; color:#888;">Не удалось загрузить данные.</p>';
+                if (!hasLoadedFromCache) {
+                    document.getElementById('spots-container').innerHTML = '<p style="text-align:center; color:#888;">Не удалось загрузить данные.</p>';
+                }
             }
         }
 
@@ -1601,12 +1695,82 @@
             modal.classList.add('active');
         }
 
+        function positionWatermark() {
+            const mainImg = document.getElementById('main-modal-img');
+            const watermark = document.getElementById('gallery-watermark');
+            if (!mainImg || !watermark) return;
+
+            if (!mainImg.src || mainImg.src === '' || mainImg.style.display === 'none' || !mainImg.naturalWidth) {
+                watermark.style.display = 'none';
+                return;
+            }
+
+            const container = mainImg.parentElement;
+            const cW = container.clientWidth;
+            const cH = container.clientHeight;
+            if (cW === 0 || cH === 0) return;
+
+            const imgRatio = mainImg.naturalWidth / mainImg.naturalHeight;
+            const contRatio = cW / cH;
+
+            let renderedW, renderedH, offsetX, offsetY;
+            if (contRatio > imgRatio) {
+                renderedH = cH;
+                renderedW = cH * imgRatio;
+                offsetX = (cW - renderedW) / 2;
+                offsetY = 0;
+            } else {
+                renderedW = cW;
+                renderedH = cW / imgRatio;
+                offsetX = 0;
+                offsetY = (cH - renderedH) / 2;
+            }
+
+            // Перекрываем чужую ватермарку в левом нижнем углу
+            const bannerW = Math.max(110, Math.min(230, renderedW * 0.19));
+            watermark.style.width = bannerW + 'px';
+            watermark.style.left = (offsetX + Math.max(8, renderedW * 0.012)) + 'px';
+            watermark.style.bottom = (offsetY + Math.max(6, renderedH * 0.014)) + 'px';
+            watermark.style.display = 'block';
+        }
+
+        function positionLightboxWatermark() {
+            const lbImg = document.getElementById('lightbox-img');
+            const watermark = document.getElementById('lightbox-watermark');
+            if (!lbImg || !watermark || !lbImg.naturalWidth) return;
+
+            const cW = window.innerWidth;
+            const cH = window.innerHeight;
+            const imgRatio = lbImg.naturalWidth / lbImg.naturalHeight;
+            const maxW = cW * 0.9;
+            const maxH = cH * 0.9;
+
+            let renderedW, renderedH;
+            if (maxW / maxH > imgRatio) {
+                renderedH = maxH;
+                renderedW = maxH * imgRatio;
+            } else {
+                renderedW = maxW;
+                renderedH = maxW / imgRatio;
+            }
+            const offsetX = (cW - renderedW) / 2;
+            const offsetY = (cH - renderedH) / 2;
+
+            const bannerW = Math.max(140, Math.min(280, renderedW * 0.19));
+            watermark.style.width = bannerW + 'px';
+            watermark.style.left = (offsetX + Math.max(8, renderedW * 0.012)) + 'px';
+            watermark.style.bottom = (offsetY + Math.max(6, renderedH * 0.014)) + 'px';
+            watermark.style.display = 'block';
+        }
         function updateMainImage() {
             const currentSrc = currentSpotImages[currentImageIndex];
             const safeSrc = isSafeUrl(currentSrc) ? currentSrc : '';
             mainImg.src = safeSrc;
             lightboxImg.src = safeSrc; 
             
+            mainImg.onload = positionWatermark;
+            positionWatermark();
+
             const thumbs = thumbsContainer.querySelectorAll('.thumb-img');
             thumbs.forEach((t, i) => {
                 if (i === currentImageIndex) t.classList.add('active');
@@ -1634,9 +1798,19 @@
                 lightboxPrevBtn.style.display = showNav ? 'block' : 'none';
                 lightboxNextBtn.style.display = showNav ? 'block' : 'none';
                 
+                lightboxImg.onload = positionLightboxWatermark;
+                positionLightboxWatermark();
+
                 lightbox.classList.add('active');
             }
         };
+
+        window.addEventListener('resize', () => {
+            positionWatermark();
+            if (lightbox && lightbox.classList.contains('active')) {
+                positionLightboxWatermark();
+            }
+        });
 
         const closeLightboxFn = () => { lightbox.classList.remove('active'); };
         

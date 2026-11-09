@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+*.pyo
+*.bak
+spots_archive.json
+.vscode/
+.idea/
