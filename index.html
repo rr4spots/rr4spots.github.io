@@ -1421,7 +1421,7 @@
         }
 
         // --- Быстрый IndexedDB кэш для мгновенной загрузки сайта (0.05 сек) ---
-        const SPOTS_DB_NAME = 'rr4spots_cache_db';
+        const SPOTS_DB_NAME = 'rr4spots_cache_v4';
         const SPOTS_DB_STORE = 'spots_store';
 
         function openSpotsDB() {
@@ -1487,11 +1487,10 @@
                 console.warn('Кэш IndexedDB недоступен:', e);
             }
 
-            // 2. Сетевая загрузка свежих данных с умным кэшированием (окно 10 минут)
+            // 2. Сетевая загрузка свежих данных
             try {
-                const cacheWindow = Math.floor(Date.now() / 600000); // Кэшируется на 10 минут
                 const [response, tgResponse] = await Promise.all([
-                    fetch('spots.json?v=' + cacheWindow),
+                    fetch('spots.json?v=' + Date.now(), { cache: 'no-cache' }),
                     fetch('https://rf4-spots.pronk211rf4.workers.dev/api/points?v=' + Date.now(), { cache: 'no-cache' }).catch(() => null)
                 ]);
 
@@ -1500,7 +1499,7 @@
                     return;
                 }
                 allSpots = await response.json();
-                allSpots = allSpots.filter(s => s && s.id !== 'tg_feef46abbe17' && s.id !== 'tg_8c5c9204bbee' && s.id !== 'tg_0ebfa0d0f760' && s.coordinates !== '1' && s.coordinates !== 'wdad');
+                allSpots = allSpots.filter(s => s && s.id !== 'tg_feef46abbe17' && s.id !== 'tg_8c5c9204bbee' && s.id !== 'tg_0ebfa0d0f760' && s.coordinates !== '1' && s.coordinates !== 'wdad' && !String(s.id).startsWith('ft_'));
 
                 // Подмешиваем свежие одобренные точки из Telegram бота в реальном времени
                 if (tgResponse && tgResponse.ok) {
@@ -1554,8 +1553,9 @@
                     }
                 }
 
-                allSpots.sort((a, b) => b.timestamp - a.timestamp);
-                setCachedSpots(allSpots); // Сохраняем в IndexedDB для следующего мгновенного открытия
+                // Строгая хронологическая сортировка: свежие сверху
+                allSpots.sort((a, b) => (Number(b.timestamp) || 0) - (Number(a.timestamp) || 0));
+                setCachedSpots(allSpots); // Сохраняем чистые данные в IndexedDB
                 renderSpots(true);
                 
                 checkSharedSpot();
