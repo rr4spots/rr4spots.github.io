@@ -7,12 +7,14 @@ from datetime import datetime
 
 VK_TOKEN = os.environ.get("VK_TOKEN")
 
+# Список качественных активных групп ВК по РР4 (БЕЗ rf4map, без мертвых пабликов):
 VK_GROUPS = [
-    "rr4mestakleva", 
-    "pp4farmtrof", 
-    "rr4pepper", 
-    "pp4wikipedia", 
-    "rf4map"
+    "rr4pepper",       # Перчик РР4 (крупнейшее активное сообщество)
+    "pp4wikipedia",   # Википедия рыболова (старейшая активная база знаний)
+    "rr4mestakleva",  # Места клёва РР4 (актуальные посты)
+    "pp4farmtrof",    # Фарм Троф (ежедневные отчеты)
+    "psixgamerr4",    # Psix Game — новая активная группа (актуальные точки)
+    "mut9iulive"      # МитяйLive (5k+ постов, точки и сборки)
 ]
 
 def normalize_wb(name):
@@ -41,17 +43,29 @@ def normalize_wb(name):
         return "Не указан"
     return name.title()
 
+def norm_coords(c):
+    if not c:
+        return ""
+    c = str(c).strip()
+    m = re.search(r'(\d{1,3})\s*[:\-]\s*(\d{1,3})', c)
+    if m:
+        return f"{m.group(1)}:{m.group(2)}"
+    return re.sub(r'\s+', ' ', c).lower()
+
 def clean_text(text):
     if not text:
         return ""
-    # Удаляем ссылки и чужие каналы
+    # Удаляем любые внешние ссылки, каналы и домены
     text = re.sub(r'https?://\S+', '', text)
-    text = re.sub(r'(?:t\.me|vk\.com|vk\.me|rf4-map\.ru|rf4stat\.ru)\S*', '', text, flags=re.IGNORECASE)
+    text = re.sub(r'(?:t\.me|vk\.com|vk\.me|vk\.ru|rf4-map\.ru|rf4stat\.ru)\S*', '', text, flags=re.IGNORECASE)
     text = re.sub(r'@[a-zA-Z0-9_]+', '', text)
     text = re.sub(r'#[a-zA-Zа-яА-ЯёЁ0-9_]+', '', text)
+    text = re.sub(r'[─—–\-]{3,}', '', text)
 
     promo_patterns = [
         r'(?i)наш\s+(?:telegram|тг|канал|паблик|сайт|дискорд|discord)[^\n\r]*',
+        r'(?i)источник[^\n\r]*',
+        r'(?i)поделиться\s+точкой[^\n\r]*',
         r'(?i)сайт с полезной информацией[^\n\r]*',
         r'(?i)вся информация по рр4[^\n\r]*',
         r'(?i)подписывайтесь[^\n\r]*',
@@ -64,6 +78,9 @@ def clean_text(text):
         r'(?i)предложить пост[^\n\r]*',
         r'(?i)поиск точки[^\n\r]*',
         r'(?i)больше точек[^\n\r]*',
+        r'(?i)наша беседа[^\n\r]*',
+        r'(?i)чат рыболовов[^\n\r]*',
+        r'(?i)розыгрыш[^\n\r]*',
     ]
     for pat in promo_patterns:
         text = re.sub(pat, '', text)
@@ -83,6 +100,138 @@ def clean_text(text):
     text = re.sub(r'\s+', ' ', text)
     return text.strip()
 
+def extract_fish(text, display_fish=""):
+    if display_fish and isinstance(display_fish, str):
+        return display_fish.strip().lower()
+    if not text:
+        return ""
+    cleaned = text.replace('\ufe0f', '').replace('\u200d', '')
+    m = re.search(r'Рыба\s*[:\-–]?\s*([A-Za-zА-Яа-яЁё\s,]+?)(?=[-\n\r📌🎣💧📝]|Координаты|Квадрат|$)', cleaned, re.IGNORECASE)
+    if m:
+        val = m.group(1).strip().strip(':-, ')
+        if 1 < len(val) < 80:
+            return val.lower()
+    m2 = re.search(r'[⭐👑🐟🦈🐠]\s*([A-Za-zА-Яа-яЁё\s,]+?)(?=[-\n\r📌🎣💧📝]|Координаты|$)', cleaned)
+    if m2:
+        val = m2.group(1).strip().strip(':-, ')
+        if 1 < len(val) < 80 and not any(w in val.lower() for w in ['фарм', 'точка', 'водоем']):
+            return val.lower()
+    return ""
+
+def text_signature(text):
+    if not text:
+        return set()
+    cleaned = re.sub(r'[^a-zA-Zа-яА-ЯёЁ0-9\s]', ' ', text.lower())
+    stop = {'в', 'на', 'с', 'по', 'за', 'и', 'для', 'из', 'от', 'до', 'не', 'озеро', 'река', 'точка', 'водоем', 'рр4', 'rf4', 'нормальная', 'температура', 'воды', 'координаты', 'клипса', 'квадрат'}
+    return {w for w in cleaned.split() if len(w) > 2 and w not in stop}
+
+def text_similarity(t1, t2):
+    s1, s2 = text_signature(t1), text_signature(t2)
+    if not s1 or not s2:
+        return 0.0
+    inter = s1 & s2
+    min_len = min(len(s1), len(s2))
+    return len(inter) / min_len if min_len > 0 else 0.0
+
+def get_image_key(url):
+    if not url:
+        return ""
+    u = re.sub(r'\?.*$', '', url)
+    parts = u.rstrip('/').split('/')
+    return parts[-1] if parts else u
+
+def merge_two_spots(spot1, spot2):
+    # Объединяем уникальные изображения (до 8 лучших фото)
+    merged_images = []
+    seen_imgs = set()
+    for img in spot1.get('images', []):
+        k = get_image_key(img)
+        if k and k not in seen_imgs:
+            seen_imgs.add(k)
+            merged_images.append(img)
+    for img in spot2.get('images', []):
+        k = get_image_key(img)
+        if k and k not in seen_imgs:
+            seen_imgs.add(k)
+            merged_images.append(img)
+    merged_images = merged_images[:8]
+
+    # Выбираем более полное описание
+    d1 = spot1.get('description', '').strip()
+    d2 = spot2.get('description', '').strip()
+    merged_desc = d1 if len(d1) >= len(d2) else d2
+
+    # Лайки и просмотры: берём максимум
+    merged_likes = max(spot1.get('likes', 0), spot2.get('likes', 0))
+    merged_views = max(spot1.get('views', 0), spot2.get('views', 0))
+
+    # Тег: сохраняем более ценный
+    tags = [spot1.get('tag'), spot2.get('tag')]
+    if 'Трофей' in tags: merged_tag = 'Трофей'
+    elif 'Фарм' in tags: merged_tag = 'Фарм'
+    elif 'Высед' in tags: merged_tag = 'Высед'
+    else: merged_tag = spot1.get('tag') or 'Обычная'
+
+    primary = spot1 if len(d1) >= len(d2) else spot2
+
+    return {
+        "id": primary.get('id'),
+        "timestamp": max(spot1.get('timestamp', 0), spot2.get('timestamp', 0)),
+        "date": primary.get('date') or spot2.get('date'),
+        "waterbody": primary.get('waterbody'),
+        "tag": merged_tag,
+        "coordinates": primary.get('coordinates'),
+        "description": merged_desc,
+        "images": merged_images,
+        "likes": merged_likes,
+        "views": merged_views
+    }
+
+def deduplicate_all_spots(spots_list):
+    from collections import defaultdict
+    groups = defaultdict(list)
+    for s in spots_list:
+        wb = normalize_wb(s.get('waterbody'))
+        c = norm_coords(s.get('coordinates'))
+        groups[(wb, c)].append(s)
+
+    merged_total = 0
+    clean_spots = []
+
+    for key, spot_group in groups.items():
+        if len(spot_group) == 1:
+            clean_spots.append(spot_group[0])
+            continue
+
+        cluster = []
+        for s in spot_group:
+            matched = False
+            t_s = s.get('timestamp', 0)
+            fish_s = extract_fish(s.get('description', ''))
+
+            for idx, existing in enumerate(cluster):
+                t_e = existing.get('timestamp', 0)
+                time_diff = abs(t_s - t_e)
+
+                # Если посты опубликованы в пределах 48 часов
+                if time_diff <= 172800:
+                    fish_e = extract_fish(existing.get('description', ''))
+                    sim = text_similarity(s.get('description', ''), existing.get('description', ''))
+                    fish_match = bool(fish_s and fish_e and (fish_s in fish_e or fish_e in fish_s))
+                    image_overlap = bool(set(get_image_key(img) for img in s.get('images', [])) & set(get_image_key(img) for img in existing.get('images', [])))
+
+                    if fish_match or sim >= 0.40 or image_overlap:
+                        cluster[idx] = merge_two_spots(existing, s)
+                        matched = True
+                        merged_total += 1
+                        break
+            if not matched:
+                cluster.append(s)
+        clean_spots.extend(cluster)
+
+    print(f"[Дедупликация] Объединено повторных постов: {merged_total}. Уникальных точек: {len(clean_spots)}")
+    return clean_spots
+
 def parse_vk():
     spots_file = 'spots.json'
     old_spots = {}
@@ -91,8 +240,10 @@ def parse_vk():
             with open(spots_file, 'r', encoding='utf-8') as f:
                 data = json.load(f)
                 for spot in data:
-                    old_spots[spot['id']] = spot
-            print(f"Загружено из базы: {len(old_spots)} старых точек.")
+                    # Полностью игнорируем любые точки rf4map
+                    if not spot.get('id', '').startswith('rf4map'):
+                        old_spots[spot['id']] = spot
+            print(f"Загружено из базы: {len(old_spots)} старых точек (без rf4map).")
         except Exception as e:
             print(f"Ошибка чтения старой базы: {e}")
 
@@ -150,10 +301,10 @@ def parse_vk():
                         elif any(word in lower_clean_text for word in ["высед", "высе", "высиж"]):
                             spot_tag = "Высед"
 
-                        coords_match = re.search(r'(\d{1,3}\s*[:\-]\s*\d{1,3})', raw_text)
+                        coords_match = re.search(r'(\d{1,3}\s*[:\-;]\s*\d{1,3})', raw_text)
                         square_match = re.search(r'Квадрат:\s*([A-ZА-Я0-9\-]+)', raw_text, re.IGNORECASE)
                         if coords_match:
-                            coordinates = re.sub(r'\s*[:\-]\s*', ':', coords_match.group(1).strip())
+                            coordinates = re.sub(r'\s*[:\-;]\s*', ':', coords_match.group(1).strip())
                         elif square_match:
                             coordinates = square_match.group(1).strip()
                         else:
@@ -170,9 +321,9 @@ def parse_vk():
                         
                         if waterbody_name == "Не указан":
                             tags = re.findall(r'#([a-zа-яё0-9_]+)', raw_text.lower())
-                            ignore_tags = ['трофей', 'фарм', 'гайд', 'сборка', 'вопрос', 'местаклева', 'рр4', 'rr4', 'rf4map', 'pp4farmtrof', 'rr4pepper', 'pp4wikipedia']
+                            ignore_tags = ['трофей', 'фарм', 'гайд', 'сборка', 'вопрос', 'местаклева', 'рр4', 'rr4', 'pp4farmtrof', 'rr4pepper', 'pp4wikipedia', 'psixgamerr4', 'mut9iulive']
                             for tag in tags:
-                                tag = tag.replace('_rf4map', '').replace('rf4_', '').replace('pp4_', '') 
+                                tag = tag.replace('rf4_', '').replace('pp4_', '').replace('rr4_', '')
                                 if tag not in ignore_tags:
                                     waterbody_name = tag
                                     break
@@ -263,17 +414,26 @@ def parse_vk():
     except Exception as e:
         print(f"Ошибка загрузки точек бота: {e}")
 
+    # Запускаем дедупликацию постов (склеиваем повторяющиеся отчеты из разных групп)
+    all_spots_raw = list(old_spots.values())
+    clean_spots = deduplicate_all_spots(all_spots_raw)
+
+    # Нормализуем дату строго из timestamp для 100% хронологической точности
+    for s in clean_spots:
+        ts = int(s.get('timestamp') or 0)
+        if ts > 0:
+            s['date'] = datetime.fromtimestamp(ts).strftime('%d.%m.%Y')
+
     # Строгая сортировка по timestamp убыванию (самые свежие даты всегда сверху)
-    all_spots = list(old_spots.values())
-    all_spots.sort(key=lambda x: x.get('timestamp', 0), reverse=True)
+    clean_spots.sort(key=lambda x: (int(x.get('timestamp') or 0)), reverse=True)
 
     # Ограничиваем топ 3000 активных точек для быстродействия сети
-    all_spots = all_spots[:3000]
+    clean_spots = clean_spots[:3000]
 
     with open(spots_file, 'w', encoding='utf-8') as f:
-        json.dump(all_spots, f, ensure_ascii=False, indent=2)
+        json.dump(clean_spots, f, ensure_ascii=False, indent=2)
         
-    print(f"Готово! В базе {spots_file} сейчас {len(all_spots)} точек.")
+    print(f"Готово! В базе {spots_file} сейчас {len(clean_spots)} уникальных точек.")
 
     try:
         import calculate_verified
