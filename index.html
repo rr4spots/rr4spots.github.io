@@ -1421,7 +1421,7 @@
         }
 
         // --- Быстрый IndexedDB кэш для мгновенной загрузки сайта (0.05 сек) ---
-        const SPOTS_DB_NAME = 'rr4spots_cache_v5';
+        const SPOTS_DB_NAME = 'rr4spots_cache_v6';
         const SPOTS_DB_STORE = 'spots_store';
 
         function openSpotsDB() {
@@ -1544,7 +1544,16 @@
                     }
                 }
                 
-                // Клиентская очистка от рекламных каналов, битых водоёмов и строгая синхронизация дат
+                // Клиентская очистка от рекламных каналов, мусора, битых водоёмов и строгая синхронизация дат
+                allSpots = allSpots.filter(s => {
+                    const wb = s.waterbody || "";
+                    if (!wb || wb === "Не указан" || wb.toLowerCase() === "видео") return false;
+                    const desc = (s.description || "").toLowerCase();
+                    if (desc.includes("новое видео") || desc.includes("лайт аккаунт") || desc.includes("портмоне") || desc.includes("кубок большого медведя") || desc.includes("на стрим") || desc.includes("приглашают")) return false;
+                    if (["500:700", "6:30", "7:43", "3:5", "302:4", "18:00", "19:00", "01:00", "09:10"].includes(s.coordinates)) return false;
+                    return true;
+                });
+
                 for (const s of allSpots) {
                     if (s.timestamp) {
                         const d = new Date(Number(s.timestamp) * 1000);

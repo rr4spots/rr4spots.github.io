@@ -39,9 +39,7 @@ def normalize_wb(name):
     if "тунгус" in n: return "р. Нижняя Тунгуска"
     if "яма" in n or "яму" in n: return "р. Яма"
     if "норвеж" in n or "море" in n or "банка" in n: return "Норвежское море"
-    if any(c in name for c in ['@', '#', '\n', '\r']) or len(name) > 30 or any(x in n for x in ["водоем", "не указан"]):
-        return "Не указан"
-    return name.title()
+    return "Не указан"
 
 def norm_coords(c):
     if not c:
@@ -289,7 +287,15 @@ def parse_vk():
                         clean_description = clean_text(raw_text)
                         lower_clean_text = clean_description.lower()
 
-                        spam_words = ["розыгрыш", "призовое место", "магазина", "барахолка", "купить", "промокод", "скидка", "рублей", "купон"]
+                        spam_words = [
+                            "розыгрыш", "призовое место", "призовые места", "магазина", "барахолка", 
+                            "купить", "промокод", "скидка", "скидки", "рублей", "руб.", "купон", 
+                            "портмоне", "кожа", "пошив", "доставка", "турнир", "кубок", "новое видео", 
+                            "лайт аккаунт", "youtube", "rutube", "boosty", "бусти", "перезагрузка сервера", 
+                            "профилактические работы", "технические работы", "праздничном стриме",
+                            "на стрим", "на стриме", "приглашают на стрим", "приглашают тебя на стрим", 
+                            "начало в", "стрим!"
+                        ]
                         if any(word in lower_clean_text for word in spam_words):
                             continue
 
@@ -301,14 +307,31 @@ def parse_vk():
                         elif any(word in lower_clean_text for word in ["высед", "высе", "высиж"]):
                             spot_tag = "Высед"
 
-                        coords_match = re.search(r'(\d{1,3}\s*[:\-;]\s*\d{1,3})', raw_text)
+                        # Координаты: сначала ищем явные маркеры точки
+                        labeled_coords = re.search(r'(?:точка|координаты|коры|[📍📌])\s*[:\-–]?\s*(\d{1,3}\s*[\.:\-;]\s*\d{1,3})', raw_text, re.IGNORECASE)
                         square_match = re.search(r'Квадрат:\s*([A-ZА-Я0-9\-]+)', raw_text, re.IGNORECASE)
-                        if coords_match:
-                            coordinates = re.sub(r'\s*[:\-;]\s*', ':', coords_match.group(1).strip())
+                        coords_match = re.search(r'\b(\d{1,3}\s*[:\-;]\s*\d{1,3})\b', raw_text)
+
+                        if labeled_coords:
+                            coordinates = re.sub(r'\s*[\.:\-;]\s*', ':', labeled_coords.group(1).strip())
                         elif square_match:
                             coordinates = square_match.group(1).strip()
+                        elif coords_match:
+                            # Исключаем диапазоны серебра, мест, дней, времени (500-700 сер, 6-30 место, 3-5 дней)
+                            end_idx = coords_match.end()
+                            following_text = raw_text[end_idx:end_idx+20].lower()
+                            if any(w in following_text for w in ['серебр', 'монет', 'мест', 'дней', 'сек', 'мин', 'час', 'уровн', 'руб', 'мск']):
+                                continue
+                            coordinates = re.sub(r'\s*[:\-;]\s*', ':', coords_match.group(1).strip())
                         else:
                             continue 
+
+                        # Валидация разумных границ координат
+                        m_coord = re.match(r'^(\d+):(\d+)$', coordinates)
+                        if m_coord:
+                            cx, cy = int(m_coord.group(1)), int(m_coord.group(2))
+                            if cx > 450 or cy > 650 or (cx < 10 and cy < 10):
+                                continue
 
                         waterbody_name = "Не указан"
                         wb_match = re.search(r'Водо[её]м:\s*([^|\n\r]+)', raw_text, re.IGNORECASE)
@@ -329,6 +352,9 @@ def parse_vk():
                                     break
                         
                         waterbody_name = normalize_wb(waterbody_name)
+                        # Точка ОБЯЗАТЕЛЬНО должна принадлежать реальному водоёму
+                        if waterbody_name == "Не указан":
+                            continue
 
                         images_list = []
                         attachments = post.get("attachments", [])
