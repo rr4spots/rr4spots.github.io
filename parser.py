@@ -3,6 +3,7 @@ import json
 import re
 import os
 import time
+import html
 from datetime import datetime
 
 VK_TOKEN = os.environ.get("VK_TOKEN")
@@ -10,12 +11,34 @@ VK_TOKEN = os.environ.get("VK_TOKEN")
 # Список качественных активных групп ВК по РР4 (БЕЗ rf4map, без мертвых пабликов):
 VK_GROUPS = [
     "rr4pepper",       # Перчик РР4 (крупнейшее активное сообщество)
+    "rr4trophy",       # РР4 Трофеи (активные отчёты по водоёмам с клипсами)
     "pp4wikipedia",   # Википедия рыболова (старейшая активная база знаний)
     "rr4mestakleva",  # Места клёва РР4 (актуальные посты)
     "pp4farmtrof",    # Фарм Троф (ежедневные отчеты)
     "psixgamerr4",    # Psix Game — новая активная группа (актуальные точки)
     "mut9iulive"      # МитяйLive (5k+ постов, точки и сборки)
 ]
+
+# Открытые каналы Telegram по РР4 для парсинга через публичное веб-зеркало (t.me/s/...):
+TG_CHANNELS = [
+    "rf4crazyft",       # Crazy F&T (42k+ участников, ежедневные отчеты, точки и трофеи)
+    "RussianFishRR4"    # ВСЕ Точки клёва РР4 (бот-агрегатор точек по водоемам)
+]
+
+def parse_tg_views(val):
+    if not val:
+        return 0
+    v = str(val).strip().upper()
+    if v.endswith('K'):
+        try: return int(float(v[:-1]) * 1000)
+        except: return 0
+    elif v.endswith('M'):
+        try: return int(float(v[:-1]) * 1000000)
+        except: return 0
+    try:
+        return int(v)
+    except:
+        return 0
 
 def normalize_wb(name):
     if not name:
@@ -55,7 +78,7 @@ def clean_text(text):
         return ""
     # Удаляем любые внешние ссылки, каналы и домены
     text = re.sub(r'https?://\S+', '', text)
-    text = re.sub(r'(?:t\.me|vk\.com|vk\.me|vk\.ru|rf4-map\.ru|rf4stat\.ru)\S*', '', text, flags=re.IGNORECASE)
+    text = re.sub(r'(?:t\.me|vk\.com|vk\.me|vk\.ru|max\.ru|rf4-map\.ru|rf4stat\.ru)\S*', '', text, flags=re.IGNORECASE)
     text = re.sub(r'@[a-zA-Z0-9_]+', '', text)
     text = re.sub(r'#[a-zA-Zа-яА-ЯёЁ0-9_]+', '', text)
     text = re.sub(r'[─—–\-]{3,}', '', text)
@@ -344,7 +367,7 @@ def parse_vk():
                         
                         if waterbody_name == "Не указан":
                             tags = re.findall(r'#([a-zа-яё0-9_]+)', raw_text.lower())
-                            ignore_tags = ['трофей', 'фарм', 'гайд', 'сборка', 'вопрос', 'местаклева', 'рр4', 'rr4', 'pp4farmtrof', 'rr4pepper', 'pp4wikipedia', 'psixgamerr4', 'mut9iulive']
+                            ignore_tags = ['трофей', 'фарм', 'гайд', 'сборка', 'вопрос', 'местаклева', 'рр4', 'rr4', 'rf4', 'pp4', 'pp4farmtrof', 'rr4pepper', 'pp4wikipedia', 'psixgamerr4', 'mut9iulive', 'rf4crazyft', 'crazyft', 'rr4trophy']
                             for tag in tags:
                                 tag = tag.replace('rf4_', '').replace('pp4_', '').replace('rr4_', '')
                                 if tag not in ignore_tags:
@@ -387,6 +410,184 @@ def parse_vk():
                     print(f"Ошибка парсинга VK ({group}): {e}")
                     
         print(f"\nВсего добавлено новых точек из ВК: {new_posts_found}")
+
+    # --- Парсинг открытых Telegram каналов (Crazy F&T, RussianFishRR4) ---
+    print("\n--- Парсинг открытых Telegram каналов ---")
+    tg_chan_posts = 0
+    tg_headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+    }
+    spam_words_tg = [
+        "розыгрыш", "призовое место", "призовые места", "магазина", "барахолка", 
+        "купить", "промокод", "скидка", "скидки", "рублей", "руб.", "купон", 
+        "портмоне", "кожа", "пошив", "доставка", "турнир", "кубок", "новое видео", 
+        "лайт аккаунт", "youtube", "rutube", "boosty", "бусти", "перезагрузка сервера", 
+        "профилактические работы", "технические работы", "праздничном стриме",
+        "на стрим", "на стриме", "приглашают на стрим", "приглашают тебя на стрим", 
+        "начало в", "стрим!"
+    ]
+    ignore_tags_tg = [
+        'трофей', 'фарм', 'гайд', 'сборка', 'вопрос', 'местаклева', 'рр4', 'rr4', 
+        'rf4', 'pp4', 'pp4farmtrof', 'rr4pepper', 'pp4wikipedia', 'psixgamerr4', 
+        'mut9iulive', 'rf4crazyft', 'crazyft', 'rr4trophy', 'russianfishrr4'
+    ]
+
+    for ch in TG_CHANNELS:
+        print(f"Парсинг Telegram канала: {ch}")
+        try:
+            time.sleep(1)
+            tg_channel_url = f"https://t.me/s/{ch}"
+            resp = requests.get(tg_channel_url, headers=tg_headers, timeout=12)
+            if not resp.ok:
+                print(f"[-] Ошибка загрузки t.me/s/{ch}: HTTP {resp.status_code}")
+                continue
+
+            page_html = resp.text
+            msg_blocks = re.split(r'<div class="tgme_widget_message_wrap', page_html)
+
+            for block in msg_blocks[1:]:
+                m_post = re.search(r'data-post="([^"]+)"', block)
+                if not m_post:
+                    continue
+                post_slug = m_post.group(1).replace('/', '_')
+                post_id = f"tg_{post_slug}"
+
+                # Дата публикации
+                m_time = re.search(r'<time datetime="([^"]+)"', block)
+                if m_time:
+                    try:
+                        iso_val = m_time.group(1).replace('Z', '+00:00')
+                        dt = datetime.fromisoformat(iso_val)
+                        timestamp = int(dt.timestamp())
+                        date_str = dt.strftime('%d.%m.%Y')
+                    except Exception:
+                        timestamp = int(time.time())
+                        date_str = datetime.now().strftime('%d.%m.%Y')
+                else:
+                    timestamp = int(time.time())
+                    date_str = datetime.now().strftime('%d.%m.%Y')
+
+                # Просмотры
+                m_views = re.search(r'class="tgme_widget_message_views">([^<]+)<', block)
+                views_count = parse_tg_views(m_views.group(1)) if m_views else 150
+
+                if post_id in old_spots:
+                    if timestamp > time.time() - 7 * 86400:
+                        old_spots[post_id]["views"] = views_count
+                    continue
+
+                # Текст поста
+                m_text = re.search(r'<div class="tgme_widget_message_text js-message_text"[^>]*>(.*?)</div>', block, re.DOTALL)
+                if not m_text:
+                    continue
+
+                raw_html_text = m_text.group(1)
+                raw_html_text = re.sub(r'<br\s*/?>', '\n', raw_html_text)
+                raw_html_text = re.sub(r'<[^>]+>', '', raw_html_text)
+                raw_text = html.unescape(raw_html_text).strip()
+                if not raw_text:
+                    continue
+
+                clean_description = clean_text(raw_text)
+                lower_clean_text = clean_description.lower()
+
+                if any(word in lower_clean_text for word in spam_words_tg):
+                    continue
+
+                spot_tag = "Обычная"
+                if any(word in lower_clean_text for word in ["трофей", "троф", "трофе", "синяк", "синь", "голуб", "голубая","звезд", "звёзд","⭐"]):
+                    spot_tag = "Трофей"
+                elif any(word in lower_clean_text for word in ["фарм", "фар"]):
+                    spot_tag = "Фарм"
+                elif any(word in lower_clean_text for word in ["высед", "высе", "высиж"]):
+                    spot_tag = "Высед"
+
+                # Координаты
+                labeled_coords = re.search(r'(?:точка|координаты|коры|[📍📌])\s*[:\-–]?\s*(\d{1,3}\s*[\.:\-;]\s*\d{1,3})', raw_text, re.IGNORECASE)
+                square_match = re.search(r'Квадрат:\s*([A-ZА-Я0-9\-]+)', raw_text, re.IGNORECASE)
+                coords_match = re.search(r'\b(\d{1,3}\s*[:\-;]\s*\d{1,3})\b', raw_text)
+
+                if labeled_coords:
+                    coordinates = re.sub(r'\s*[\.:\-;]\s*', ':', labeled_coords.group(1).strip())
+                elif square_match:
+                    coordinates = square_match.group(1).strip()
+                elif coords_match:
+                    end_idx = coords_match.end()
+                    following_text = raw_text[end_idx:end_idx+20].lower()
+                    if any(w in following_text for w in ['серебр', 'монет', 'мест', 'дней', 'сек', 'мин', 'час', 'уровн', 'руб', 'мск']):
+                        continue
+                    coordinates = re.sub(r'\s*[:\-;]\s*', ':', coords_match.group(1).strip())
+                else:
+                    continue
+
+                # Валидация разумных границ координат
+                m_coord = re.match(r'^(\d+):(\d+)$', coordinates)
+                if m_coord:
+                    cx, cy = int(m_coord.group(1)), int(m_coord.group(2))
+                    if cx > 450 or cy > 650 or (cx < 10 and cy < 10):
+                        continue
+
+                # Водоём
+                waterbody_name = "Не указан"
+                wb_match = re.search(r'Водо[её]м:\s*([^|\n\r]+)', raw_text, re.IGNORECASE)
+                if wb_match:
+                    wb_temp = wb_match.group(1).strip()
+                    wb_temp = re.sub(r'@[a-zA-Z0-9_]+', '', wb_temp)
+                    wb_temp = re.sub(r'#[a-zA-Zа-яА-ЯёЁ0-9_]+', '', wb_temp).strip()
+                    if wb_temp and wb_temp != "-" and len(wb_temp) > 1 and not any(x in wb_temp.lower() for x in ["водоем", "не указан"]):
+                        waterbody_name = wb_temp
+
+                if waterbody_name == "Не указан":
+                    tags = re.findall(r'#([a-zа-яё0-9_]+)', raw_text.lower())
+                    for tag in tags:
+                        tag = tag.replace('rf4_', '').replace('pp4_', '').replace('rr4_', '')
+                        if tag not in ignore_tags_tg:
+                            waterbody_name = tag
+                            break
+
+                waterbody_name = normalize_wb(waterbody_name)
+                if waterbody_name == "Не указан":
+                    continue
+
+                # Фотографии: забираем строго полноразмерные скриншоты постов (HD 1280px),
+                # исключая любые мелкие аватарки или иконки интерфейса
+                images_list = []
+                photo_wraps = re.findall(r'<(?:a|i)[^>]+class="[^"]*(?:tgme_widget_message_photo_wrap|tgme_widget_message_video_thumb)[^"]*"[^>]+>', block)
+                for wrap in photo_wraps:
+                    m_url = re.search(r'background-image:url\([\'"]?(https?://[^\'")\s]+)[\'"]?\)', wrap)
+                    if m_url:
+                        u = m_url.group(1)
+                        if u not in images_list:
+                            images_list.append(u)
+
+                # Запасной вариант, если структура изменилась
+                if not images_list:
+                    raw_bg_imgs = re.findall(r'background-image:url\([\'"]?(https?://cdn[^\'")\s]+)[\'"]?\)', block)
+                    for u in raw_bg_imgs:
+                        if u not in images_list:
+                            images_list.append(u)
+
+                images_list = images_list[:8]
+
+                spot = {
+                    "id": post_id,
+                    "timestamp": timestamp,
+                    "date": date_str,
+                    "waterbody": waterbody_name,
+                    "tag": spot_tag,
+                    "coordinates": coordinates,
+                    "description": clean_description,
+                    "images": images_list,
+                    "likes": max(15, int(views_count * 0.04)),
+                    "views": views_count
+                }
+                old_spots[post_id] = spot
+                tg_chan_posts += 1
+
+        except Exception as e:
+            print(f"[-] Предупреждение парсинга Telegram ({ch}): {e}")
+
+    print(f"Всего добавлено новых точек из открытых Telegram каналов: {tg_chan_posts}")
 
     # --- Загрузка одобренных точек от пользователей из Telegram бота (@rr4spotsbot) ---
     print("\n--- Загрузка точек из Telegram бота (@rr4spotsbot) ---")
